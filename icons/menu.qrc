@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>🦆 icon _Bars_.png</file>
+  </qresource>
+</RCC>

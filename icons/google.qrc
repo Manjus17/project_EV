@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>google.png</file>
+  </qresource>
+</RCC>

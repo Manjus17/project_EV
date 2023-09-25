@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>create_account.png</file>
+  </qresource>
+</RCC>

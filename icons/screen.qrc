@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>🦆 icon _Window Maximize_.png</file>
+  </qresource>
+</RCC>
