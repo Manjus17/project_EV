@@ -1,23 +1,24 @@
-# -*- coding: utf-8 -*-
-
 ################################################################################
-## Form generated from reading UI file 'mainmQhmHb.ui'
-##
-## Created by: Qt User Interface Compiler version 5.15.2
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
+## IMPORTING PYSIDE2 MODULES
 ################################################################################
 
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
+######################################################################
+## IMPORTING ICON IMAGES
+#####################################################################
 import account_rc
 import plug_rc
 import down_rc
 import menu_rc
 import noti_rc
 
+
+########################################################################
+## MAIN WINDOW CLASS
+########################################################################
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -26,8 +27,17 @@ class Ui_MainWindow(object):
         MainWindow.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+
+        ##########################################################################
+        ## SETTING MAIN WINDOW LAYOUT
+        ##########################################################################
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
+
+
+        ##########################################################################
+        ## CREATING HEADER
+        ##########################################################################
         self.header = QWidget(self.centralwidget)
         self.header.setObjectName(u"header")
         self.header.setStyleSheet(u"background-color: rgb(24, 24, 24);")
@@ -68,6 +78,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.frame, 0, Qt.AlignLeft)
 
+        ##########################################################################
+        ## SIDE MENU BAR
+        ##########################################################################
         self.frame_2 = QFrame(self.header)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.StyledPanel)

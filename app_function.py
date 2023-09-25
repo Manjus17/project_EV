@@ -23,9 +23,9 @@ class UIFunctions(MainWindow):
         self.ui.settings.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.About.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
@@ -52,9 +52,9 @@ class UIFunctions(MainWindow):
         self.ui.settings.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.About.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
@@ -81,9 +81,9 @@ class UIFunctions(MainWindow):
         self.ui.settings.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.About.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
@@ -139,9 +139,9 @@ class UIFunctions(MainWindow):
         self.ui.settings.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.About.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
@@ -168,9 +168,9 @@ class UIFunctions(MainWindow):
         self.ui.stations.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.About.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
@@ -197,9 +197,9 @@ class UIFunctions(MainWindow):
         self.ui.settings.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
-        self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-        "font: 14pt \"Consolas\";\n"
-        "padding: 3px 5px;")
+        # self.ui.security.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        # "font: 14pt \"Consolas\";\n"
+        # "padding: 3px 5px;")
         self.ui.stations.setStyleSheet(u"color: rgb(255, 255, 255);\n"
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
