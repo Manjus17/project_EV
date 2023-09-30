@@ -1,43 +1,35 @@
+# -*- coding: utf-8 -*-
+
 ################################################################################
-## IMPORTING PYSIDE2 MODULES
+## Form generated from reading UI file 'maindKjtEA.ui'
+##
+## Created by: Qt User Interface Compiler version 5.15.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-######################################################################
-## IMPORTING ICON IMAGES
-#####################################################################
+from PySide2extn.RoundProgressBar import roundProgressBar
+
 import account_rc
 import plug_rc
 import down_rc
 import menu_rc
 import noti_rc
 
-
-########################################################################
-## MAIN WINDOW CLASS
-########################################################################
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(894, 544)
+        MainWindow.resize(894, 582)
         MainWindow.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-
-        ##########################################################################
-        ## SETTING MAIN WINDOW LAYOUT
-        ##########################################################################
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
-
-
-        ##########################################################################
-        ## CREATING HEADER
-        ##########################################################################
         self.header = QWidget(self.centralwidget)
         self.header.setObjectName(u"header")
         self.header.setStyleSheet(u"background-color: rgb(24, 24, 24);")
@@ -78,9 +70,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.frame, 0, Qt.AlignLeft)
 
-        ##########################################################################
-        ## SIDE MENU BAR
-        ##########################################################################
         self.frame_2 = QFrame(self.header)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
@@ -308,7 +297,67 @@ class Ui_MainWindow(object):
 "")
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_24 = QVBoxLayout(self.frame_13)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.frame_26 = QFrame(self.frame_13)
+        self.frame_26.setObjectName(u"frame_26")
+        sizePolicy.setHeightForWidth(self.frame_26.sizePolicy().hasHeightForWidth())
+        self.frame_26.setSizePolicy(sizePolicy)
+        self.frame_26.setFrameShape(QFrame.StyledPanel)
+        self.frame_26.setFrameShadow(QFrame.Raised)
+        self.gridLayout_14 = QGridLayout(self.frame_26)
+        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.progress = QFrame(self.frame_26)
+        self.progress.setObjectName(u"progress")
+        self.progress.setMinimumSize(QSize(150, 150))
+        self.progress.setMaximumSize(QSize(5000, 5000))
+        self.progress.setStyleSheet(u"border: 2px solid;\n"
+"border-radius: 75;\n"
+"border-color: transparent;\n"
+"")
+        self.progress.setFrameShape(QFrame.StyledPanel)
+        self.progress.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_65 = QHBoxLayout(self.progress)
+        self.horizontalLayout_65.setObjectName(u"horizontalLayout_65")
+        self.prg_in = roundProgressBar(self.progress)
+        self.prg_in.setObjectName(u"prg_in")
 
+        self.horizontalLayout_65.addWidget(self.prg_in)
+
+
+        self.gridLayout_14.addWidget(self.progress, 0, 0, 1, 1)
+
+
+        self.verticalLayout_24.addWidget(self.frame_26)
+
+        self.frame_27 = QFrame(self.frame_13)
+        self.frame_27.setObjectName(u"frame_27")
+        self.frame_27.setFrameShape(QFrame.StyledPanel)
+        self.frame_27.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_64 = QHBoxLayout(self.frame_27)
+        self.horizontalLayout_64.setObjectName(u"horizontalLayout_64")
+        self.label_117 = QLabel(self.frame_27)
+        self.label_117.setObjectName(u"label_117")
+        self.label_117.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 18pt \"Calibri\";")
+
+        self.horizontalLayout_64.addWidget(self.label_117)
+
+        self.lcdNumber_3 = QLCDNumber(self.frame_27)
+        self.lcdNumber_3.setObjectName(u"lcdNumber_3")
+        self.lcdNumber_3.setDigitCount(2)
+        self.lcdNumber_3.setProperty("intValue", 26)
+
+        self.horizontalLayout_64.addWidget(self.lcdNumber_3)
+
+
+        self.verticalLayout_24.addWidget(self.frame_27, 0, Qt.AlignBottom)
+
+        self.prg_in.rpb_setRange(0, 100)
+        self.prg_in.rpb_setBarStyle('Pizza') 
+        self.prg_in.rpb_setValue(40)
+
+        
         self.gridLayout_8.addWidget(self.frame_13, 0, 1, 1, 1)
 
         self.frame_14 = QFrame(self.frame_5)
@@ -320,13 +369,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.frame_17 = QFrame(self.frame_14)
         self.frame_17.setObjectName(u"frame_17")
+        self.frame_17.setMinimumSize(QSize(0, 100))
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
         self.label_5 = QLabel(self.frame_17)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(10, 10, 281, 81))
+        self.label_5.setGeometry(QRect(0, 0, 310, 96))
         self.label_5.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 75 20pt \"Gill Sans MT\";\n"
+"padding-left: 20px;\n"
 "")
         self.label_5.setWordWrap(True)
 
@@ -382,13 +433,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.frame_20 = QFrame(self.frame_15)
         self.frame_20.setObjectName(u"frame_20")
+        self.frame_20.setMinimumSize(QSize(0, 100))
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
         self.label_10 = QLabel(self.frame_20)
         self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(60, 30, 201, 41))
+        self.label_10.setGeometry(QRect(0, 0, 310, 97))
         self.label_10.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 75 20pt \"Gill Sans MT\";")
+"font: 75 20pt \"Gill Sans MT\";\n"
+"padding-left: 20px;")
         self.label_10.setWordWrap(False)
 
         self.verticalLayout_8.addWidget(self.frame_20)
@@ -426,8 +479,6 @@ class Ui_MainWindow(object):
         self.comboBox = QComboBox(self.frame_23)
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setGeometry(QRect(10, 0, 150, 40))
         self.comboBox.setMinimumSize(QSize(150, 30))
@@ -449,6 +500,7 @@ class Ui_MainWindow(object):
         self.gridLayout_11.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget_2 = QStackedWidget(self.frame_22)
         self.stackedWidget_2.setObjectName(u"stackedWidget_2")
+        self.stackedWidget_2.setMinimumSize(QSize(0, 70))
         self.station_1 = QWidget()
         self.station_1.setObjectName(u"station_1")
         self.gridLayout_12 = QGridLayout(self.station_1)
@@ -459,7 +511,9 @@ class Ui_MainWindow(object):
         self.frame_24.setFrameShape(QFrame.StyledPanel)
         self.frame_24.setFrameShadow(QFrame.Raised)
         self.verticalLayout_10 = QVBoxLayout(self.frame_24)
+        self.verticalLayout_10.setSpacing(0)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.frame_28 = QFrame(self.frame_24)
         self.frame_28.setObjectName(u"frame_28")
         self.frame_28.setMinimumSize(QSize(0, 40))
@@ -509,7 +563,7 @@ class Ui_MainWindow(object):
         self.comboBox_2.addItem("")
         self.comboBox_2.addItem("")
         self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setGeometry(QRect(30, 10, 150, 40))
+        self.comboBox_2.setGeometry(QRect(40, 10, 150, 35))
         self.comboBox_2.setMinimumSize(QSize(150, 30))
         self.comboBox_2.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgb(50, 162, 244);")
@@ -539,7 +593,9 @@ class Ui_MainWindow(object):
         self.frame_32.setFrameShape(QFrame.StyledPanel)
         self.frame_32.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_7 = QHBoxLayout(self.frame_32)
+        self.horizontalLayout_7.setSpacing(10)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.frame_33 = QFrame(self.frame_32)
         self.frame_33.setObjectName(u"frame_33")
         self.frame_33.setStyleSheet(u"background-color: rgb(34, 34, 34);")
@@ -704,38 +760,143 @@ class Ui_MainWindow(object):
         self.frame_34.setFrameShadow(QFrame.Raised)
         self.verticalLayout_12 = QVBoxLayout(self.frame_34)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.frame_48 = QFrame(self.frame_34)
-        self.frame_48.setObjectName(u"frame_48")
-        self.frame_48.setMinimumSize(QSize(200, 60))
-        self.frame_48.setFrameShape(QFrame.StyledPanel)
-        self.frame_48.setFrameShadow(QFrame.Raised)
-        self.label_21 = QLabel(self.frame_48)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setGeometry(QRect(0, 0, 211, 71))
-        self.label_21.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 20pt \"Calibri\";")
-        self.label_21.setWordWrap(True)
-
-        self.verticalLayout_12.addWidget(self.frame_48, 0, Qt.AlignHCenter|Qt.AlignTop)
-
         self.frame_47 = QFrame(self.frame_34)
         self.frame_47.setObjectName(u"frame_47")
-        sizePolicy.setHeightForWidth(self.frame_47.sizePolicy().hasHeightForWidth())
-        self.frame_47.setSizePolicy(sizePolicy)
-        self.frame_47.setMinimumSize(QSize(200, 0))
         self.frame_47.setFrameShape(QFrame.StyledPanel)
         self.frame_47.setFrameShadow(QFrame.Raised)
-        self.label_22 = QLabel(self.frame_47)
-        self.label_22.setObjectName(u"label_22")
-        self.label_22.setGeometry(QRect(40, 20, 181, 131))
-        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.label_22.sizePolicy().hasHeightForWidth())
-        self.label_22.setSizePolicy(sizePolicy1)
-        self.label_22.setStyleSheet(u"border-image: url(:/newPrefix/plug.png);")
+        self.horizontalLayout_21 = QHBoxLayout(self.frame_47)
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.label_37 = QLabel(self.frame_47)
+        self.label_37.setObjectName(u"label_37")
+        self.label_37.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_21.addWidget(self.label_37)
+
+        self.label_38 = QLabel(self.frame_47)
+        self.label_38.setObjectName(u"label_38")
+        self.label_38.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_21.addWidget(self.label_38)
+
 
         self.verticalLayout_12.addWidget(self.frame_47)
+
+        self.frame_48 = QFrame(self.frame_34)
+        self.frame_48.setObjectName(u"frame_48")
+        self.frame_48.setFrameShape(QFrame.StyledPanel)
+        self.frame_48.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_22 = QHBoxLayout(self.frame_48)
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.label_35 = QLabel(self.frame_48)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_22.addWidget(self.label_35)
+
+        self.label_36 = QLabel(self.frame_48)
+        self.label_36.setObjectName(u"label_36")
+        self.label_36.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_22.addWidget(self.label_36)
+
+
+        self.verticalLayout_12.addWidget(self.frame_48)
+
+        self.frame_66 = QFrame(self.frame_34)
+        self.frame_66.setObjectName(u"frame_66")
+        self.frame_66.setFrameShape(QFrame.StyledPanel)
+        self.frame_66.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_23 = QHBoxLayout(self.frame_66)
+        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.label_21 = QLabel(self.frame_66)
+        self.label_21.setObjectName(u"label_21")
+        self.label_21.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_23.addWidget(self.label_21)
+
+        self.label_22 = QLabel(self.frame_66)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_23.addWidget(self.label_22)
+
+
+        self.verticalLayout_12.addWidget(self.frame_66)
+
+        self.frame_67 = QFrame(self.frame_34)
+        self.frame_67.setObjectName(u"frame_67")
+        self.frame_67.setFrameShape(QFrame.StyledPanel)
+        self.frame_67.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_24 = QHBoxLayout(self.frame_67)
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.label_39 = QLabel(self.frame_67)
+        self.label_39.setObjectName(u"label_39")
+        self.label_39.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_24.addWidget(self.label_39)
+
+        self.label_40 = QLabel(self.frame_67)
+        self.label_40.setObjectName(u"label_40")
+        self.label_40.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_24.addWidget(self.label_40)
+
+
+        self.verticalLayout_12.addWidget(self.frame_67)
+
+        self.frame_68 = QFrame(self.frame_34)
+        self.frame_68.setObjectName(u"frame_68")
+        self.frame_68.setFrameShape(QFrame.StyledPanel)
+        self.frame_68.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_25 = QHBoxLayout(self.frame_68)
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.label_41 = QLabel(self.frame_68)
+        self.label_41.setObjectName(u"label_41")
+        self.label_41.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_25.addWidget(self.label_41)
+
+        self.label_42 = QLabel(self.frame_68)
+        self.label_42.setObjectName(u"label_42")
+        self.label_42.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_25.addWidget(self.label_42)
+
+
+        self.verticalLayout_12.addWidget(self.frame_68)
+
+        self.frame_69 = QFrame(self.frame_34)
+        self.frame_69.setObjectName(u"frame_69")
+        self.frame_69.setFrameShape(QFrame.StyledPanel)
+        self.frame_69.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_26 = QHBoxLayout(self.frame_69)
+        self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
+        self.label_43 = QLabel(self.frame_69)
+        self.label_43.setObjectName(u"label_43")
+        self.label_43.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_26.addWidget(self.label_43)
+
+        self.label_44 = QLabel(self.frame_69)
+        self.label_44.setObjectName(u"label_44")
+        self.label_44.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_26.addWidget(self.label_44)
+
+
+        self.verticalLayout_12.addWidget(self.frame_69)
 
 
         self.horizontalLayout_7.addWidget(self.frame_34)
@@ -755,11 +916,152 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8 = QHBoxLayout(self.frame_35)
         self.horizontalLayout_8.setSpacing(10)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.frame_36 = QFrame(self.frame_35)
         self.frame_36.setObjectName(u"frame_36")
         self.frame_36.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.frame_36.setFrameShape(QFrame.StyledPanel)
         self.frame_36.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_19 = QVBoxLayout(self.frame_36)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.frame_70 = QFrame(self.frame_36)
+        self.frame_70.setObjectName(u"frame_70")
+        self.frame_70.setFrameShape(QFrame.StyledPanel)
+        self.frame_70.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_37 = QHBoxLayout(self.frame_70)
+        self.horizontalLayout_37.setObjectName(u"horizontalLayout_37")
+        self.label_45 = QLabel(self.frame_70)
+        self.label_45.setObjectName(u"label_45")
+        self.label_45.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_37.addWidget(self.label_45)
+
+        self.label_46 = QLabel(self.frame_70)
+        self.label_46.setObjectName(u"label_46")
+        self.label_46.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_37.addWidget(self.label_46, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_70)
+
+        self.frame_71 = QFrame(self.frame_36)
+        self.frame_71.setObjectName(u"frame_71")
+        self.frame_71.setFrameShape(QFrame.StyledPanel)
+        self.frame_71.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_38 = QHBoxLayout(self.frame_71)
+        self.horizontalLayout_38.setObjectName(u"horizontalLayout_38")
+        self.label_47 = QLabel(self.frame_71)
+        self.label_47.setObjectName(u"label_47")
+        self.label_47.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_38.addWidget(self.label_47)
+
+        self.label_48 = QLabel(self.frame_71)
+        self.label_48.setObjectName(u"label_48")
+        self.label_48.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_38.addWidget(self.label_48, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_71)
+
+        self.frame_72 = QFrame(self.frame_36)
+        self.frame_72.setObjectName(u"frame_72")
+        self.frame_72.setFrameShape(QFrame.StyledPanel)
+        self.frame_72.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_39 = QHBoxLayout(self.frame_72)
+        self.horizontalLayout_39.setObjectName(u"horizontalLayout_39")
+        self.label_49 = QLabel(self.frame_72)
+        self.label_49.setObjectName(u"label_49")
+        self.label_49.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_39.addWidget(self.label_49)
+
+        self.label_50 = QLabel(self.frame_72)
+        self.label_50.setObjectName(u"label_50")
+        self.label_50.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_39.addWidget(self.label_50, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_72)
+
+        self.frame_73 = QFrame(self.frame_36)
+        self.frame_73.setObjectName(u"frame_73")
+        self.frame_73.setFrameShape(QFrame.StyledPanel)
+        self.frame_73.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_40 = QHBoxLayout(self.frame_73)
+        self.horizontalLayout_40.setObjectName(u"horizontalLayout_40")
+        self.label_51 = QLabel(self.frame_73)
+        self.label_51.setObjectName(u"label_51")
+        self.label_51.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_40.addWidget(self.label_51)
+
+        self.label_52 = QLabel(self.frame_73)
+        self.label_52.setObjectName(u"label_52")
+        self.label_52.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_40.addWidget(self.label_52, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_73)
+
+        self.frame_74 = QFrame(self.frame_36)
+        self.frame_74.setObjectName(u"frame_74")
+        self.frame_74.setFrameShape(QFrame.StyledPanel)
+        self.frame_74.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_41 = QHBoxLayout(self.frame_74)
+        self.horizontalLayout_41.setObjectName(u"horizontalLayout_41")
+        self.label_53 = QLabel(self.frame_74)
+        self.label_53.setObjectName(u"label_53")
+        self.label_53.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_41.addWidget(self.label_53)
+
+        self.label_54 = QLabel(self.frame_74)
+        self.label_54.setObjectName(u"label_54")
+        self.label_54.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_41.addWidget(self.label_54, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_74)
+
+        self.frame_75 = QFrame(self.frame_36)
+        self.frame_75.setObjectName(u"frame_75")
+        self.frame_75.setFrameShape(QFrame.StyledPanel)
+        self.frame_75.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_42 = QHBoxLayout(self.frame_75)
+        self.horizontalLayout_42.setObjectName(u"horizontalLayout_42")
+        self.label_55 = QLabel(self.frame_75)
+        self.label_55.setObjectName(u"label_55")
+        self.label_55.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_42.addWidget(self.label_55)
+
+        self.label_56 = QLabel(self.frame_75)
+        self.label_56.setObjectName(u"label_56")
+        self.label_56.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_42.addWidget(self.label_56, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_19.addWidget(self.frame_75)
+
 
         self.horizontalLayout_8.addWidget(self.frame_36)
 
@@ -768,6 +1070,146 @@ class Ui_MainWindow(object):
         self.frame_37.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.frame_37.setFrameShape(QFrame.StyledPanel)
         self.frame_37.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_18 = QVBoxLayout(self.frame_37)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.frame_76 = QFrame(self.frame_37)
+        self.frame_76.setObjectName(u"frame_76")
+        self.frame_76.setFrameShape(QFrame.StyledPanel)
+        self.frame_76.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_43 = QHBoxLayout(self.frame_76)
+        self.horizontalLayout_43.setObjectName(u"horizontalLayout_43")
+        self.label_59 = QLabel(self.frame_76)
+        self.label_59.setObjectName(u"label_59")
+        self.label_59.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_43.addWidget(self.label_59)
+
+        self.label_60 = QLabel(self.frame_76)
+        self.label_60.setObjectName(u"label_60")
+        self.label_60.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_43.addWidget(self.label_60, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_18.addWidget(self.frame_76)
+
+        self.frame_77 = QFrame(self.frame_37)
+        self.frame_77.setObjectName(u"frame_77")
+        self.frame_77.setFrameShape(QFrame.StyledPanel)
+        self.frame_77.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_44 = QHBoxLayout(self.frame_77)
+        self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
+        self.label_61 = QLabel(self.frame_77)
+        self.label_61.setObjectName(u"label_61")
+        self.label_61.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_44.addWidget(self.label_61)
+
+        self.label_62 = QLabel(self.frame_77)
+        self.label_62.setObjectName(u"label_62")
+        self.label_62.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_44.addWidget(self.label_62, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_18.addWidget(self.frame_77)
+
+        self.frame_78 = QFrame(self.frame_37)
+        self.frame_78.setObjectName(u"frame_78")
+        self.frame_78.setFrameShape(QFrame.StyledPanel)
+        self.frame_78.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_45 = QHBoxLayout(self.frame_78)
+        self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
+        self.label_63 = QLabel(self.frame_78)
+        self.label_63.setObjectName(u"label_63")
+        self.label_63.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_45.addWidget(self.label_63)
+
+        self.label_64 = QLabel(self.frame_78)
+        self.label_64.setObjectName(u"label_64")
+        self.label_64.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_45.addWidget(self.label_64, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_18.addWidget(self.frame_78)
+
+        self.frame_79 = QFrame(self.frame_37)
+        self.frame_79.setObjectName(u"frame_79")
+        self.frame_79.setFrameShape(QFrame.StyledPanel)
+        self.frame_79.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_46 = QHBoxLayout(self.frame_79)
+        self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
+        self.label_65 = QLabel(self.frame_79)
+        self.label_65.setObjectName(u"label_65")
+        self.label_65.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_46.addWidget(self.label_65)
+
+        self.label_66 = QLabel(self.frame_79)
+        self.label_66.setObjectName(u"label_66")
+        self.label_66.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_46.addWidget(self.label_66, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_18.addWidget(self.frame_79)
+
+        self.frame_80 = QFrame(self.frame_37)
+        self.frame_80.setObjectName(u"frame_80")
+        self.frame_80.setFrameShape(QFrame.StyledPanel)
+        self.frame_80.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_47 = QHBoxLayout(self.frame_80)
+        self.horizontalLayout_47.setObjectName(u"horizontalLayout_47")
+        self.label_57 = QLabel(self.frame_80)
+        self.label_57.setObjectName(u"label_57")
+        self.label_57.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_47.addWidget(self.label_57)
+
+        self.label_58 = QLabel(self.frame_80)
+        self.label_58.setObjectName(u"label_58")
+        self.label_58.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_47.addWidget(self.label_58)
+
+
+        self.verticalLayout_18.addWidget(self.frame_80)
+
+        self.frame_81 = QFrame(self.frame_37)
+        self.frame_81.setObjectName(u"frame_81")
+        self.frame_81.setFrameShape(QFrame.StyledPanel)
+        self.frame_81.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_48 = QHBoxLayout(self.frame_81)
+        self.horizontalLayout_48.setObjectName(u"horizontalLayout_48")
+        self.label_67 = QLabel(self.frame_81)
+        self.label_67.setObjectName(u"label_67")
+        self.label_67.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_48.addWidget(self.label_67)
+
+        self.label_68 = QLabel(self.frame_81)
+        self.label_68.setObjectName(u"label_68")
+        self.label_68.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_48.addWidget(self.label_68, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_18.addWidget(self.frame_81)
+
 
         self.horizontalLayout_8.addWidget(self.frame_37)
 
@@ -795,10 +1237,12 @@ class Ui_MainWindow(object):
         self.frame_25.setFrameShape(QFrame.StyledPanel)
         self.frame_25.setFrameShadow(QFrame.Raised)
         self.verticalLayout_13 = QVBoxLayout(self.frame_25)
+        self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.frame_49 = QFrame(self.frame_25)
         self.frame_49.setObjectName(u"frame_49")
-        self.frame_49.setMinimumSize(QSize(0, 68))
+        self.frame_49.setMinimumSize(QSize(0, 70))
         self.frame_49.setSizeIncrement(QSize(0, 40))
         self.frame_49.setFrameShape(QFrame.StyledPanel)
         self.frame_49.setFrameShadow(QFrame.Raised)
@@ -847,7 +1291,8 @@ class Ui_MainWindow(object):
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
         self.comboBox_3.setObjectName(u"comboBox_3")
-        self.comboBox_3.setGeometry(QRect(40, 10, 131, 41))
+        self.comboBox_3.setGeometry(QRect(40, 10, 150, 35))
+        self.comboBox_3.setMinimumSize(QSize(150, 30))
         self.comboBox_3.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "background-color: rgb(50, 162, 244);")
 
@@ -877,12 +1322,154 @@ class Ui_MainWindow(object):
         self.frame_53.setFrameShape(QFrame.StyledPanel)
         self.frame_53.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_18 = QHBoxLayout(self.frame_53)
+        self.horizontalLayout_18.setSpacing(10)
         self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
         self.frame_54 = QFrame(self.frame_53)
         self.frame_54.setObjectName(u"frame_54")
         self.frame_54.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.frame_54.setFrameShape(QFrame.StyledPanel)
         self.frame_54.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_20 = QVBoxLayout(self.frame_54)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.frame_82 = QFrame(self.frame_54)
+        self.frame_82.setObjectName(u"frame_82")
+        self.frame_82.setFrameShape(QFrame.StyledPanel)
+        self.frame_82.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_28 = QHBoxLayout(self.frame_82)
+        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+        self.label_69 = QLabel(self.frame_82)
+        self.label_69.setObjectName(u"label_69")
+        self.label_69.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_28.addWidget(self.label_69)
+
+        self.label_70 = QLabel(self.frame_82)
+        self.label_70.setObjectName(u"label_70")
+        self.label_70.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_28.addWidget(self.label_70)
+
+
+        self.verticalLayout_20.addWidget(self.frame_82)
+
+        self.frame_83 = QFrame(self.frame_54)
+        self.frame_83.setObjectName(u"frame_83")
+        self.frame_83.setFrameShape(QFrame.StyledPanel)
+        self.frame_83.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_29 = QHBoxLayout(self.frame_83)
+        self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
+        self.label_71 = QLabel(self.frame_83)
+        self.label_71.setObjectName(u"label_71")
+        self.label_71.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_29.addWidget(self.label_71)
+
+        self.label_72 = QLabel(self.frame_83)
+        self.label_72.setObjectName(u"label_72")
+        self.label_72.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_29.addWidget(self.label_72)
+
+
+        self.verticalLayout_20.addWidget(self.frame_83)
+
+        self.frame_84 = QFrame(self.frame_54)
+        self.frame_84.setObjectName(u"frame_84")
+        self.frame_84.setFrameShape(QFrame.StyledPanel)
+        self.frame_84.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_30 = QHBoxLayout(self.frame_84)
+        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.label_73 = QLabel(self.frame_84)
+        self.label_73.setObjectName(u"label_73")
+        self.label_73.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_30.addWidget(self.label_73)
+
+        self.label_74 = QLabel(self.frame_84)
+        self.label_74.setObjectName(u"label_74")
+        self.label_74.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_30.addWidget(self.label_74)
+
+
+        self.verticalLayout_20.addWidget(self.frame_84)
+
+        self.frame_85 = QFrame(self.frame_54)
+        self.frame_85.setObjectName(u"frame_85")
+        self.frame_85.setFrameShape(QFrame.StyledPanel)
+        self.frame_85.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_31 = QHBoxLayout(self.frame_85)
+        self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
+        self.label_75 = QLabel(self.frame_85)
+        self.label_75.setObjectName(u"label_75")
+        self.label_75.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_31.addWidget(self.label_75)
+
+        self.label_76 = QLabel(self.frame_85)
+        self.label_76.setObjectName(u"label_76")
+        self.label_76.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_31.addWidget(self.label_76)
+
+
+        self.verticalLayout_20.addWidget(self.frame_85)
+
+        self.frame_86 = QFrame(self.frame_54)
+        self.frame_86.setObjectName(u"frame_86")
+        self.frame_86.setFrameShape(QFrame.StyledPanel)
+        self.frame_86.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_32 = QHBoxLayout(self.frame_86)
+        self.horizontalLayout_32.setObjectName(u"horizontalLayout_32")
+        self.label_77 = QLabel(self.frame_86)
+        self.label_77.setObjectName(u"label_77")
+        self.label_77.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_32.addWidget(self.label_77)
+
+        self.label_78 = QLabel(self.frame_86)
+        self.label_78.setObjectName(u"label_78")
+        self.label_78.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_32.addWidget(self.label_78)
+
+
+        self.verticalLayout_20.addWidget(self.frame_86)
+
+        self.frame_87 = QFrame(self.frame_54)
+        self.frame_87.setObjectName(u"frame_87")
+        self.frame_87.setFrameShape(QFrame.StyledPanel)
+        self.frame_87.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_33 = QHBoxLayout(self.frame_87)
+        self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
+        self.label_79 = QLabel(self.frame_87)
+        self.label_79.setObjectName(u"label_79")
+        self.label_79.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_33.addWidget(self.label_79)
+
+        self.label_80 = QLabel(self.frame_87)
+        self.label_80.setObjectName(u"label_80")
+        self.label_80.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_33.addWidget(self.label_80)
+
+
+        self.verticalLayout_20.addWidget(self.frame_87)
+
 
         self.horizontalLayout_18.addWidget(self.frame_54)
 
@@ -891,6 +1478,146 @@ class Ui_MainWindow(object):
         self.frame_55.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.frame_55.setFrameShape(QFrame.StyledPanel)
         self.frame_55.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_21 = QVBoxLayout(self.frame_55)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.frame_88 = QFrame(self.frame_55)
+        self.frame_88.setObjectName(u"frame_88")
+        self.frame_88.setFrameShape(QFrame.StyledPanel)
+        self.frame_88.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_34 = QHBoxLayout(self.frame_88)
+        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
+        self.label_81 = QLabel(self.frame_88)
+        self.label_81.setObjectName(u"label_81")
+        self.label_81.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_34.addWidget(self.label_81)
+
+        self.label_82 = QLabel(self.frame_88)
+        self.label_82.setObjectName(u"label_82")
+        self.label_82.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_34.addWidget(self.label_82)
+
+
+        self.verticalLayout_21.addWidget(self.frame_88)
+
+        self.frame_89 = QFrame(self.frame_55)
+        self.frame_89.setObjectName(u"frame_89")
+        self.frame_89.setFrameShape(QFrame.StyledPanel)
+        self.frame_89.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_35 = QHBoxLayout(self.frame_89)
+        self.horizontalLayout_35.setObjectName(u"horizontalLayout_35")
+        self.label_83 = QLabel(self.frame_89)
+        self.label_83.setObjectName(u"label_83")
+        self.label_83.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_35.addWidget(self.label_83)
+
+        self.label_84 = QLabel(self.frame_89)
+        self.label_84.setObjectName(u"label_84")
+        self.label_84.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_35.addWidget(self.label_84)
+
+
+        self.verticalLayout_21.addWidget(self.frame_89)
+
+        self.frame_90 = QFrame(self.frame_55)
+        self.frame_90.setObjectName(u"frame_90")
+        self.frame_90.setFrameShape(QFrame.StyledPanel)
+        self.frame_90.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_36 = QHBoxLayout(self.frame_90)
+        self.horizontalLayout_36.setObjectName(u"horizontalLayout_36")
+        self.label_85 = QLabel(self.frame_90)
+        self.label_85.setObjectName(u"label_85")
+        self.label_85.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_36.addWidget(self.label_85)
+
+        self.label_86 = QLabel(self.frame_90)
+        self.label_86.setObjectName(u"label_86")
+        self.label_86.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_36.addWidget(self.label_86)
+
+
+        self.verticalLayout_21.addWidget(self.frame_90)
+
+        self.frame_91 = QFrame(self.frame_55)
+        self.frame_91.setObjectName(u"frame_91")
+        self.frame_91.setFrameShape(QFrame.StyledPanel)
+        self.frame_91.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_49 = QHBoxLayout(self.frame_91)
+        self.horizontalLayout_49.setObjectName(u"horizontalLayout_49")
+        self.label_87 = QLabel(self.frame_91)
+        self.label_87.setObjectName(u"label_87")
+        self.label_87.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_49.addWidget(self.label_87)
+
+        self.label_88 = QLabel(self.frame_91)
+        self.label_88.setObjectName(u"label_88")
+        self.label_88.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_49.addWidget(self.label_88)
+
+
+        self.verticalLayout_21.addWidget(self.frame_91)
+
+        self.frame_92 = QFrame(self.frame_55)
+        self.frame_92.setObjectName(u"frame_92")
+        self.frame_92.setFrameShape(QFrame.StyledPanel)
+        self.frame_92.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_50 = QHBoxLayout(self.frame_92)
+        self.horizontalLayout_50.setObjectName(u"horizontalLayout_50")
+        self.label_89 = QLabel(self.frame_92)
+        self.label_89.setObjectName(u"label_89")
+        self.label_89.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_50.addWidget(self.label_89)
+
+        self.label_90 = QLabel(self.frame_92)
+        self.label_90.setObjectName(u"label_90")
+        self.label_90.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_50.addWidget(self.label_90)
+
+
+        self.verticalLayout_21.addWidget(self.frame_92)
+
+        self.frame_93 = QFrame(self.frame_55)
+        self.frame_93.setObjectName(u"frame_93")
+        self.frame_93.setFrameShape(QFrame.StyledPanel)
+        self.frame_93.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_51 = QHBoxLayout(self.frame_93)
+        self.horizontalLayout_51.setObjectName(u"horizontalLayout_51")
+        self.label_91 = QLabel(self.frame_93)
+        self.label_91.setObjectName(u"label_91")
+        self.label_91.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_51.addWidget(self.label_91)
+
+        self.label_92 = QLabel(self.frame_93)
+        self.label_92.setObjectName(u"label_92")
+        self.label_92.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_51.addWidget(self.label_92)
+
+
+        self.verticalLayout_21.addWidget(self.frame_93)
+
 
         self.horizontalLayout_18.addWidget(self.frame_55)
 
@@ -900,6 +1627,315 @@ class Ui_MainWindow(object):
         self.stackedWidget_4.addWidget(self.page)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
+        self.gridLayout_26 = QGridLayout(self.page_2)
+        self.gridLayout_26.setObjectName(u"gridLayout_26")
+        self.frame_94 = QFrame(self.page_2)
+        self.frame_94.setObjectName(u"frame_94")
+        self.frame_94.setFrameShape(QFrame.StyledPanel)
+        self.frame_94.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_27 = QHBoxLayout(self.frame_94)
+        self.horizontalLayout_27.setSpacing(10)
+        self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
+        self.horizontalLayout_27.setContentsMargins(0, 0, 0, 0)
+        self.frame_95 = QFrame(self.frame_94)
+        self.frame_95.setObjectName(u"frame_95")
+        self.frame_95.setStyleSheet(u"background-color: rgb(34, 34, 34);")
+        self.frame_95.setFrameShape(QFrame.StyledPanel)
+        self.frame_95.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_23 = QVBoxLayout(self.frame_95)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.frame_97 = QFrame(self.frame_95)
+        self.frame_97.setObjectName(u"frame_97")
+        self.frame_97.setFrameShape(QFrame.StyledPanel)
+        self.frame_97.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_52 = QHBoxLayout(self.frame_97)
+        self.horizontalLayout_52.setObjectName(u"horizontalLayout_52")
+        self.label_93 = QLabel(self.frame_97)
+        self.label_93.setObjectName(u"label_93")
+        self.label_93.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_52.addWidget(self.label_93)
+
+        self.label_94 = QLabel(self.frame_97)
+        self.label_94.setObjectName(u"label_94")
+        self.label_94.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_52.addWidget(self.label_94)
+
+
+        self.verticalLayout_23.addWidget(self.frame_97)
+
+        self.frame_98 = QFrame(self.frame_95)
+        self.frame_98.setObjectName(u"frame_98")
+        self.frame_98.setFrameShape(QFrame.StyledPanel)
+        self.frame_98.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_53 = QHBoxLayout(self.frame_98)
+        self.horizontalLayout_53.setObjectName(u"horizontalLayout_53")
+        self.label_95 = QLabel(self.frame_98)
+        self.label_95.setObjectName(u"label_95")
+        self.label_95.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_53.addWidget(self.label_95)
+
+        self.label_96 = QLabel(self.frame_98)
+        self.label_96.setObjectName(u"label_96")
+        self.label_96.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_53.addWidget(self.label_96)
+
+
+        self.verticalLayout_23.addWidget(self.frame_98)
+
+        self.frame_99 = QFrame(self.frame_95)
+        self.frame_99.setObjectName(u"frame_99")
+        self.frame_99.setFrameShape(QFrame.StyledPanel)
+        self.frame_99.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_54 = QHBoxLayout(self.frame_99)
+        self.horizontalLayout_54.setObjectName(u"horizontalLayout_54")
+        self.label_97 = QLabel(self.frame_99)
+        self.label_97.setObjectName(u"label_97")
+        self.label_97.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_54.addWidget(self.label_97)
+
+        self.label_98 = QLabel(self.frame_99)
+        self.label_98.setObjectName(u"label_98")
+        self.label_98.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_54.addWidget(self.label_98)
+
+
+        self.verticalLayout_23.addWidget(self.frame_99)
+
+        self.frame_100 = QFrame(self.frame_95)
+        self.frame_100.setObjectName(u"frame_100")
+        self.frame_100.setFrameShape(QFrame.StyledPanel)
+        self.frame_100.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_55 = QHBoxLayout(self.frame_100)
+        self.horizontalLayout_55.setObjectName(u"horizontalLayout_55")
+        self.label_99 = QLabel(self.frame_100)
+        self.label_99.setObjectName(u"label_99")
+        self.label_99.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_55.addWidget(self.label_99)
+
+        self.label_100 = QLabel(self.frame_100)
+        self.label_100.setObjectName(u"label_100")
+        self.label_100.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_55.addWidget(self.label_100)
+
+
+        self.verticalLayout_23.addWidget(self.frame_100)
+
+        self.frame_101 = QFrame(self.frame_95)
+        self.frame_101.setObjectName(u"frame_101")
+        self.frame_101.setFrameShape(QFrame.StyledPanel)
+        self.frame_101.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_56 = QHBoxLayout(self.frame_101)
+        self.horizontalLayout_56.setObjectName(u"horizontalLayout_56")
+        self.label_101 = QLabel(self.frame_101)
+        self.label_101.setObjectName(u"label_101")
+        self.label_101.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_56.addWidget(self.label_101)
+
+        self.label_102 = QLabel(self.frame_101)
+        self.label_102.setObjectName(u"label_102")
+        self.label_102.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_56.addWidget(self.label_102)
+
+
+        self.verticalLayout_23.addWidget(self.frame_101)
+
+        self.frame_102 = QFrame(self.frame_95)
+        self.frame_102.setObjectName(u"frame_102")
+        self.frame_102.setFrameShape(QFrame.StyledPanel)
+        self.frame_102.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_57 = QHBoxLayout(self.frame_102)
+        self.horizontalLayout_57.setObjectName(u"horizontalLayout_57")
+        self.label_103 = QLabel(self.frame_102)
+        self.label_103.setObjectName(u"label_103")
+        self.label_103.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_57.addWidget(self.label_103)
+
+        self.label_104 = QLabel(self.frame_102)
+        self.label_104.setObjectName(u"label_104")
+        self.label_104.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_57.addWidget(self.label_104)
+
+
+        self.verticalLayout_23.addWidget(self.frame_102)
+
+
+        self.horizontalLayout_27.addWidget(self.frame_95)
+
+        self.frame_96 = QFrame(self.frame_94)
+        self.frame_96.setObjectName(u"frame_96")
+        self.frame_96.setStyleSheet(u"background-color: rgb(34, 34, 34);")
+        self.frame_96.setFrameShape(QFrame.StyledPanel)
+        self.frame_96.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_22 = QVBoxLayout(self.frame_96)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.frame_103 = QFrame(self.frame_96)
+        self.frame_103.setObjectName(u"frame_103")
+        self.frame_103.setFrameShape(QFrame.StyledPanel)
+        self.frame_103.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_58 = QHBoxLayout(self.frame_103)
+        self.horizontalLayout_58.setObjectName(u"horizontalLayout_58")
+        self.label_105 = QLabel(self.frame_103)
+        self.label_105.setObjectName(u"label_105")
+        self.label_105.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_58.addWidget(self.label_105)
+
+        self.label_106 = QLabel(self.frame_103)
+        self.label_106.setObjectName(u"label_106")
+        self.label_106.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_58.addWidget(self.label_106)
+
+
+        self.verticalLayout_22.addWidget(self.frame_103)
+
+        self.frame_104 = QFrame(self.frame_96)
+        self.frame_104.setObjectName(u"frame_104")
+        self.frame_104.setFrameShape(QFrame.StyledPanel)
+        self.frame_104.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_59 = QHBoxLayout(self.frame_104)
+        self.horizontalLayout_59.setObjectName(u"horizontalLayout_59")
+        self.label_107 = QLabel(self.frame_104)
+        self.label_107.setObjectName(u"label_107")
+        self.label_107.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_59.addWidget(self.label_107)
+
+        self.label_108 = QLabel(self.frame_104)
+        self.label_108.setObjectName(u"label_108")
+        self.label_108.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_59.addWidget(self.label_108)
+
+
+        self.verticalLayout_22.addWidget(self.frame_104)
+
+        self.frame_105 = QFrame(self.frame_96)
+        self.frame_105.setObjectName(u"frame_105")
+        self.frame_105.setFrameShape(QFrame.StyledPanel)
+        self.frame_105.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_60 = QHBoxLayout(self.frame_105)
+        self.horizontalLayout_60.setObjectName(u"horizontalLayout_60")
+        self.label_109 = QLabel(self.frame_105)
+        self.label_109.setObjectName(u"label_109")
+        self.label_109.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_60.addWidget(self.label_109)
+
+        self.label_110 = QLabel(self.frame_105)
+        self.label_110.setObjectName(u"label_110")
+        self.label_110.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_60.addWidget(self.label_110)
+
+
+        self.verticalLayout_22.addWidget(self.frame_105)
+
+        self.frame_106 = QFrame(self.frame_96)
+        self.frame_106.setObjectName(u"frame_106")
+        self.frame_106.setFrameShape(QFrame.StyledPanel)
+        self.frame_106.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_61 = QHBoxLayout(self.frame_106)
+        self.horizontalLayout_61.setObjectName(u"horizontalLayout_61")
+        self.label_111 = QLabel(self.frame_106)
+        self.label_111.setObjectName(u"label_111")
+        self.label_111.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_61.addWidget(self.label_111)
+
+        self.label_112 = QLabel(self.frame_106)
+        self.label_112.setObjectName(u"label_112")
+        self.label_112.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_61.addWidget(self.label_112)
+
+
+        self.verticalLayout_22.addWidget(self.frame_106)
+
+        self.frame_107 = QFrame(self.frame_96)
+        self.frame_107.setObjectName(u"frame_107")
+        self.frame_107.setFrameShape(QFrame.StyledPanel)
+        self.frame_107.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_62 = QHBoxLayout(self.frame_107)
+        self.horizontalLayout_62.setObjectName(u"horizontalLayout_62")
+        self.label_113 = QLabel(self.frame_107)
+        self.label_113.setObjectName(u"label_113")
+        self.label_113.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_62.addWidget(self.label_113)
+
+        self.label_114 = QLabel(self.frame_107)
+        self.label_114.setObjectName(u"label_114")
+        self.label_114.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_62.addWidget(self.label_114)
+
+
+        self.verticalLayout_22.addWidget(self.frame_107)
+
+        self.frame_108 = QFrame(self.frame_96)
+        self.frame_108.setObjectName(u"frame_108")
+        self.frame_108.setFrameShape(QFrame.StyledPanel)
+        self.frame_108.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_63 = QHBoxLayout(self.frame_108)
+        self.horizontalLayout_63.setObjectName(u"horizontalLayout_63")
+        self.label_115 = QLabel(self.frame_108)
+        self.label_115.setObjectName(u"label_115")
+        self.label_115.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_63.addWidget(self.label_115)
+
+        self.label_116 = QLabel(self.frame_108)
+        self.label_116.setObjectName(u"label_116")
+        self.label_116.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_63.addWidget(self.label_116)
+
+
+        self.verticalLayout_22.addWidget(self.frame_108)
+
+
+        self.horizontalLayout_27.addWidget(self.frame_96)
+
+
+        self.gridLayout_26.addWidget(self.frame_94, 0, 0, 1, 1)
+
         self.stackedWidget_4.addWidget(self.page_2)
 
         self.gridLayout_23.addWidget(self.stackedWidget_4, 0, 0, 1, 1)
@@ -911,32 +1947,6 @@ class Ui_MainWindow(object):
         self.gridLayout_13.addWidget(self.frame_25, 0, 0, 1, 1)
 
         self.stackedWidget_2.addWidget(self.station_2)
-        self.station_3 = QWidget()
-        self.station_3.setObjectName(u"station_3")
-        self.gridLayout_14 = QGridLayout(self.station_3)
-        self.gridLayout_14.setObjectName(u"gridLayout_14")
-        self.frame_26 = QFrame(self.station_3)
-        self.frame_26.setObjectName(u"frame_26")
-        self.frame_26.setStyleSheet(u"background-color: rgb(24, 24, 24);")
-        self.frame_26.setFrameShape(QFrame.StyledPanel)
-        self.frame_26.setFrameShadow(QFrame.Raised)
-
-        self.gridLayout_14.addWidget(self.frame_26, 0, 0, 1, 1)
-
-        self.stackedWidget_2.addWidget(self.station_3)
-        self.station_4 = QWidget()
-        self.station_4.setObjectName(u"station_4")
-        self.gridLayout_15 = QGridLayout(self.station_4)
-        self.gridLayout_15.setObjectName(u"gridLayout_15")
-        self.frame_27 = QFrame(self.station_4)
-        self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setStyleSheet(u"background-color: rgb(24, 24, 24);")
-        self.frame_27.setFrameShape(QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Raised)
-
-        self.gridLayout_15.addWidget(self.frame_27, 0, 0, 1, 1)
-
-        self.stackedWidget_2.addWidget(self.station_4)
 
         self.gridLayout_11.addWidget(self.stackedWidget_2, 0, 0, 1, 1)
 
@@ -1163,12 +2173,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.frame_62 = QFrame(self.frame_61)
         self.frame_62.setObjectName(u"frame_62")
-        self.frame_62.setMinimumSize(QSize(0, 70))
+        self.frame_62.setMinimumSize(QSize(0, 100))
         self.frame_62.setFrameShape(QFrame.StyledPanel)
         self.frame_62.setFrameShadow(QFrame.Raised)
         self.label_25 = QLabel(self.frame_62)
         self.label_25.setObjectName(u"label_25")
-        self.label_25.setGeometry(QRect(10, 10, 631, 41))
+        self.label_25.setGeometry(QRect(10, 10, 631, 100))
+        self.label_25.setMinimumSize(QSize(0, 100))
         self.label_25.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 75 36pt \"MS Shell Dlg 2\";")
 
@@ -1182,9 +2193,10 @@ class Ui_MainWindow(object):
         self.frame_63.setFrameShadow(QFrame.Raised)
         self.label_26 = QLabel(self.frame_63)
         self.label_26.setObjectName(u"label_26")
-        self.label_26.setGeometry(QRect(20, 20, 591, 331))
+        self.label_26.setGeometry(QRect(20, 20, 591, 400))
         self.label_26.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
+        self.label_26.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.label_26.setWordWrap(True)
 
         self.verticalLayout_15.addWidget(self.frame_63)
@@ -1210,10 +2222,12 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.comboBox_2.currentIndexChanged.connect(self.stackedWidget_3.setCurrentIndex)
         self.comboBox.currentIndexChanged.connect(self.stackedWidget_2.setCurrentIndex)
+        self.comboBox_3.currentIndexChanged.connect(self.stackedWidget_4.setCurrentIndex)
 
         self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
         self.stackedWidget_3.setCurrentIndex(0)
+        self.stackedWidget_4.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
 
 
@@ -1234,6 +2248,7 @@ class Ui_MainWindow(object):
         self.About.setText(QCoreApplication.translate("MainWindow", u"About", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Total Chargers", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Total Stations", None))
+        self.label_117.setText(QCoreApplication.translate("MainWindow", u"Occupied Chargers", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Carbon Foot print Reduction", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"CO2 Saved", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"10 Units", None))
@@ -1242,8 +2257,6 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Monthly Revenue", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Station 1", None))
         self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Station 2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Station 3", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Station 4", None))
 
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Location", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Camera View", None))
@@ -1262,13 +2275,95 @@ class Ui_MainWindow(object):
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"EV Not Connected", None))
-        self.label_22.setText("")
+        self.label_37.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
+        self.label_38.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"Charging start Time", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_39.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.label_40.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_41.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
+        self.label_42.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
+        self.label_44.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_45.setText(QCoreApplication.translate("MainWindow", u"Charger name", None))
+        self.label_46.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_47.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_49.setText(QCoreApplication.translate("MainWindow", u"Charger ID", None))
+        self.label_50.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_51.setText(QCoreApplication.translate("MainWindow", u"Minimum Current", None))
+        self.label_52.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_53.setText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
+        self.label_54.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_55.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
+        self.label_56.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_59.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
+        self.label_60.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_61.setText(QCoreApplication.translate("MainWindow", u"Charging start Time", None))
+        self.label_62.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.label_64.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.label_66.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_57.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
+        self.label_58.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_67.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Location", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"Camera View", None))
         self.comboBox_3.setItemText(0, QCoreApplication.translate("MainWindow", u"Charger 1", None))
         self.comboBox_3.setItemText(1, QCoreApplication.translate("MainWindow", u"Charger 2", None))
 
+        self.label_69.setText(QCoreApplication.translate("MainWindow", u"Charger Name", None))
+        self.label_70.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_71.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
+        self.label_72.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_73.setText(QCoreApplication.translate("MainWindow", u"Charger ID", None))
+        self.label_74.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_75.setText(QCoreApplication.translate("MainWindow", u"Minimum Current", None))
+        self.label_76.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_77.setText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
+        self.label_78.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_79.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
+        self.label_80.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_81.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
+        self.label_82.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_83.setText(QCoreApplication.translate("MainWindow", u"Chrging Start Time", None))
+        self.label_84.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_85.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.label_86.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_87.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.label_88.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_89.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
+        self.label_90.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_91.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
+        self.label_92.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_93.setText(QCoreApplication.translate("MainWindow", u"Charger Name", None))
+        self.label_94.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_95.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
+        self.label_96.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_97.setText(QCoreApplication.translate("MainWindow", u"Charger ID", None))
+        self.label_98.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_99.setText(QCoreApplication.translate("MainWindow", u"Minimum Current", None))
+        self.label_100.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_101.setText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
+        self.label_102.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_103.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
+        self.label_104.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.label_105.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
+        self.label_106.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_107.setText(QCoreApplication.translate("MainWindow", u"Charging Start Time", None))
+        self.label_108.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_109.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.label_110.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_111.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.label_112.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_113.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
+        self.label_114.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_115.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
+        self.label_116.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Sales", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Management Cost", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"Electricity Cost", None))
@@ -1288,8 +2383,6 @@ class Ui_MainWindow(object):
 "EV Charge\u2019s mission is to build EV charging solutions that scale. This means making EV charger deployment fast and affordable. And making charging easy and reliable for every EV driver.\n"
 "\u200d\n"
 "EV Charge sits at the nexus point between vehicles, building owners, and the grid. With software, we can help buildings, communities, and entire cities charge more EVs than their infrastructure would otherwise allow. We can optimize charging for grid capacity, cost, or carbon impact. And we can enable bi-di"
-                        "rectional communication between individual EVs and the grid.\n"
-"\n"
-"EV Charge is building for scale because our planet needs millions more EVs, and consumers want millions more EVs. Automobiles have been powered by petrol since 1892. The switch to electric vehicles is a once-per-century economic and cultural shift. We are pioneers for the new era of transportation and energy.", None))
+                        "rectional communication between individual EVs and the grid.", None))
     # retranslateUi
 
