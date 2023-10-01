@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'startYyTeuv.ui'
+## Form generated from reading UI file 'startnanqsj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -20,7 +20,7 @@ import next_rc
 import log_in_rc
 import sign_in_rc
 
-class Ui_MainWindow(object):
+class Ui_StartWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -131,7 +131,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setContentsMargins(9, 0, -1, 0)
         self.pushButton = QPushButton(self.frame_8)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(100, 45))
+        self.pushButton.setMinimumSize(QSize(100, 55))
         self.pushButton.setMaximumSize(QSize(250, 16777215))
         self.pushButton.setStyleSheet(u"border-image: url(:/newPrefix/create_account.png);")
 
@@ -153,7 +153,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_2 = QPushButton(self.frame_9)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(70, 40))
+        self.pushButton_2.setMinimumSize(QSize(80, 50))
         self.pushButton_2.setMaximumSize(QSize(100, 16777215))
         self.pushButton_2.setStyleSheet(u"border-image: url(:/newPrefix/button_2.png);")
 
@@ -204,10 +204,11 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShadow(QFrame.Raised)
         self.label_5 = QLabel(self.frame_15)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(0, 0, 311, 61))
+        self.label_5.setGeometry(QRect(0, 0, 338, 60))
+        self.label_5.setMinimumSize(QSize(0, 60))
         self.label_5.setStyleSheet(u"color: rgb(255, 255, 255);\n"
-"font: 75 26pt \"MS Shell Dlg 2\";\n" 
-"padding-left: 20px;\n")
+"font: 75 26pt \"MS Shell Dlg 2\";\n"
+"")
         self.label_5.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_3.addWidget(self.frame_15, 0, Qt.AlignTop)
@@ -308,7 +309,7 @@ class Ui_MainWindow(object):
 
         self.pushButton_6 = QPushButton(self.frame_14)
         self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setMinimumSize(QSize(0, 45))
+        self.pushButton_6.setMinimumSize(QSize(100, 65))
         self.pushButton_6.setStyleSheet(u"border-image: url(:/newPrefix/button_1.png);")
 
         self.horizontalLayout_4.addWidget(self.pushButton_6)
@@ -366,18 +367,18 @@ class Ui_MainWindow(object):
         self.frame_18.setFrameShadow(QFrame.Raised)
         self.label_6 = QLabel(self.frame_18)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(0, 0, 341, 70))
+        self.label_6.setGeometry(QRect(0, 0, 342, 70))
         self.label_6.setMinimumSize(QSize(0, 70))
         self.label_6.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 75 26pt \"MS Shell Dlg 2\";")
         self.label_6.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_7.addWidget(self.frame_18, 0, Qt.AlignTop)
+        self.verticalLayout_7.addWidget(self.frame_18, 0, Qt.AlignBottom)
 
         self.frame_19 = QFrame(self.frame_17)
         self.frame_19.setObjectName(u"frame_19")
-        sizePolicy.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
-        self.frame_19.setSizePolicy(sizePolicy)
+        sizePolicy1.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
+        self.frame_19.setSizePolicy(sizePolicy1)
         self.frame_19.setFrameShape(QFrame.StyledPanel)
         self.frame_19.setFrameShadow(QFrame.Raised)
         self.verticalLayout_8 = QVBoxLayout(self.frame_19)
@@ -386,7 +387,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setContentsMargins(-1, -1, -1, 30)
         self.lineEdit_6 = QLineEdit(self.frame_19)
         self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setMinimumSize(QSize(0, 40))
+        self.lineEdit_6.setMinimumSize(QSize(0, 70))
         self.lineEdit_6.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -398,7 +399,7 @@ class Ui_MainWindow(object):
 
         self.lineEdit_7 = QLineEdit(self.frame_19)
         self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setMinimumSize(QSize(0, 40))
+        self.lineEdit_7.setMinimumSize(QSize(0, 70))
         self.lineEdit_7.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -413,15 +414,21 @@ class Ui_MainWindow(object):
 
         self.frame_20 = QFrame(self.frame_17)
         self.frame_20.setObjectName(u"frame_20")
-        self.frame_20.setMinimumSize(QSize(0, 80))
+        self.frame_20.setMinimumSize(QSize(200, 80))
         self.frame_20.setFrameShape(QFrame.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Raised)
+        self.gridLayout_9 = QGridLayout(self.frame_20)
+        self.gridLayout_9.setObjectName(u"gridLayout_9")
         self.pushButton_7 = QPushButton(self.frame_20)
         self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setGeometry(QRect(110, 0, 131, 61))
+        self.pushButton_7.setMinimumSize(QSize(100, 65))
+        self.pushButton_7.setMaximumSize(QSize(120, 70))
         self.pushButton_7.setStyleSheet(u"border-image: url(:/newPrefix/button_1.png);")
 
-        self.verticalLayout_7.addWidget(self.frame_20)
+        self.gridLayout_9.addWidget(self.pushButton_7, 0, 0, 1, 1)
+
+
+        self.verticalLayout_7.addWidget(self.frame_20, 0, Qt.AlignTop)
 
 
         self.gridLayout_8.addWidget(self.frame_17, 0, 0, 1, 1)

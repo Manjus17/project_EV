@@ -11,6 +11,7 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+# from app_function import *
 
 from PySide2extn.RoundProgressBar import roundProgressBar
 
@@ -20,8 +21,17 @@ import down_rc
 import menu_rc
 import noti_rc
 
+total_stations = 10
+total_chargers = 40
+in_use_chargers = 26
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        global total_chargers
+        global total_stations
+        global in_use_chargers
+
+
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(894, 582)
@@ -255,7 +265,7 @@ class Ui_MainWindow(object):
         self.lcdNumber_2 = QLCDNumber(self.frame_18)
         self.lcdNumber_2.setObjectName(u"lcdNumber_2")
         self.lcdNumber_2.setDigitCount(2)
-        self.lcdNumber_2.setProperty("intValue", 40)
+        self.lcdNumber_2.setProperty("intValue", total_chargers)
 
         self.horizontalLayout_6.addWidget(self.lcdNumber_2)
 
@@ -281,7 +291,7 @@ class Ui_MainWindow(object):
         self.lcdNumber = QLCDNumber(self.frame_16)
         self.lcdNumber.setObjectName(u"lcdNumber")
         self.lcdNumber.setDigitCount(2)
-        self.lcdNumber.setProperty("intValue", 10)
+        self.lcdNumber.setProperty("intValue", total_stations)
 
         self.horizontalLayout_5.addWidget(self.lcdNumber)
 
@@ -346,16 +356,12 @@ class Ui_MainWindow(object):
         self.lcdNumber_3 = QLCDNumber(self.frame_27)
         self.lcdNumber_3.setObjectName(u"lcdNumber_3")
         self.lcdNumber_3.setDigitCount(2)
-        self.lcdNumber_3.setProperty("intValue", 26)
+        self.lcdNumber_3.setProperty("intValue", in_use_chargers)
 
         self.horizontalLayout_64.addWidget(self.lcdNumber_3)
 
 
         self.verticalLayout_24.addWidget(self.frame_27, 0, Qt.AlignBottom)
-
-        self.prg_in.rpb_setRange(0, 100)
-        self.prg_in.rpb_setBarStyle('Pizza') 
-        self.prg_in.rpb_setValue(40)
 
         
         self.gridLayout_8.addWidget(self.frame_13, 0, 1, 1, 1)

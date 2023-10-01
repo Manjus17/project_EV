@@ -11,6 +11,10 @@ from app import Ui_MainWindow
 
 # IMPORT FUNCTIONS
 from app_function import *
+# import app_function.total_chargers
+from app import total_chargers, in_use_chargers
+
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -19,6 +23,14 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # UIFunctions.home_page_fun(self)
+        global total_chargers
+        global in_use_chargers
+        # print(total_chargers)
+        self.ui.prg_in.rpb_setRange(0, 100)
+        self.ui.prg_in.rpb_setBarStyle('Pizza') 
+        value = UIFunctions.progress_bar_value(in_use_chargers, total_chargers)
+        self.ui.prg_in.rpb_setValue(value)
+        
 
         self.ui.home.clicked.connect(lambda: UIFunctions.home_page_fun(self))
 

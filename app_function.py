@@ -204,3 +204,7 @@ class UIFunctions(MainWindow):
         "font: 14pt \"Consolas\";\n"
         "padding: 3px 5px;")
    
+
+    def progress_bar_value(a, b):
+        ans = (a/b)*100
+        return ans

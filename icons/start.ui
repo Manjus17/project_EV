@@ -217,7 +217,7 @@ font: 40pt &quot;Calibri&quot;;</string>
                          <property name="minimumSize">
                           <size>
                            <width>100</width>
-                           <height>45</height>
+                           <height>55</height>
                           </size>
                          </property>
                          <property name="maximumSize">
@@ -261,8 +261,8 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                            <widget class="QPushButton" name="pushButton_2">
                             <property name="minimumSize">
                              <size>
-                              <width>70</width>
-                              <height>40</height>
+                              <width>80</width>
+                              <height>50</height>
                              </size>
                             </property>
                             <property name="maximumSize">
@@ -374,9 +374,15 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>311</width>
-                               <height>61</height>
+                               <width>338</width>
+                               <height>60</height>
                               </rect>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>60</height>
+                              </size>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">color: rgb(255, 255, 255);
@@ -412,7 +418,7 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>30</height>
+                                 <height>60</height>
                                 </size>
                                </property>
                                <property name="styleSheet">
@@ -433,7 +439,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>30</height>
+                                 <height>60</height>
                                 </size>
                                </property>
                                <property name="styleSheet">
@@ -454,7 +460,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>30</height>
+                                 <height>60</height>
                                 </size>
                                </property>
                                <property name="styleSheet">
@@ -475,7 +481,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>30</height>
+                                 <height>60</height>
                                 </size>
                                </property>
                                <property name="styleSheet">
@@ -496,7 +502,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
-                                 <height>30</height>
+                                 <height>60</height>
                                 </size>
                                </property>
                                <property name="styleSheet">
@@ -558,8 +564,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                            <widget class="QPushButton" name="pushButton_6">
                             <property name="minimumSize">
                              <size>
-                              <width>0</width>
-                              <height>45</height>
+                              <width>100</width>
+                              <height>65</height>
                              </size>
                             </property>
                             <property name="styleSheet">
@@ -651,7 +657,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_7">
-                    <item alignment="Qt::AlignTop">
+                    <item alignment="Qt::AlignBottom">
                      <widget class="QFrame" name="frame_18">
                       <property name="minimumSize">
                        <size>
@@ -670,7 +676,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>341</width>
+                         <width>342</width>
                          <height>70</height>
                         </rect>
                        </property>
@@ -696,7 +702,7 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
                     <item>
                      <widget class="QFrame" name="frame_19">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -719,7 +725,7 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
-                           <height>40</height>
+                           <height>70</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -740,7 +746,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
-                           <height>40</height>
+                           <height>70</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -759,11 +765,11 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                       </layout>
                      </widget>
                     </item>
-                    <item>
+                    <item alignment="Qt::AlignTop">
                      <widget class="QFrame" name="frame_20">
                       <property name="minimumSize">
                        <size>
-                        <width>0</width>
+                        <width>200</width>
                         <height>80</height>
                        </size>
                       </property>
@@ -773,22 +779,30 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QPushButton" name="pushButton_7">
-                       <property name="geometry">
-                        <rect>
-                         <x>110</x>
-                         <y>0</y>
-                         <width>131</width>
-                         <height>61</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-image: url(:/newPrefix/button_1.png);</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </widget>
+                      <layout class="QGridLayout" name="gridLayout_9">
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="pushButton_7">
+                         <property name="minimumSize">
+                          <size>
+                           <width>100</width>
+                           <height>65</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>120</width>
+                           <height>70</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/newPrefix/button_1.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                    </layout>
