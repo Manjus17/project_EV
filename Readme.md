@@ -8,8 +8,8 @@
 - connected the login and create account pages with the main app
 
 ## Done Today
-- connected the login and create account pages with the main app
-- integrated of progress bar algorithm in python app
+- changed ui of home page
+- done little bit documentation
 
 ## to do
 - intergation of algorithm in the python app

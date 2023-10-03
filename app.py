@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'maindKjtEA.ui'
+## Form generated from reading UI file 'mainGyHXSv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -11,7 +11,6 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-# from app_function import *
 
 from PySide2extn.RoundProgressBar import roundProgressBar
 
@@ -21,25 +20,32 @@ import down_rc
 import menu_rc
 import noti_rc
 
-total_stations = 10
-total_chargers = 40
+##########################################################################################################
+# VARIABLES FOR TOTAL AND IN USE CHARGERS
+##########################################################################################################
+total_chargers = 58
 in_use_chargers = 26
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        global total_chargers
-        global total_stations
         global in_use_chargers
+        global total_chargers
 
 
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
+
+        # main window
         MainWindow.resize(894, 582)
         MainWindow.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
+
+        ##########################################################################################################
+        # HEADER
+        ##########################################################################################################
         self.header = QWidget(self.centralwidget)
         self.header.setObjectName(u"header")
         self.header.setStyleSheet(u"background-color: rgb(24, 24, 24);")
@@ -53,6 +59,11 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+
+
+        ##########################################################################################################
+        # LEFT MENU
+        ##########################################################################################################
         self.menu = QPushButton(self.frame)
         self.menu.setObjectName(u"menu")
         icon = QIcon()
@@ -265,12 +276,12 @@ class Ui_MainWindow(object):
         self.lcdNumber_2 = QLCDNumber(self.frame_18)
         self.lcdNumber_2.setObjectName(u"lcdNumber_2")
         self.lcdNumber_2.setDigitCount(2)
-        self.lcdNumber_2.setProperty("intValue", total_chargers)
+        self.lcdNumber_2.setProperty("intValue", in_use_chargers)
 
         self.horizontalLayout_6.addWidget(self.lcdNumber_2)
 
 
-        self.gridLayout_9.addWidget(self.frame_18, 1, 0, 1, 1)
+        self.gridLayout_9.addWidget(self.frame_18, 2, 0, 1, 1)
 
         self.frame_16 = QFrame(self.frame_12)
         self.frame_16.setObjectName(u"frame_16")
@@ -291,12 +302,38 @@ class Ui_MainWindow(object):
         self.lcdNumber = QLCDNumber(self.frame_16)
         self.lcdNumber.setObjectName(u"lcdNumber")
         self.lcdNumber.setDigitCount(2)
-        self.lcdNumber.setProperty("intValue", total_stations)
+        self.lcdNumber.setProperty("intValue", total_chargers)
 
         self.horizontalLayout_5.addWidget(self.lcdNumber)
 
 
         self.gridLayout_9.addWidget(self.frame_16, 0, 0, 1, 1)
+
+        self.frame_109 = QFrame(self.frame_12)
+        self.frame_109.setObjectName(u"frame_109")
+        self.frame_109.setStyleSheet(u"background-color: rgb(24, 24, 24);")
+        self.frame_109.setFrameShape(QFrame.StyledPanel)
+        self.frame_109.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_66 = QHBoxLayout(self.frame_109)
+        self.horizontalLayout_66.setObjectName(u"horizontalLayout_66")
+        self.horizontalLayout_66.setContentsMargins(20, -1, -1, -1)
+        self.label_118 = QLabel(self.frame_109)
+        self.label_118.setObjectName(u"label_118")
+        self.label_118.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 18pt \"Calibri\";")
+
+        self.horizontalLayout_66.addWidget(self.label_118)
+        # Available_chargers = 
+
+        self.lcdNumber_3 = QLCDNumber(self.frame_109)
+        self.lcdNumber_3.setObjectName(u"lcdNumber_3")
+        self.lcdNumber_3.setDigitCount(2)
+        # self.lcdNumber_3.setProperty("intValue", Available_chargers)
+
+        self.horizontalLayout_66.addWidget(self.lcdNumber_3)
+
+
+        self.gridLayout_9.addWidget(self.frame_109, 1, 0, 1, 1)
 
 
         self.gridLayout_8.addWidget(self.frame_12, 0, 0, 1, 1)
@@ -353,17 +390,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_64.addWidget(self.label_117)
 
-        self.lcdNumber_3 = QLCDNumber(self.frame_27)
-        self.lcdNumber_3.setObjectName(u"lcdNumber_3")
-        self.lcdNumber_3.setDigitCount(2)
-        self.lcdNumber_3.setProperty("intValue", in_use_chargers)
-
-        self.horizontalLayout_64.addWidget(self.lcdNumber_3)
-
 
         self.verticalLayout_24.addWidget(self.frame_27, 0, Qt.AlignBottom)
 
-        
+
         self.gridLayout_8.addWidget(self.frame_13, 0, 1, 1, 1)
 
         self.frame_14 = QFrame(self.frame_5)
@@ -1969,13 +1999,15 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.frame_7 = QFrame(self.report_page)
         self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.frame_7.setFrameShape(QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.gridLayout_19 = QGridLayout(self.frame_7)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.tabWidget = QTabWidget(self.frame_7)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setStyleSheet(u"background-color: rgb(24, 24, 24);")
+        self.tabWidget.setStyleSheet(u"background-color: rgb(24, 24, 24);\n"
+"border: none;")
         self.tabWidget.setTabShape(QTabWidget.Rounded)
         self.tabWidget.setElideMode(Qt.ElideNone)
         self.tab = QWidget()
@@ -2200,6 +2232,11 @@ class Ui_MainWindow(object):
         self.label_26 = QLabel(self.frame_63)
         self.label_26.setObjectName(u"label_26")
         self.label_26.setGeometry(QRect(20, 20, 591, 400))
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.label_26.sizePolicy().hasHeightForWidth())
+        self.label_26.setSizePolicy(sizePolicy1)
         self.label_26.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
         self.label_26.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
@@ -2252,9 +2289,10 @@ class Ui_MainWindow(object):
         self.my_account.setText(QCoreApplication.translate("MainWindow", u"My Account", None))
         self.settings.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.About.setText(QCoreApplication.translate("MainWindow", u"About", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Total Chargers", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Total Stations", None))
-        self.label_117.setText(QCoreApplication.translate("MainWindow", u"Occupied Chargers", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Occupied Chargers", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Total Chargers", None))
+        self.label_118.setText(QCoreApplication.translate("MainWindow", u"Available Chargers", None))
+        self.label_117.setText(QCoreApplication.translate("MainWindow", u"Percentage of Chargers in use ", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Carbon Foot print Reduction", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"CO2 Saved", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"10 Units", None))

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>844</width>
-    <height>511</height>
+    <height>681</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -261,8 +261,8 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                            <widget class="QPushButton" name="pushButton_2">
                             <property name="minimumSize">
                              <size>
-                              <width>80</width>
-                              <height>50</height>
+                              <width>110</width>
+                              <height>60</height>
                              </size>
                             </property>
                             <property name="maximumSize">
@@ -564,8 +564,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                            <widget class="QPushButton" name="pushButton_6">
                             <property name="minimumSize">
                              <size>
-                              <width>100</width>
-                              <height>65</height>
+                              <width>110</width>
+                              <height>80</height>
                              </size>
                             </property>
                             <property name="styleSheet">
@@ -784,14 +784,14 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                         <widget class="QPushButton" name="pushButton_7">
                          <property name="minimumSize">
                           <size>
-                           <width>100</width>
-                           <height>65</height>
+                           <width>110</width>
+                           <height>75</height>
                           </size>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>120</width>
-                           <height>70</height>
+                           <width>180</width>
+                           <height>120</height>
                           </size>
                          </property>
                          <property name="styleSheet">

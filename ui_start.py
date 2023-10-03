@@ -131,7 +131,7 @@ class Ui_StartWindow(object):
         self.verticalLayout_2.setContentsMargins(9, 0, -1, 0)
         self.pushButton = QPushButton(self.frame_8)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(100, 55))
+        self.pushButton.setMinimumSize(QSize(170, 65))
         self.pushButton.setMaximumSize(QSize(250, 16777215))
         self.pushButton.setStyleSheet(u"border-image: url(:/newPrefix/create_account.png);")
 
@@ -153,7 +153,7 @@ class Ui_StartWindow(object):
 
         self.pushButton_2 = QPushButton(self.frame_9)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(80, 50))
+        self.pushButton_2.setMinimumSize(QSize(110, 60))
         self.pushButton_2.setMaximumSize(QSize(100, 16777215))
         self.pushButton_2.setStyleSheet(u"border-image: url(:/newPrefix/button_2.png);")
 
@@ -309,7 +309,7 @@ class Ui_StartWindow(object):
 
         self.pushButton_6 = QPushButton(self.frame_14)
         self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setMinimumSize(QSize(100, 65))
+        self.pushButton_6.setMinimumSize(QSize(110, 80))
         self.pushButton_6.setStyleSheet(u"border-image: url(:/newPrefix/button_1.png);")
 
         self.horizontalLayout_4.addWidget(self.pushButton_6)
@@ -421,8 +421,8 @@ class Ui_StartWindow(object):
         self.gridLayout_9.setObjectName(u"gridLayout_9")
         self.pushButton_7 = QPushButton(self.frame_20)
         self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setMinimumSize(QSize(100, 65))
-        self.pushButton_7.setMaximumSize(QSize(120, 70))
+        self.pushButton_7.setMinimumSize(QSize(110, 75))
+        self.pushButton_7.setMaximumSize(QSize(180, 140))
         self.pushButton_7.setStyleSheet(u"border-image: url(:/newPrefix/button_1.png);")
 
         self.gridLayout_9.addWidget(self.pushButton_7, 0, 0, 1, 1)

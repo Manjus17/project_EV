@@ -32,6 +32,9 @@ class MainWindow(QMainWindow):
         self.ui.prg_in.rpb_setBarStyle('Pizza') 
         value = UIFunctions.progress_bar_value(in_use_chargers, total_chargers)
         self.ui.prg_in.rpb_setValue(value)
+
+        Available_chargers = UIFunctions.available(total_chargers, in_use_chargers)
+        self.ui.lcdNumber_3.setProperty("intValue", Available_chargers)
         
 
         self.ui.home.clicked.connect(lambda: UIFunctions.home_page_fun(self))
