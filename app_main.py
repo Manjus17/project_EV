@@ -6,7 +6,7 @@ from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTi
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
-
+## ui file is in icons folder named as main.ui
 
 ################################################################################################
 # GUI FILE IMPORT
@@ -48,28 +48,26 @@ class MainWindow(QMainWindow):
         value = UIFunctions.progress_bar_value(in_use_chargers, total_chargers)
         self.ui.prg_in.rpb_setValue(value) # set the returned value in progress bar
 
+        # calculation of available chargers 
         Available_chargers = UIFunctions.available(total_chargers, in_use_chargers)
-        self.ui.lcdNumber_3.setProperty("intValue", Available_chargers)
+        self.ui.lcdNumber_3.setProperty("intValue", Available_chargers) # add value to lcd display
         
-
+        # Home page
         self.ui.home.clicked.connect(lambda: UIFunctions.home_page_fun(self))
 
-        # PAGE 2
+        # stations page
         self.ui.stations.clicked.connect(lambda: UIFunctions.stations_page_fun(self))
 
-        # PAGE 3
+        # report page
         self.ui.report.clicked.connect(lambda: UIFunctions.report_page_fun(self))
 
-        #
-        # self.ui.security.clicked.connect(lambda: UIFunctions.security_page_fun(self))
-
-        # PAGE 2
+        # my account page
         self.ui.my_account.clicked.connect(lambda: UIFunctions.account_page_fun(self))
 
-        # PAGE 3
+        # settings page
         self.ui.settings.clicked.connect(lambda: UIFunctions.settings_page_fun(self))
 
-        #
+        # about page
         self.ui.About.clicked.connect(lambda: UIFunctions.about_page_fun(self))
 
 
@@ -78,6 +76,10 @@ class MainWindow(QMainWindow):
         self.show()
         ## ==> END ##
 
+
+########################################################################
+# EXECUTION 
+########################################################################
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()

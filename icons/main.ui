@@ -554,7 +554,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QGridLayout" name="gridLayout_14">
-                       <item row="0" column="0">
+                       <item row="0" column="0" alignment="Qt::AlignHCenter">
                         <widget class="QFrame" name="progress">
                          <property name="minimumSize">
                           <size>
@@ -618,6 +618,12 @@ font: 18pt &quot;Calibri&quot;;</string>
                  </item>
                  <item row="1" column="0">
                   <widget class="QFrame" name="frame_14">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">background-color: rgb(24, 24, 24);</string>
                    </property>
@@ -727,6 +733,12 @@ font: 12pt &quot;Calibri&quot;;</string>
                  </item>
                  <item row="1" column="1">
                   <widget class="QFrame" name="frame_15">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">background-color: rgb(24, 24, 24);
 </string>

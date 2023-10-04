@@ -6,11 +6,12 @@
 - Added round progress bar for occupied chargers percentage
 - integration of progress bar algorithm in python app
 - connected the login and create account pages with the main app
+- changed ui of home page i.e, removing total stations part
+- documentation done
 
 ## Done Today
-- changed ui of home page
-- done little bit documentation
+- documentation done
 
 ## to do
 - intergation of algorithm in the python app
-- documentation
+

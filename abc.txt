@@ -2,6 +2,6 @@ total_stations = 10
 total_chargers = 0
 in_use_chargers = 0
 
-        global total_chargers
         global total_stations
+        global total_chargers
         global in_use_chargers

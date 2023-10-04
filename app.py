@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainGyHXSv.ui'
+## Form generated from reading UI file 'mainiAisAB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -20,32 +20,22 @@ import down_rc
 import menu_rc
 import noti_rc
 
-##########################################################################################################
-# VARIABLES FOR TOTAL AND IN USE CHARGERS
-##########################################################################################################
 total_chargers = 58
-in_use_chargers = 26
+in_use_chargers = 45
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        global in_use_chargers
         global total_chargers
-
+        global in_use_chargers
 
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-
-        # main window
         MainWindow.resize(894, 582)
         MainWindow.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
-
-        ##########################################################################################################
-        # HEADER
-        ##########################################################################################################
         self.header = QWidget(self.centralwidget)
         self.header.setObjectName(u"header")
         self.header.setStyleSheet(u"background-color: rgb(24, 24, 24);")
@@ -59,11 +49,6 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-
-
-        ##########################################################################################################
-        # LEFT MENU
-        ##########################################################################################################
         self.menu = QPushButton(self.frame)
         self.menu.setObjectName(u"menu")
         icon = QIcon()
@@ -323,12 +308,11 @@ class Ui_MainWindow(object):
 "font: 18pt \"Calibri\";")
 
         self.horizontalLayout_66.addWidget(self.label_118)
-        # Available_chargers = 
 
         self.lcdNumber_3 = QLCDNumber(self.frame_109)
         self.lcdNumber_3.setObjectName(u"lcdNumber_3")
         self.lcdNumber_3.setDigitCount(2)
-        # self.lcdNumber_3.setProperty("intValue", Available_chargers)
+        # self.lcdNumber_3.setProperty("intValue", 14)
 
         self.horizontalLayout_66.addWidget(self.lcdNumber_3)
 
@@ -398,6 +382,8 @@ class Ui_MainWindow(object):
 
         self.frame_14 = QFrame(self.frame_5)
         self.frame_14.setObjectName(u"frame_14")
+        sizePolicy.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
+        self.frame_14.setSizePolicy(sizePolicy)
         self.frame_14.setStyleSheet(u"background-color: rgb(24, 24, 24);")
         self.frame_14.setFrameShape(QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QFrame.Raised)
@@ -461,6 +447,8 @@ class Ui_MainWindow(object):
 
         self.frame_15 = QFrame(self.frame_5)
         self.frame_15.setObjectName(u"frame_15")
+        sizePolicy.setHeightForWidth(self.frame_15.sizePolicy().hasHeightForWidth())
+        self.frame_15.setSizePolicy(sizePolicy)
         self.frame_15.setStyleSheet(u"background-color: rgb(24, 24, 24);\n"
 "")
         self.frame_15.setFrameShape(QFrame.StyledPanel)
