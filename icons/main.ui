@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>894</width>
-    <height>582</height>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -339,12 +339,12 @@ border-radius: 25;</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QGridLayout" name="gridLayout">
               <item row="0" column="0">
-               <widget class="QFrame" name="frame_5">
+               <widget class="QFrame" name="home_page_main_frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -395,7 +395,7 @@ border-radius: 25;</string>
                      <number>6</number>
                     </property>
                     <item row="2" column="0">
-                     <widget class="QFrame" name="frame_18">
+                     <widget class="QFrame" name="occupiedchargers_frame">
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(24, 24, 24);</string>
                       </property>
@@ -410,7 +410,7 @@ border-radius: 25;</string>
                         <number>20</number>
                        </property>
                        <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_3">
+                        <widget class="QLabel" name="occupied_chargers_label">
                          <property name="styleSheet">
                           <string notr="true">color: rgb(255, 255, 255);
 font: 18pt &quot;Calibri&quot;;</string>
@@ -421,7 +421,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLCDNumber" name="lcdNumber_2">
+                        <widget class="QLCDNumber" name="occupied_chargers_lcdNumber">
                          <property name="digitCount">
                           <number>2</number>
                          </property>
@@ -434,7 +434,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                      </widget>
                     </item>
                     <item row="0" column="0">
-                     <widget class="QFrame" name="frame_16">
+                     <widget class="QFrame" name="total_chargers_frame">
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(24, 24, 24);</string>
                       </property>
@@ -458,7 +458,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                         <number>9</number>
                        </property>
                        <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label">
+                        <widget class="QLabel" name="total_chargers_label">
                          <property name="styleSheet">
                           <string notr="true">color: rgb(255, 255, 255);
 font: 18pt &quot;Calibri&quot;;</string>
@@ -472,7 +472,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLCDNumber" name="lcdNumber">
+                        <widget class="QLCDNumber" name="total_chargers_lcdNumber">
                          <property name="digitCount">
                           <number>2</number>
                          </property>
@@ -485,7 +485,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                      </widget>
                     </item>
                     <item row="1" column="0">
-                     <widget class="QFrame" name="frame_109">
+                     <widget class="QFrame" name="available_chargers_frame">
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(24, 24, 24);</string>
                       </property>
@@ -500,7 +500,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                         <number>20</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="label_118">
+                        <widget class="QLabel" name="available_chargers_label">
                          <property name="styleSheet">
                           <string notr="true">color: rgb(255, 255, 255);
 font: 18pt &quot;Calibri&quot;;</string>
@@ -511,7 +511,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLCDNumber" name="lcdNumber_3">
+                        <widget class="QLCDNumber" name="available_chargers_lcdNumber">
                          <property name="digitCount">
                           <number>2</number>
                          </property>
@@ -540,7 +540,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_24">
                     <item>
-                     <widget class="QFrame" name="frame_26">
+                     <widget class="QFrame" name="progressbar_frame">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                         <horstretch>0</horstretch>
@@ -553,8 +553,8 @@ font: 18pt &quot;Calibri&quot;;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QGridLayout" name="gridLayout_14">
-                       <item row="0" column="0" alignment="Qt::AlignHCenter">
+                      <layout class="QHBoxLayout" name="horizontalLayout_71">
+                       <item>
                         <widget class="QFrame" name="progress">
                          <property name="minimumSize">
                           <size>
@@ -591,7 +591,7 @@ border-color: transparent;
                      </widget>
                     </item>
                     <item alignment="Qt::AlignBottom">
-                     <widget class="QFrame" name="frame_27">
+                     <widget class="QFrame" name="percentage_frame">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -600,7 +600,7 @@ border-color: transparent;
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_64">
                        <item>
-                        <widget class="QLabel" name="label_117">
+                        <widget class="QLabel" name="percentage_label">
                          <property name="styleSheet">
                           <string notr="true">color: rgb(255, 255, 255);
 font: 18pt &quot;Calibri&quot;;</string>
@@ -617,7 +617,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="QFrame" name="frame_14">
+                  <widget class="QFrame" name="co2_frame">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -635,7 +635,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_7">
                     <item>
-                     <widget class="QFrame" name="frame_17">
+                     <widget class="QFrame" name="co2_heading_frame">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -648,7 +648,7 @@ font: 18pt &quot;Calibri&quot;;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QLabel" name="label_5">
+                      <widget class="QLabel" name="co2_heading_label">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
@@ -673,7 +673,7 @@ padding-left: 20px;
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="frame_19">
+                     <widget class="QFrame" name="co2_contents">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -732,7 +732,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QFrame" name="frame_15">
+                  <widget class="QFrame" name="Monthly_revenue_frame">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -751,7 +751,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_8">
                     <item>
-                     <widget class="QFrame" name="frame_20">
+                     <widget class="QFrame" name="heading_frame_revenue">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -764,7 +764,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QLabel" name="label_10">
+                      <widget class="QLabel" name="revenue_heading_label">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
@@ -808,7 +808,7 @@ padding-left: 20px;</string>
             <widget class="QWidget" name="stations_page">
              <layout class="QGridLayout" name="gridLayout_2">
               <item row="0" column="0">
-               <widget class="QFrame" name="frame_6">
+               <widget class="QFrame" name="Station_main_frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>
@@ -842,7 +842,7 @@ padding-left: 20px;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <widget class="QComboBox" name="comboBox">
+                   <widget class="QComboBox" name="stations_comboBox">
                     <property name="geometry">
                      <rect>
                       <x>10</x>
@@ -877,7 +877,7 @@ background-color: rgb(50, 162, 244);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="frame_22">
+                  <widget class="QFrame" name="chargers_frame">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                      <horstretch>0</horstretch>
@@ -912,7 +912,7 @@ background-color: rgb(50, 162, 244);
                        </size>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="station_1">
                        <layout class="QGridLayout" name="gridLayout_12">
@@ -944,7 +944,7 @@ background-color: rgb(50, 162, 244);
                             <number>0</number>
                            </property>
                            <item alignment="Qt::AlignTop">
-                            <widget class="QFrame" name="frame_28">
+                            <widget class="QFrame" name="top_chargers_1">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -968,7 +968,7 @@ background-color: rgb(50, 162, 244);
                                 </property>
                                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                                  <item>
-                                  <widget class="QPushButton" name="pushButton">
+                                  <widget class="QPushButton" name="location1_btn">
                                    <property name="minimumSize">
                                     <size>
                                      <width>100</width>
@@ -989,7 +989,7 @@ padding: 3px 5px;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QPushButton" name="pushButton_2">
+                                  <widget class="QPushButton" name="camera1_btn">
                                    <property name="minimumSize">
                                     <size>
                                      <width>150</width>
@@ -1026,7 +1026,7 @@ padding: 3px 5px;</string>
                                 <property name="frameShadow">
                                  <enum>QFrame::Raised</enum>
                                 </property>
-                                <widget class="QComboBox" name="comboBox_2">
+                                <widget class="QComboBox" name="st1_charger_comboBox">
                                  <property name="geometry">
                                   <rect>
                                    <x>40</x>
@@ -1093,10 +1093,10 @@ background-color: rgb(50, 162, 244);</string>
                                 <property name="currentIndex">
                                  <number>0</number>
                                 </property>
-                                <widget class="QWidget" name="charge_1">
+                                <widget class="QWidget" name="charge_11">
                                  <layout class="QGridLayout" name="gridLayout_17">
                                   <item row="0" column="0">
-                                   <widget class="QFrame" name="frame_32">
+                                   <widget class="QFrame" name="charger_11_frame">
                                     <property name="frameShape">
                                      <enum>QFrame::StyledPanel</enum>
                                     </property>
@@ -1120,7 +1120,7 @@ background-color: rgb(50, 162, 244);</string>
                                       <number>0</number>
                                      </property>
                                      <item>
-                                      <widget class="QFrame" name="frame_33">
+                                      <widget class="QFrame" name="ch11_left_frame">
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgb(34, 34, 34);</string>
                                        </property>
@@ -1132,7 +1132,7 @@ background-color: rgb(50, 162, 244);</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_11">
                                         <item>
-                                         <widget class="QFrame" name="frame_41">
+                                         <widget class="QFrame" name="cname11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1156,7 +1156,7 @@ background-color: rgb(50, 162, 244);</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_2">
+                                            <widget class="QLabel" name="cname11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1167,7 +1167,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_4">
+                                            <widget class="QLabel" name="cname11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1181,7 +1181,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_42">
+                                         <widget class="QFrame" name="ctype11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1205,7 +1205,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_11">
+                                            <widget class="QLabel" name="ctype11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1216,7 +1216,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_12">
+                                            <widget class="QLabel" name="ctype11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1230,7 +1230,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_43">
+                                         <widget class="QFrame" name="cid11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1251,7 +1251,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_13">
+                                            <widget class="QLabel" name="cid11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1262,7 +1262,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_14">
+                                            <widget class="QLabel" name="cid11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1276,7 +1276,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_44">
+                                         <widget class="QFrame" name="minc11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1294,7 +1294,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_15">
+                                            <widget class="QLabel" name="minc11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1305,7 +1305,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_16">
+                                            <widget class="QLabel" name="minc11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1319,7 +1319,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_45">
+                                         <widget class="QFrame" name="maxc11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1337,7 +1337,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_17">
+                                            <widget class="QLabel" name="maxc11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1348,7 +1348,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_18">
+                                            <widget class="QLabel" name="maxc11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1362,7 +1362,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_46">
+                                         <widget class="QFrame" name="voltage11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1380,7 +1380,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             <number>0</number>
                                            </property>
                                            <item>
-                                            <widget class="QLabel" name="label_19">
+                                            <widget class="QLabel" name="voltage11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1391,7 +1391,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_20">
+                                            <widget class="QLabel" name="voltage11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1408,7 +1408,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                       </widget>
                                      </item>
                                      <item>
-                                      <widget class="QFrame" name="frame_34">
+                                      <widget class="QFrame" name="ch11_right_frame">
                                        <property name="minimumSize">
                                         <size>
                                          <width>0</width>
@@ -1426,7 +1426,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_12">
                                         <item>
-                                         <widget class="QFrame" name="frame_47">
+                                         <widget class="QFrame" name="evid11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1435,7 +1435,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_21">
                                            <item>
-                                            <widget class="QLabel" name="label_37">
+                                            <widget class="QLabel" name="evid11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1446,7 +1446,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_38">
+                                            <widget class="QLabel" name="evid11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1460,7 +1460,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_48">
+                                         <widget class="QFrame" name="cst11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1469,7 +1469,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_22">
                                            <item>
-                                            <widget class="QLabel" name="label_35">
+                                            <widget class="QLabel" name="cst11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1480,7 +1480,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_36">
+                                            <widget class="QLabel" name="cst11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1494,7 +1494,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_66">
+                                         <widget class="QFrame" name="soc11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1503,7 +1503,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_23">
                                            <item>
-                                            <widget class="QLabel" name="label_21">
+                                            <widget class="QLabel" name="soc11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1514,7 +1514,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_22">
+                                            <widget class="QLabel" name="soc11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1528,7 +1528,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_67">
+                                         <widget class="QFrame" name="capacity11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1537,7 +1537,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_24">
                                            <item>
-                                            <widget class="QLabel" name="label_39">
+                                            <widget class="QLabel" name="capacity11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1548,7 +1548,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_40">
+                                            <widget class="QLabel" name="capacity11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1562,7 +1562,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_68">
+                                         <widget class="QFrame" name="ecet11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1571,7 +1571,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_25">
                                            <item>
-                                            <widget class="QLabel" name="label_41">
+                                            <widget class="QLabel" name="ecet11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1582,7 +1582,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_42">
+                                            <widget class="QLabel" name="ecet11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1596,7 +1596,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_69">
+                                         <widget class="QFrame" name="price11_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1605,7 +1605,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_26">
                                            <item>
-                                            <widget class="QLabel" name="label_43">
+                                            <widget class="QLabel" name="price11_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1616,7 +1616,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_44">
+                                            <widget class="QLabel" name="price11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1637,10 +1637,10 @@ font: 12pt &quot;Calibri&quot;;</string>
                                   </item>
                                  </layout>
                                 </widget>
-                                <widget class="QWidget" name="charge_2">
+                                <widget class="QWidget" name="charge_12">
                                  <layout class="QGridLayout" name="gridLayout_18">
                                   <item row="0" column="0">
-                                   <widget class="QFrame" name="frame_35">
+                                   <widget class="QFrame" name="charger12_main_frame">
                                     <property name="frameShape">
                                      <enum>QFrame::StyledPanel</enum>
                                     </property>
@@ -1664,7 +1664,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                       <number>0</number>
                                      </property>
                                      <item>
-                                      <widget class="QFrame" name="frame_36">
+                                      <widget class="QFrame" name="charger12_main_left_frame">
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgb(34, 34, 34);</string>
                                        </property>
@@ -1676,7 +1676,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_19">
                                         <item>
-                                         <widget class="QFrame" name="frame_70">
+                                         <widget class="QFrame" name="cname12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1685,7 +1685,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_37">
                                            <item>
-                                            <widget class="QLabel" name="label_45">
+                                            <widget class="QLabel" name="cname12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1696,7 +1696,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_46">
+                                            <widget class="QLabel" name="cname12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1710,7 +1710,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_71">
+                                         <widget class="QFrame" name="ctype12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1719,7 +1719,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_38">
                                            <item>
-                                            <widget class="QLabel" name="label_47">
+                                            <widget class="QLabel" name="ctype12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1730,7 +1730,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_48">
+                                            <widget class="QLabel" name="ctype12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1744,7 +1744,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_72">
+                                         <widget class="QFrame" name="cid12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1753,7 +1753,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_39">
                                            <item>
-                                            <widget class="QLabel" name="label_49">
+                                            <widget class="QLabel" name="cid12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1764,7 +1764,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_50">
+                                            <widget class="QLabel" name="cid12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1778,7 +1778,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_73">
+                                         <widget class="QFrame" name="minc12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1787,7 +1787,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_40">
                                            <item>
-                                            <widget class="QLabel" name="label_51">
+                                            <widget class="QLabel" name="minc12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1798,7 +1798,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_52">
+                                            <widget class="QLabel" name="minc12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1812,7 +1812,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_74">
+                                         <widget class="QFrame" name="maxc12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1821,7 +1821,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_41">
                                            <item>
-                                            <widget class="QLabel" name="label_53">
+                                            <widget class="QLabel" name="maxc12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1832,7 +1832,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_54">
+                                            <widget class="QLabel" name="maxc12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1846,7 +1846,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_75">
+                                         <widget class="QFrame" name="voltage12_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -1855,7 +1855,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_42">
                                            <item>
-                                            <widget class="QLabel" name="label_55">
+                                            <widget class="QLabel" name="voltage12_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -1866,7 +1866,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item alignment="Qt::AlignHCenter">
-                                            <widget class="QLabel" name="label_56">
+                                            <widget class="QLabel" name="voltage12_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2119,7 +2119,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                       <widget class="QWidget" name="station_2">
                        <layout class="QGridLayout" name="gridLayout_13">
                         <item row="0" column="0">
-                         <widget class="QFrame" name="frame_25">
+                         <widget class="QFrame" name="station2_frame">
                           <property name="styleSheet">
                            <string notr="true">background-color: rgb(24, 24, 24);</string>
                           </property>
@@ -2146,7 +2146,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                             <number>0</number>
                            </property>
                            <item alignment="Qt::AlignTop">
-                            <widget class="QFrame" name="frame_49">
+                            <widget class="QFrame" name="st1_top_frame">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -2179,7 +2179,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                 </property>
                                 <layout class="QHBoxLayout" name="horizontalLayout_19">
                                  <item>
-                                  <widget class="QPushButton" name="pushButton_3">
+                                  <widget class="QPushButton" name="location2_btn">
                                    <property name="minimumSize">
                                     <size>
                                      <width>100</width>
@@ -2200,7 +2200,7 @@ padding: 3px 5px;</string>
                                   </widget>
                                  </item>
                                  <item>
-                                  <widget class="QPushButton" name="pushButton_4">
+                                  <widget class="QPushButton" name="camera2_btn">
                                    <property name="minimumSize">
                                     <size>
                                      <width>150</width>
@@ -2237,7 +2237,7 @@ padding: 3px 5px;</string>
                                 <property name="frameShadow">
                                  <enum>QFrame::Raised</enum>
                                 </property>
-                                <widget class="QComboBox" name="comboBox_3">
+                                <widget class="QComboBox" name="st2_charger_comboBox">
                                  <property name="geometry">
                                   <rect>
                                    <x>40</x>
@@ -2305,12 +2305,12 @@ background-color: rgb(50, 162, 244);</string>
                               <item row="0" column="0">
                                <widget class="QStackedWidget" name="stackedWidget_4">
                                 <property name="currentIndex">
-                                 <number>0</number>
+                                 <number>1</number>
                                 </property>
                                 <widget class="QWidget" name="page">
                                  <layout class="QGridLayout" name="gridLayout_24">
                                   <item row="0" column="0">
-                                   <widget class="QFrame" name="frame_53">
+                                   <widget class="QFrame" name="charger21_frame">
                                     <property name="frameShape">
                                      <enum>QFrame::StyledPanel</enum>
                                     </property>
@@ -2334,7 +2334,7 @@ background-color: rgb(50, 162, 244);</string>
                                       <number>0</number>
                                      </property>
                                      <item>
-                                      <widget class="QFrame" name="frame_54">
+                                      <widget class="QFrame" name="charger21_left_frame">
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgb(34, 34, 34);</string>
                                        </property>
@@ -2346,7 +2346,7 @@ background-color: rgb(50, 162, 244);</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_20">
                                         <item>
-                                         <widget class="QFrame" name="frame_82">
+                                         <widget class="QFrame" name="cname21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2355,7 +2355,7 @@ background-color: rgb(50, 162, 244);</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_28">
                                            <item>
-                                            <widget class="QLabel" name="label_69">
+                                            <widget class="QLabel" name="cname21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2366,7 +2366,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_70">
+                                            <widget class="QLabel" name="cname21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2380,7 +2380,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_83">
+                                         <widget class="QFrame" name="ctype21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2389,7 +2389,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_29">
                                            <item>
-                                            <widget class="QLabel" name="label_71">
+                                            <widget class="QLabel" name="ctype21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2400,7 +2400,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_72">
+                                            <widget class="QLabel" name="ctype21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2414,7 +2414,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_84">
+                                         <widget class="QFrame" name="cid21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2423,7 +2423,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_30">
                                            <item>
-                                            <widget class="QLabel" name="label_73">
+                                            <widget class="QLabel" name="cid21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2434,7 +2434,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_74">
+                                            <widget class="QLabel" name="cid21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2448,7 +2448,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_85">
+                                         <widget class="QFrame" name="minc21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2457,7 +2457,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_31">
                                            <item>
-                                            <widget class="QLabel" name="label_75">
+                                            <widget class="QLabel" name="minc21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2468,7 +2468,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_76">
+                                            <widget class="QLabel" name="minc21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2482,7 +2482,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_86">
+                                         <widget class="QFrame" name="maxc21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2491,7 +2491,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_32">
                                            <item>
-                                            <widget class="QLabel" name="label_77">
+                                            <widget class="QLabel" name="maxc21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2502,7 +2502,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_78">
+                                            <widget class="QLabel" name="maxc21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2516,7 +2516,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_87">
+                                         <widget class="QFrame" name="voltage21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2525,7 +2525,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_33">
                                            <item>
-                                            <widget class="QLabel" name="label_79">
+                                            <widget class="QLabel" name="voltage21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2536,7 +2536,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_80">
+                                            <widget class="QLabel" name="voltage21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2553,7 +2553,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                       </widget>
                                      </item>
                                      <item>
-                                      <widget class="QFrame" name="frame_55">
+                                      <widget class="QFrame" name="charger21_right_frame">
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgb(34, 34, 34);</string>
                                        </property>
@@ -2565,7 +2565,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_21">
                                         <item>
-                                         <widget class="QFrame" name="frame_88">
+                                         <widget class="QFrame" name="evid21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2574,7 +2574,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_34">
                                            <item>
-                                            <widget class="QLabel" name="label_81">
+                                            <widget class="QLabel" name="evid21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2585,7 +2585,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_82">
+                                            <widget class="QLabel" name="evid21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2599,7 +2599,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_89">
+                                         <widget class="QFrame" name="cst21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2608,7 +2608,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_35">
                                            <item>
-                                            <widget class="QLabel" name="label_83">
+                                            <widget class="QLabel" name="cst21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2619,7 +2619,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_84">
+                                            <widget class="QLabel" name="cst21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2633,7 +2633,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_90">
+                                         <widget class="QFrame" name="soc21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2642,7 +2642,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_36">
                                            <item>
-                                            <widget class="QLabel" name="label_85">
+                                            <widget class="QLabel" name="soc21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2653,7 +2653,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_86">
+                                            <widget class="QLabel" name="soc21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2667,7 +2667,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_91">
+                                         <widget class="QFrame" name="capacity21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2676,7 +2676,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_49">
                                            <item>
-                                            <widget class="QLabel" name="label_87">
+                                            <widget class="QLabel" name="capacity21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2687,7 +2687,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_88">
+                                            <widget class="QLabel" name="capacity21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2701,7 +2701,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_92">
+                                         <widget class="QFrame" name="ecet21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2710,7 +2710,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_50">
                                            <item>
-                                            <widget class="QLabel" name="label_89">
+                                            <widget class="QLabel" name="ecet21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2721,7 +2721,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_90">
+                                            <widget class="QLabel" name="ecet21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2735,7 +2735,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_93">
+                                         <widget class="QFrame" name="price21_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2744,7 +2744,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_51">
                                            <item>
-                                            <widget class="QLabel" name="label_91">
+                                            <widget class="QLabel" name="price21_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2755,7 +2755,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_92">
+                                            <widget class="QLabel" name="price21_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2779,7 +2779,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                 <widget class="QWidget" name="page_2">
                                  <layout class="QGridLayout" name="gridLayout_26">
                                   <item row="0" column="0">
-                                   <widget class="QFrame" name="frame_94">
+                                   <widget class="QFrame" name="charger22_frame">
                                     <property name="frameShape">
                                      <enum>QFrame::StyledPanel</enum>
                                     </property>
@@ -2803,7 +2803,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                       <number>0</number>
                                      </property>
                                      <item>
-                                      <widget class="QFrame" name="frame_95">
+                                      <widget class="QFrame" name="charger22_left_frame">
                                        <property name="styleSheet">
                                         <string notr="true">background-color: rgb(34, 34, 34);</string>
                                        </property>
@@ -2815,7 +2815,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_23">
                                         <item>
-                                         <widget class="QFrame" name="frame_97">
+                                         <widget class="QFrame" name="cname22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2824,7 +2824,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_52">
                                            <item>
-                                            <widget class="QLabel" name="label_93">
+                                            <widget class="QLabel" name="cname22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2835,7 +2835,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_94">
+                                            <widget class="QLabel" name="cname22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2849,7 +2849,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_98">
+                                         <widget class="QFrame" name="ctype22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3289,18 +3289,18 @@ border: none;</string>
                     <enum>QTabWidget::Rounded</enum>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>2</number>
                    </property>
                    <property name="elideMode">
                     <enum>Qt::ElideNone</enum>
                    </property>
-                   <widget class="QWidget" name="tab">
+                   <widget class="QWidget" name="sales_tab">
                     <attribute name="title">
                      <string>Sales</string>
                     </attribute>
                     <layout class="QGridLayout" name="gridLayout_20">
                      <item row="0" column="0">
-                      <widget class="QFrame" name="frame_38">
+                      <widget class="QFrame" name="sales_frame">
                        <property name="styleSheet">
                         <string notr="true">background-color: rgb(24, 24, 24);</string>
                        </property>
@@ -3310,22 +3310,18 @@ border: none;</string>
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QGridLayout" name="gridLayout_25">
-                        <item row="0" column="0">
-                         <widget class="QTableWidget" name="tableWidget"/>
-                        </item>
-                       </layout>
+                       <layout class="QGridLayout" name="gridLayout_25"/>
                       </widget>
                      </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="tab_2">
+                   <widget class="QWidget" name="managemet_cost_tab">
                     <attribute name="title">
                      <string>Management Cost</string>
                     </attribute>
                     <layout class="QGridLayout" name="gridLayout_21">
                      <item row="0" column="0">
-                      <widget class="QFrame" name="frame_39">
+                      <widget class="QFrame" name="managemet_cost_frame">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
@@ -3336,13 +3332,13 @@ border: none;</string>
                      </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="tab_3">
+                   <widget class="QWidget" name="electricity_cost_tab">
                     <attribute name="title">
                      <string>Electricity Cost</string>
                     </attribute>
                     <layout class="QGridLayout" name="gridLayout_22">
                      <item row="0" column="0">
-                      <widget class="QFrame" name="frame_40">
+                      <widget class="QFrame" name="electricity_cost_frame">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
@@ -3363,7 +3359,7 @@ border: none;</string>
             <widget class="QWidget" name="account_page_2">
              <layout class="QGridLayout" name="gridLayout_4">
               <item row="0" column="0">
-               <widget class="QFrame" name="frame_8">
+               <widget class="QFrame" name="account_main_frame">
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(24, 24, 24);</string>
                 </property>
@@ -3374,87 +3370,19 @@ border: none;</string>
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
                  <item>
-                  <widget class="QFrame" name="frame_56">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                  <widget class="QFrame" name="account_left_frame">
+                   <property name="minimumSize">
+                    <size>
+                     <width>250</width>
+                     <height>0</height>
+                    </size>
                    </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_16">
-                    <item>
-                     <widget class="QFrame" name="frame_11">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>250</height>
-                       </size>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <widget class="QLabel" name="label_24">
-                       <property name="geometry">
-                        <rect>
-                         <x>50</x>
-                         <y>40</y>
-                         <width>191</width>
-                         <height>171</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-image: url(:/newPrefix/🦆 icon _User Circle_.png);</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </widget>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QFrame" name="frame_58">
-                      <property name="styleSheet">
-                       <string notr="true">color: rgb(255, 255, 255);
-font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <widget class="QLabel" name="label_23">
-                       <property name="geometry">
-                        <rect>
-                         <x>30</x>
-                         <y>0</y>
-                         <width>241</width>
-                         <height>121</height>
-                        </rect>
-                       </property>
-                       <property name="text">
-                        <string>Account Holders  Name</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame_57">
                    <property name="styleSheet">
-                    <string notr="true">color: rgb(255, 255, 255);</string>
+                    <string notr="true"/>
                    </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -3463,10 +3391,284 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_14">
+                    <property name="spacing">
+                     <number>10</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
                     <item>
-                     <widget class="QFrame" name="frame_59">
+                     <widget class="QFrame" name="account_top_left_frame">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(34, 34, 34);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_67">
+                       <item>
+                        <widget class="QFrame" name="frame_15">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_27">
+                          <item>
+                           <widget class="QLabel" name="account_logo_label">
+                            <property name="styleSheet">
+                             <string notr="true">border-image: url(:/newPrefix/🦆 icon _User Circle_.png);</string>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="account_bottom_left_frame">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(34, 34, 34);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <item>
+                        <widget class="QLabel" name="label">
+                         <property name="font">
+                          <font>
+                           <family>Comic Sans MS</family>
+                           <pointsize>20</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+font: 20pt &quot;Comic Sans MS&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Welcome back,</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                         </property>
+                         <property name="wordWrap">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_2">
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+font: 20pt &quot;Comic Sans MS&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Manjusha</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_5">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_15">
+                          <item row="2" column="1">
+                           <widget class="QLabel" name="label_4">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_5">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>Active time</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLabel" name="label_10">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLabel" name="label_12">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_3">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>Last Login</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_11">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_13">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLabel" name="label_14">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Calibri&quot;;</string>
+                            </property>
+                            <property name="text">
+                             <string>TextLabel</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="account_right_frame">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(34, 34, 34);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_68">
+                    <item>
+                     <widget class="QFrame" name="frame_6">
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_69">
+                       <item>
+                        <widget class="QLabel" name="label_15">
+                         <property name="minimumSize">
+                          <size>
+                           <width>14</width>
+                           <height>441</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/newPrefix/line.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_8">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -3478,147 +3680,355 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_17">
-                       <item>
-                        <widget class="QFrame" name="frame_64">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QFrame" name="frame_11">
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>50</height>
+                          </size>
+                         </property>
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="label_27">
-                          <property name="geometry">
-                           <rect>
-                            <x>50</x>
-                            <y>20</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_28">
-                          <property name="geometry">
-                           <rect>
-                            <x>170</x>
-                            <y>20</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_29">
-                          <property name="geometry">
-                           <rect>
-                            <x>50</x>
-                            <y>50</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_30">
-                          <property name="geometry">
-                           <rect>
-                            <x>170</x>
-                            <y>50</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_31">
-                          <property name="geometry">
-                           <rect>
-                            <x>50</x>
-                            <y>80</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_32">
-                          <property name="geometry">
-                           <rect>
-                            <x>170</x>
-                            <y>80</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_33">
-                          <property name="geometry">
-                           <rect>
-                            <x>50</x>
-                            <y>110</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
-                         <widget class="QLabel" name="label_34">
-                          <property name="geometry">
-                           <rect>
-                            <x>170</x>
-                            <y>110</y>
-                            <width>47</width>
-                            <height>14</height>
-                           </rect>
-                          </property>
-                          <property name="text">
-                           <string>TextLabel</string>
-                          </property>
-                         </widget>
+                         <layout class="QHBoxLayout" name="horizontalLayout_70">
+                          <item>
+                           <widget class="QPushButton" name="pushButton_5">
+                            <property name="maximumSize">
+                             <size>
+                              <width>50</width>
+                              <height>50</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border-image: url(:/newPrefix/🦆 icon _User Edit_.png);</string>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_65">
+                        <widget class="QFrame" name="frame_14">
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_25">
+                          <item>
+                           <widget class="QFrame" name="frame_17">
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>70</height>
+                             </size>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_26">
+                             <item>
+                              <widget class="QLabel" name="label_16">
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(255, 255, 255);
+font: 25pt &quot;Calibri&quot;;</string>
+                               </property>
+                               <property name="text">
+                                <string>Personal Information</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_18">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_28">
+                             <item>
+                              <widget class="QFrame" name="frame_16">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_19">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>20</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_20">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>160</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_19">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_23">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>20</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_24">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>130</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_27">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_27">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>20</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_28">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>160</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_33">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_17">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>10</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_18">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>170</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_32">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_29">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>30</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_30">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>180</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_28">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <widget class="QLabel" name="label_31">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>30</x>
+                                  <y>10</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                               <widget class="QLabel" name="label_32">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>180</x>
+                                  <y>20</y>
+                                  <width>47</width>
+                                  <height>14</height>
+                                 </rect>
+                                </property>
+                                <property name="text">
+                                 <string>TextLabel</string>
+                                </property>
+                               </widget>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_22">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_26">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_20">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignBottom">
-                     <widget class="QFrame" name="frame_60">
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>70</height>
-                       </size>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -3798,6 +4208,8 @@ EV Charge sits at the nexus point between vehicles, building owners, and the gri
  </customwidgets>
  <resources>
   <include location="account.qrc"/>
+  <include location="edit.qrc"/>
+  <include location="line.qrc"/>
   <include location="plug.qrc"/>
   <include location="down.qrc"/>
   <include location="menu.qrc"/>
@@ -3805,7 +4217,7 @@ EV Charge sits at the nexus point between vehicles, building owners, and the gri
  </resources>
  <connections>
   <connection>
-   <sender>comboBox_2</sender>
+   <sender>st1_charger_comboBox</sender>
    <signal>currentIndexChanged(int)</signal>
    <receiver>stackedWidget_3</receiver>
    <slot>setCurrentIndex(int)</slot>
@@ -3821,7 +4233,7 @@ EV Charge sits at the nexus point between vehicles, building owners, and the gri
    </hints>
   </connection>
   <connection>
-   <sender>comboBox</sender>
+   <sender>stations_comboBox</sender>
    <signal>currentIndexChanged(int)</signal>
    <receiver>stackedWidget_2</receiver>
    <slot>setCurrentIndex(int)</slot>
@@ -3837,7 +4249,7 @@ EV Charge sits at the nexus point between vehicles, building owners, and the gri
    </hints>
   </connection>
   <connection>
-   <sender>comboBox_3</sender>
+   <sender>st2_charger_comboBox</sender>
    <signal>currentIndexChanged(int)</signal>
    <receiver>stackedWidget_4</receiver>
    <slot>setCurrentIndex(int)</slot>

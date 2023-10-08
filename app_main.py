@@ -6,6 +6,8 @@ from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTi
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
+from map import MapWindow, MapDialog
+
 ## ui file is in icons folder named as main.ui
 
 ################################################################################################
@@ -50,7 +52,7 @@ class MainWindow(QMainWindow):
 
         # calculation of available chargers 
         Available_chargers = UIFunctions.available(total_chargers, in_use_chargers)
-        self.ui.lcdNumber_3.setProperty("intValue", Available_chargers) # add value to lcd display
+        self.ui.available_chargers_lcdNumber.setProperty("intValue", Available_chargers) # add value to lcd display
         
         # Home page
         self.ui.home.clicked.connect(lambda: UIFunctions.home_page_fun(self))
@@ -69,6 +71,12 @@ class MainWindow(QMainWindow):
 
         # about page
         self.ui.About.clicked.connect(lambda: UIFunctions.about_page_fun(self))
+
+        # connect location button of station 1 with its location passing latitude longitude station name and location as parameters
+        self.ui.pushButton.clicked.connect(lambda: MapWindow.open_map_window(self, 26.9124, 75.7873, "Station 1", "Jaipur"))
+
+        # connect location button of station 2 with its location passing latitude longitude station name and location as parameters
+        self.ui.pushButton_3.clicked.connect(lambda: MapWindow.open_map_window(self, 51.5074, -0.1278, "Station 2", "England"))
 
 
         ## SHOW ==> MAIN WINDOW

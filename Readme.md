@@ -8,10 +8,14 @@
 - connected the login and create account pages with the main app
 - changed ui of home page i.e, removing total stations part
 - documentation done
+- done renaming of start_ui widgets
+- map integration done with station
 
 ## Done Today
-- documentation done
+- done renaming of start_ui widgets
+- map integration done with one station
 
 ## to do
 - intergation of algorithm in the python app
+- renaming all widgets in ui file for better understanding
 

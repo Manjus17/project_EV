@@ -7,6 +7,11 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 
 ################################################################################################
+# MAP FILE IMPORT
+################################################################################################
+from map import MapWindow, MapDialog
+
+################################################################################################
 # LOGIN AND SIGNUP GUI FILE IMPORT
 ################################################################################################
 from ui_start import Ui_StartWindow
@@ -26,6 +31,16 @@ from app_function import *
 from app import total_chargers, in_use_chargers
 
 class MainWindow(QMainWindow):
+    #########################################################################################################
+    # MAP LINKING FUNCTION
+    #########################################################################################################
+    def maplink(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Map_in_App()
+        # self.ui.setupUi(self.window)
+        self.window.show()
+
+
     ################################################################################################
     # APPLICATION PAGE 
     ################################################################################################
@@ -55,7 +70,7 @@ class MainWindow(QMainWindow):
 
         # calculation of available chargers 
         Available_chargers = UIFunctions.available(total_chargers, in_use_chargers)
-        self.ui.lcdNumber_3.setProperty("intValue", Available_chargers) # add value to lcd display
+        self.ui.available_chargers_lcdNumber.setProperty("intValue", Available_chargers) # add value to lcd display
         
         # Home page
         self.ui.home.clicked.connect(lambda: UIFunctions.home_page_fun(self))
@@ -75,8 +90,17 @@ class MainWindow(QMainWindow):
         # about page
         self.ui.About.clicked.connect(lambda: UIFunctions.about_page_fun(self))
 
+        # connect location button of station 1 with its location passing latitude longitude station name and location as parameters
+        self.ui.pushButton.clicked.connect(lambda: MapWindow.open_map_window(self, 26.9124, 75.7873, "Station 1", "Jaipur"))
+
+        # connect location button of station 2 with its location passing latitude longitude station name and location as parameters
+        self.ui.pushButton_3.clicked.connect(lambda: MapWindow.open_map_window(self, 51.5074, -0.1278, "Station 2", "England"))
+
         # show window
         self.window.show()
+
+    
+    
 
 
 
@@ -95,16 +119,16 @@ class MainWindow(QMainWindow):
         self.setFixedWidth(1300)
 
         # open appliction after creating account
-        self.ui.pushButton_6.clicked.connect(self.appstart)
+        self.ui.ca_next.clicked.connect(self.appstart)
 
         # open application after logging in
-        self.ui.pushButton_7.clicked.connect(self.appstart)
+        self.ui.loginpg_next_btn.clicked.connect(self.appstart)
 
         # link main i.e, first page to create account page
-        self.ui.pushButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_3))
+        self.ui.create_account_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.creat_account_page))
 
         # link main i.e, first page to login page
-        self.ui.pushButton_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_4))
+        self.ui.log_in_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.login_page))
 
 
         ## SHOW ==> MAIN WINDOW

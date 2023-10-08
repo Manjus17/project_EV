@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>844</width>
-    <height>681</height>
+    <height>696</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -34,7 +34,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QFrame" name="frame_2">
+        <widget class="QFrame" name="logo_frame">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -64,7 +64,7 @@
             </property>
             <layout class="QGridLayout" name="gridLayout_3">
              <item row="0" column="0">
-              <widget class="QLabel" name="label">
+              <widget class="QLabel" name="logo_label">
                <property name="maximumSize">
                 <size>
                  <width>600</width>
@@ -147,7 +147,7 @@
                <widget class="QWidget" name="page">
                 <layout class="QGridLayout" name="gridLayout_6">
                  <item row="0" column="0">
-                  <widget class="QFrame" name="frame_6">
+                  <widget class="QFrame" name="first_right_frame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -213,7 +213,7 @@ font: 40pt &quot;Calibri&quot;;</string>
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QPushButton" name="pushButton">
+                        <widget class="QPushButton" name="create_account_button">
                          <property name="minimumSize">
                           <size>
                            <width>100</width>
@@ -247,7 +247,7 @@ font: 40pt &quot;Calibri&quot;;</string>
                            <number>10</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="label_3">
+                           <widget class="QLabel" name="login_label">
                             <property name="styleSheet">
                              <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Comic Sans MS&quot;;</string>
@@ -258,7 +258,7 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignLeft">
-                           <widget class="QPushButton" name="pushButton_2">
+                           <widget class="QPushButton" name="log_in_button">
                             <property name="minimumSize">
                              <size>
                               <width>110</width>
@@ -290,7 +290,7 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_3">
+               <widget class="QWidget" name="creat_account_page">
                 <layout class="QGridLayout" name="gridLayout_7">
                  <item row="0" column="0">
                   <widget class="QFrame" name="frame_10">
@@ -369,7 +369,7 @@ font: 12pt &quot;Comic Sans MS&quot;;</string>
                             <property name="frameShadow">
                              <enum>QFrame::Raised</enum>
                             </property>
-                            <widget class="QLabel" name="label_5">
+                            <widget class="QLabel" name="create_account_label">
                              <property name="geometry">
                               <rect>
                                <x>0</x>
@@ -414,7 +414,7 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_6">
                              <item>
-                              <widget class="QLineEdit" name="lineEdit">
+                              <widget class="QLineEdit" name="name">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -435,7 +435,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QLineEdit" name="lineEdit_2">
+                              <widget class="QLineEdit" name="email">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -456,7 +456,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QLineEdit" name="lineEdit_3">
+                              <widget class="QLineEdit" name="seller_id">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -477,7 +477,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QLineEdit" name="lineEdit_5">
+                              <widget class="QLineEdit" name="password">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -498,7 +498,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                               </widget>
                              </item>
                              <item>
-                              <widget class="QLineEdit" name="lineEdit_4">
+                              <widget class="QLineEdit" name="cnf_password">
                                <property name="minimumSize">
                                 <size>
                                  <width>0</width>
@@ -545,7 +545,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignLeft">
-                           <widget class="QPushButton" name="pushButton_3">
+                           <widget class="QPushButton" name="add_image_btn">
                             <property name="minimumSize">
                              <size>
                               <width>30</width>
@@ -561,7 +561,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QPushButton" name="pushButton_6">
+                           <widget class="QPushButton" name="ca_next">
                             <property name="minimumSize">
                              <size>
                               <width>110</width>
@@ -592,7 +592,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                          </property>
                          <layout class="QHBoxLayout" name="horizontalLayout_3">
                           <item>
-                           <widget class="QPushButton" name="pushButton_4">
+                           <widget class="QPushButton" name="apple_btn">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -614,7 +614,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QPushButton" name="pushButton_5">
+                           <widget class="QPushButton" name="google_btn">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -646,7 +646,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_4">
+               <widget class="QWidget" name="login_page">
                 <layout class="QGridLayout" name="gridLayout_8">
                  <item row="0" column="0">
                   <widget class="QFrame" name="frame_17">
@@ -671,7 +671,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <widget class="QLabel" name="label_6">
+                      <widget class="QLabel" name="login_label_2">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
@@ -721,7 +721,7 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
                         <number>30</number>
                        </property>
                        <item>
-                        <widget class="QLineEdit" name="lineEdit_6">
+                        <widget class="QLineEdit" name="username">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -742,7 +742,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="lineEdit_7">
+                        <widget class="QLineEdit" name="password_login">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -781,7 +781,7 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                       </property>
                       <layout class="QGridLayout" name="gridLayout_9">
                        <item row="0" column="0">
-                        <widget class="QPushButton" name="pushButton_7">
+                        <widget class="QPushButton" name="loginpg_next_btn">
                          <property name="minimumSize">
                           <size>
                            <width>110</width>
