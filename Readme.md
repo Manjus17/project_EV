@@ -10,10 +10,12 @@
 - documentation done
 - done renaming of start_ui widgets
 - map integration done with station
+- added account page 
+- added combined map for all amnaged chargers in the account page
 
 ## Done Today
-- done renaming of start_ui widgets
-- map integration done with one station
+- added account page 
+- added combined map for all amnaged chargers in the account page
 
 ## to do
 - intergation of algorithm in the python app

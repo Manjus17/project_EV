@@ -1,6 +1,6 @@
 total_stations = 10
-total_chargers = 0
-in_use_chargers = 0
+total_chargers = 58
+in_use_chargers = 43
 
         global total_stations
         global total_chargers

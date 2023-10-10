@@ -15,6 +15,10 @@ from map import MapWindow, MapDialog
 ################################################################################################
 from app import Ui_MainWindow
 
+################################################################################################
+# VIEW MAP FILE IMPORT
+################################################################################################
+from view_map import ViewMapWindow, ViewMapDialog
 
 ################################################################################################
 # IMPORT FUNCTIONS
@@ -73,10 +77,16 @@ class MainWindow(QMainWindow):
         self.ui.About.clicked.connect(lambda: UIFunctions.about_page_fun(self))
 
         # connect location button of station 1 with its location passing latitude longitude station name and location as parameters
-        self.ui.pushButton.clicked.connect(lambda: MapWindow.open_map_window(self, 26.9124, 75.7873, "Station 1", "Jaipur"))
+        self.ui.location1_btn.clicked.connect(lambda: MapWindow.open_map_window(self, 26.8640, 75.8108, "Station 1", "Malaviya National Institute of Technology, jaipur"))
 
         # connect location button of station 2 with its location passing latitude longitude station name and location as parameters
-        self.ui.pushButton_3.clicked.connect(lambda: MapWindow.open_map_window(self, 51.5074, -0.1278, "Station 2", "England"))
+        self.ui.location2_btn.clicked.connect(lambda: MapWindow.open_map_window(self, 26.8416, 75.8014, "Station 2", "Patrika Gate, Jaipur"))
+
+        locations = [
+            {"name": "Station 1", "lat": 26.8640, "lon": 75.8108, "popup": "Malaviya National Institute of Technology, jaipur"},
+            {"name": "Station 2", "lat": 26.8416, "lon": 75.8014, "popup": "Patrika Gate, Jaipur"}
+        ]
+        self.ui.view_map_button.clicked.connect(lambda: ViewMapWindow.open_map_window(self, 26.9124, 75.7873, locations))
 
 
         ## SHOW ==> MAIN WINDOW

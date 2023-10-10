@@ -131,7 +131,7 @@ class Ui_StartWindow(object):
         self.verticalLayout_2.setContentsMargins(9, 0, -1, 0)
         self.create_account_button = QPushButton(self.frame_8)
         self.create_account_button.setObjectName(u"create_account_button")
-        self.create_account_button.setMinimumSize(QSize(100, 55))
+        self.create_account_button.setMinimumSize(QSize(150, 60))
         self.create_account_button.setMaximumSize(QSize(250, 16777215))
         self.create_account_button.setStyleSheet(u"border-image: url(:/newPrefix/create_account.png);")
 
@@ -153,7 +153,7 @@ class Ui_StartWindow(object):
 
         self.log_in_button = QPushButton(self.frame_9)
         self.log_in_button.setObjectName(u"log_in_button")
-        self.log_in_button.setMinimumSize(QSize(110, 60))
+        self.log_in_button.setMinimumSize(QSize(110, 50))
         self.log_in_button.setMaximumSize(QSize(100, 16777215))
         self.log_in_button.setStyleSheet(u"border-image: url(:/newPrefix/button_2.png);")
 
