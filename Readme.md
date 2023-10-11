@@ -1,5 +1,9 @@
 # EV Station management app using Python
 
+## files
+- main file start.py
+- for only application page without login and create account file: app_main.py
+
 ## Tasks completed
 - UI design of the desktop app
 - GUI of desktop app using pyqt5 and qt  designer
@@ -12,10 +16,10 @@
 - map integration done with station
 - added account page 
 - added combined map for all amnaged chargers in the account page
+- added camera using opencv
 
 ## Done Today
-- added account page 
-- added combined map for all amnaged chargers in the account page
+- added camera using opencv
 
 ## to do
 - intergation of algorithm in the python app

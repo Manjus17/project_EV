@@ -7,7 +7,6 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView  # Import QtWebEngineWidgets
 # DISPLAY MAP WINDOW
 #######################################################################################
 class ViewMapWindow(QMainWindow):
-    print("in view map")
     def open_map_window(self, x, y, locations):
         map_dialog = ViewMapDialog(x, y, locations)
         map_dialog.exec_()
@@ -51,6 +50,7 @@ class ViewMapDialog(QDialog):
                 popup=location["popup"],
                 icon=folium.Icon(color='blue',prefix='fa',icon='car'),
             ).add_to(m)
+
         map_html = m._repr_html_()
 
         # creates an instance of the QWebEngineView class, which is a widget provided 
@@ -70,11 +70,6 @@ class ViewMapDialog(QDialog):
 if __name__ == "__main__":
     # Set the attribute before creating a QApplication instance
     QApplication.setAttribute(Qt.AA_ShareOpenGLContexts, True)
-
-    locations = [
-        {"name": "Station 1", "lat": 40.7128, "lon": -74.0060, "popup": "Malaviya National Institute of Technology, jaipur"},
-        {"name": "Marker 2", "lat": 34.0522, "lon": -118.2437, "popup": "Patrika Gate, Jaipur"}
-    ]
     
     app = QApplication(sys.argv)
     window = ViewMapWindow()

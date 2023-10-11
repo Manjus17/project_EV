@@ -12,6 +12,11 @@ from PySide2.QtWidgets import *
 from map import MapWindow, MapDialog
 
 ################################################################################################
+# CAMERA FILE IMPORT
+################################################################################################
+from camera import MaincamWindow
+
+################################################################################################
 # VIEW MAP FILE IMPORT
 ################################################################################################
 from view_map import ViewMapWindow, ViewMapDialog
@@ -101,11 +106,18 @@ class MainWindow(QMainWindow):
         # connect location button of station 2 with its location passing latitude longitude station name and location as parameters
         self.ui.location2_btn.clicked.connect(lambda: MapWindow.open_map_window(self, 26.8416, 75.8014, "Station 2", "Patrika Gate, Jaipur"))
 
+        # all Managed stations locations to be shown on on the map
         locations = [
             {"name": "Station 1", "lat": 26.8640, "lon": 75.8108, "popup": "Malaviya National Institute of Technology, jaipur"},
             {"name": "Station 2", "lat": 26.8416, "lon": 75.8014, "popup": "Patrika Gate, Jaipur"}
         ]
+        
+        # connect the view map button to the map passing the locations
         self.ui.view_map_button.clicked.connect(lambda: ViewMapWindow.open_map_window(self, 26.9124, 75.7873, locations))
+
+        # link camera using opencv
+        self.ui.camera1_btn.clicked.connect(lambda: MaincamWindow.open_camera_window(self))
+        self.ui.camera2_btn.clicked.connect(lambda: MaincamWindow.open_camera_window(self))
 
         # show window
         self.window.show()
