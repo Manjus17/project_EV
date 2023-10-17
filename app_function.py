@@ -2,6 +2,7 @@
 # IMPORT APP_MAIN
 ##########################################################################################################
 from app_main import *
+from datetime import datetime, timedelta
 
 
 
@@ -204,12 +205,18 @@ class UIFunctions(MainWindow):
     # PROGRESS BAR ALGO
     ##########################################################################################################
     def progress_bar_value(a, b):
-        if a == 0:
-            return 0
-        else:
-            ans = (a/b)*100
-            return ans
+        not_in_use = 0
+        tot_in_use = 0
+        for val in a:
+            tot_in_use += val["power_use"]*val["percentage"]/100
         
+        for val in b:
+            not_in_use += val["power_use"]*val["percentage"]/100
+
+        ans = tot_in_use/(tot_in_use + not_in_use)*100
+        return ans
+
+
 
 
     ##########################################################################################################
@@ -217,4 +224,30 @@ class UIFunctions(MainWindow):
     ##########################################################################################################
     def available(a, b):
         return a-b
+    
+
+
+
+    ##########################################################################################################
+    # EXPECTED RETURN TIME CALCULATION
+    ##########################################################################################################
+    def calculate_charging_end_time(start_time, current_soc, ev_capacity, charging_rate):
+        # Convert the start_time to a datetime object
+        start_time = datetime.strptime(start_time, '%H:%M')
+        
+        # Calculate the energy required to charge the EV to its full capacity
+        energy_required = ev_capacity - current_soc
+        
+        # Calculate the time required for charging in hours
+        charging_time_hours = energy_required / charging_rate
+        
+        # Calculate the expected charging end time
+        end_time = start_time + timedelta(hours=charging_time_hours)
+        
+        # Format the end_time as a string in HH:MM format
+        end_time_str = end_time.strftime('%H:%M')
+        return end_time_str
+    
+
+
     

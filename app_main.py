@@ -37,7 +37,7 @@ from app_function import *
 ################################################################################################
 # import total_chargers and in_use_chargers for progress bar algo
 ################################################################################################
-from app import total_chargers, in_use_chargers
+from app import total_chargers, in_use_chargers, total_capacity, current_soc, power, charging_start_time
 
 
 ########################################################################
@@ -58,8 +58,20 @@ class MainWindow(QMainWindow):
         self.ui.prg_in.rpb_setRange(0, 100)
         self.ui.prg_in.rpb_setBarStyle('Pizza')  # progress bar style
 
+        in_use_progress = [
+            {"percentage": 20, "power_use":7.82 },
+            {"percentage": 30, "power_use":7.6 },
+            {"percentage": 30, "power_use":5.9 },
+            {"percentage": 20, "power_use":6.2 }
+        ]
+
+        not_in_use_progress = [
+            {"percentage": 50, "power_use":8.2 },
+            {"percentage": 50, "power_use":5.66 },
+        ]
+
         # storing value returned from progress bar function
-        value = UIFunctions.progress_bar_value(in_use_chargers, total_chargers)
+        value = UIFunctions.progress_bar_value(in_use_progress, not_in_use_progress)
         self.ui.prg_in.rpb_setValue(value) # set the returned value in progress bar
 
         # calculation of available chargers 
@@ -102,6 +114,9 @@ class MainWindow(QMainWindow):
         # link camera using opencv
         self.ui.camera1_btn.clicked.connect(lambda: MaincamWindow.open_camera_window(self))
         self.ui.camera2_btn.clicked.connect(lambda: MaincamWindow.open_camera_window(self))
+
+        ecet11 = UIFunctions.calculate_charging_end_time(charging_start_time, current_soc, total_capacity, power)
+        self.ui.ecet11_value_label.setText(str(ecet11))
 
 
         ## SHOW ==> MAIN WINDOW

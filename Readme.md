@@ -17,9 +17,12 @@
 - added account page 
 - added combined map for all amnaged chargers in the account page
 - added camera using opencv
+- added camera using opencv
 
 ## Done Today
-- added camera using opencv
+- integrated wating time calculation
+- charging end time
+- progress bar
 
 ## to do
 - intergation of algorithm in the python app

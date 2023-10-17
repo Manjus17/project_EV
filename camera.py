@@ -49,6 +49,21 @@ class VideoWidget(QWidget):
 
 # CameraWindow is a dialog that contains the VideoWidget.
 class CameraWindow(QDialog):
+    def center_on_screen(self):
+        # Get the screen geometry
+        screen_geometry = QApplication.desktop().screenGeometry()
+
+        # Calculate the center point of the screen
+        center_point = screen_geometry.center()
+
+        # Calculate the new position for the window
+        new_x = int(center_point.x() - self.width() / 2)
+        new_y = int(center_point.y() - self.height() / 2)
+
+        # Set the window position
+        self.move(new_x, new_y)
+
+        
     def __init__(self):
         super(CameraWindow, self).__init__()
 

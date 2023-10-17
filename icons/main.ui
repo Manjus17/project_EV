@@ -18,7 +18,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    <item alignment="Qt::AlignTop">
+    <item>
      <widget class="QWidget" name="header" native="true">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(24, 24, 24);</string>
@@ -339,7 +339,7 @@ border-radius: 25;</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="home_page">
              <layout class="QGridLayout" name="gridLayout">
@@ -1166,7 +1166,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="cname11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1174,6 +1174,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1215,7 +1218,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="ctype11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1223,6 +1226,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1261,7 +1267,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="cid11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1269,6 +1275,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1304,7 +1313,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="minc11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1312,6 +1321,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1347,7 +1359,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="maxc11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1355,6 +1367,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1390,7 +1405,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="voltage11_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1398,6 +1413,46 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="power11_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_74">
+                                           <item>
+                                            <widget class="QLabel" name="power11_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Power in kWH</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="power11_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1454,6 +1509,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -1487,6 +1545,12 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="textFormat">
+                                              <enum>Qt::AutoText</enum>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1522,6 +1586,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -1555,6 +1622,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1590,6 +1660,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -1623,6 +1696,46 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="ec11_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_75">
+                                           <item>
+                                            <widget class="QLabel" name="ec11_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Energy Consumed</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="ec11_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1879,6 +1992,43 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </layout>
                                          </widget>
                                         </item>
+                                        <item>
+                                         <widget class="QFrame" name="power12_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_77">
+                                           <item>
+                                            <widget class="QLabel" name="power12_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Power</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="power12_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
                                        </layout>
                                       </widget>
                                      </item>
@@ -1914,7 +2064,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="label_60">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1922,6 +2072,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1948,7 +2101,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="label_62">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1956,6 +2109,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -1982,7 +2138,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="label_64">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -1990,6 +2146,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2016,7 +2175,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="label_66">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -2024,6 +2183,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2059,6 +2221,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2084,7 +2249,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                             </widget>
                                            </item>
-                                           <item alignment="Qt::AlignHCenter">
+                                           <item>
                                             <widget class="QLabel" name="label_68">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
@@ -2092,6 +2257,46 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="ec12_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_76">
+                                           <item>
+                                            <widget class="QLabel" name="ec12_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Energy Consumed</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="ec12_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2305,7 +2510,7 @@ background-color: rgb(50, 162, 244);</string>
                               <item row="0" column="0">
                                <widget class="QStackedWidget" name="stackedWidget_4">
                                 <property name="currentIndex">
-                                 <number>1</number>
+                                 <number>0</number>
                                 </property>
                                 <widget class="QWidget" name="page">
                                  <layout class="QGridLayout" name="gridLayout_24">
@@ -2374,6 +2579,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>1</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2407,6 +2615,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2442,6 +2653,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>1</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2475,6 +2689,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2510,6 +2727,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>1</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2543,6 +2763,46 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>1</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="power21_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_81">
+                                           <item>
+                                            <widget class="QLabel" name="power21_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Power in kWH</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="power21_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2593,6 +2853,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2626,6 +2889,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2661,6 +2927,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2694,6 +2963,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2729,6 +3001,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2762,6 +3037,46 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="ec21_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_80">
+                                           <item>
+                                            <widget class="QLabel" name="ec21_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Energy Consumed</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="ec21_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -2843,6 +3158,9 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>2</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
@@ -2858,7 +3176,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_53">
                                            <item>
-                                            <widget class="QLabel" name="label_95">
+                                            <widget class="QLabel" name="ctype22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2869,7 +3187,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_96">
+                                            <widget class="QLabel" name="ctype22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2877,13 +3195,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>2</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_99">
+                                         <widget class="QFrame" name="cid22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2892,7 +3213,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_54">
                                            <item>
-                                            <widget class="QLabel" name="label_97">
+                                            <widget class="QLabel" name="cid22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2903,7 +3224,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_98">
+                                            <widget class="QLabel" name="cid22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2911,13 +3232,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>2</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_100">
+                                         <widget class="QFrame" name="minc22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2926,7 +3250,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_55">
                                            <item>
-                                            <widget class="QLabel" name="label_99">
+                                            <widget class="QLabel" name="minc22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2937,7 +3261,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_100">
+                                            <widget class="QLabel" name="minc22_valuelabel">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2945,13 +3269,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>2</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_101">
+                                         <widget class="QFrame" name="maxc22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2960,7 +3287,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_56">
                                            <item>
-                                            <widget class="QLabel" name="label_101">
+                                            <widget class="QLabel" name="maxc22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2971,7 +3298,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_102">
+                                            <widget class="QLabel" name="maxc22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -2979,13 +3306,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>2</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_102">
+                                         <widget class="QFrame" name="voltage22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -2994,7 +3324,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_57">
                                            <item>
-                                            <widget class="QLabel" name="label_103">
+                                            <widget class="QLabel" name="voltage22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3005,13 +3335,53 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_104">
+                                            <widget class="QLabel" name="voltage22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>2</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="power22_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_79">
+                                           <item>
+                                            <widget class="QLabel" name="power22_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Power</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="power22_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>
@@ -3034,7 +3404,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                        </property>
                                        <layout class="QVBoxLayout" name="verticalLayout_22">
                                         <item>
-                                         <widget class="QFrame" name="frame_103">
+                                         <widget class="QFrame" name="evid22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3043,7 +3413,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_58">
                                            <item>
-                                            <widget class="QLabel" name="label_105">
+                                            <widget class="QLabel" name="evid22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3054,7 +3424,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_106">
+                                            <widget class="QLabel" name="evid22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3062,13 +3432,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_104">
+                                         <widget class="QFrame" name="cst22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3077,7 +3450,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_59">
                                            <item>
-                                            <widget class="QLabel" name="label_107">
+                                            <widget class="QLabel" name="cst22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3088,7 +3461,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_108">
+                                            <widget class="QLabel" name="cst22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3096,13 +3469,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_105">
+                                         <widget class="QFrame" name="soc22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3111,7 +3487,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_60">
                                            <item>
-                                            <widget class="QLabel" name="label_109">
+                                            <widget class="QLabel" name="soc22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3122,7 +3498,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_110">
+                                            <widget class="QLabel" name="soc22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3130,13 +3506,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_106">
+                                         <widget class="QFrame" name="tc22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3145,7 +3524,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_61">
                                            <item>
-                                            <widget class="QLabel" name="label_111">
+                                            <widget class="QLabel" name="tc22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3164,13 +3543,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_107">
+                                         <widget class="QFrame" name="ecet22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3179,7 +3561,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_62">
                                            <item>
-                                            <widget class="QLabel" name="label_113">
+                                            <widget class="QLabel" name="ecet22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3190,7 +3572,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_114">
+                                            <widget class="QLabel" name="ecet22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3198,13 +3580,16 @@ font: 12pt &quot;Calibri&quot;;</string>
                                              <property name="text">
                                               <string>TextLabel</string>
                                              </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
                                             </widget>
                                            </item>
                                           </layout>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QFrame" name="frame_108">
+                                         <widget class="QFrame" name="price22_frame">
                                           <property name="frameShape">
                                            <enum>QFrame::StyledPanel</enum>
                                           </property>
@@ -3213,7 +3598,7 @@ font: 12pt &quot;Calibri&quot;;</string>
                                           </property>
                                           <layout class="QHBoxLayout" name="horizontalLayout_63">
                                            <item>
-                                            <widget class="QLabel" name="label_115">
+                                            <widget class="QLabel" name="price22_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
@@ -3224,13 +3609,53 @@ font: 12pt &quot;Calibri&quot;;</string>
                                             </widget>
                                            </item>
                                            <item>
-                                            <widget class="QLabel" name="label_116">
+                                            <widget class="QLabel" name="price22_value_label">
                                              <property name="styleSheet">
                                               <string notr="true">color: rgb(255, 255, 255);
 font: 12pt &quot;Calibri&quot;;</string>
                                              </property>
                                              <property name="text">
                                               <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                          </layout>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QFrame" name="ec22_frame">
+                                          <property name="frameShape">
+                                           <enum>QFrame::StyledPanel</enum>
+                                          </property>
+                                          <property name="frameShadow">
+                                           <enum>QFrame::Raised</enum>
+                                          </property>
+                                          <layout class="QHBoxLayout" name="horizontalLayout_78">
+                                           <item>
+                                            <widget class="QLabel" name="ec22_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>Energy Consumed</string>
+                                             </property>
+                                            </widget>
+                                           </item>
+                                           <item>
+                                            <widget class="QLabel" name="ec22_value_label">
+                                             <property name="styleSheet">
+                                              <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Calibri&quot;;</string>
+                                             </property>
+                                             <property name="text">
+                                              <string>TextLabel</string>
+                                             </property>
+                                             <property name="alignment">
+                                              <set>Qt::AlignCenter</set>
                                              </property>
                                             </widget>
                                            </item>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainvuPnQY.ui'
+## Form generated from reading UI file 'mainmEgIsW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -14,22 +14,30 @@ from PySide2.QtWidgets import *
 
 from PySide2extn.RoundProgressBar import roundProgressBar
 
-import account_rc
-import search_rc
-import edit_rc
-import line_rc
-import plug_rc
-import down_rc
-import menu_rc
-import noti_rc
+import qrc_pyfiles.account_rc as account_rc
+import qrc_pyfiles.search_rc as search_rc
+import qrc_pyfiles.edit_rc as edit_rc
+import qrc_pyfiles.line_rc as line_rc
+import qrc_pyfiles.plug_rc as plug_rc
+import qrc_pyfiles.down_rc as down_rc
+import qrc_pyfiles.menu_rc as menu_rc
+import qrc_pyfiles.noti_rc as noti_rc
 
 total_chargers = 58
 in_use_chargers = 43
+charging_start_time = '10:00'
+total_capacity = 60
+current_soc = 20
+power = 10
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         global total_chargers
         global in_use_chargers
+        global charging_start_time
+        global total_capacity
+        global current_soc
+        global power
 
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -107,7 +115,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame_2, 0, Qt.AlignRight)
 
 
-        self.verticalLayout.addWidget(self.header, 0, Qt.AlignTop)
+        self.verticalLayout.addWidget(self.header)
 
         self.main = QWidget(self.centralwidget)
         self.main.setObjectName(u"main")
@@ -315,6 +323,7 @@ class Ui_MainWindow(object):
         self.available_chargers_lcdNumber = QLCDNumber(self.available_chargers_frame)
         self.available_chargers_lcdNumber.setObjectName(u"available_chargers_lcdNumber")
         self.available_chargers_lcdNumber.setDigitCount(2)
+        # self.available_chargers_lcdNumber.setProperty("intValue", )
 
         self.horizontalLayout_66.addWidget(self.available_chargers_lcdNumber)
 
@@ -775,6 +784,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.voltage11_frame)
 
+        self.power11_frame = QFrame(self.ch11_left_frame)
+        self.power11_frame.setObjectName(u"power11_frame")
+        self.power11_frame.setFrameShape(QFrame.StyledPanel)
+        self.power11_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_74 = QHBoxLayout(self.power11_frame)
+        self.horizontalLayout_74.setObjectName(u"horizontalLayout_74")
+        self.power11_label = QLabel(self.power11_frame)
+        self.power11_label.setObjectName(u"power11_label")
+        self.power11_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_74.addWidget(self.power11_label)
+
+        self.power11_value_label = QLabel(self.power11_frame)
+        self.power11_value_label.setObjectName(u"power11_value_label")
+        self.power11_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+        self.power11_value_label.setAlignment(Qt.AlignCenter)
+        
+
+        self.horizontalLayout_74.addWidget(self.power11_value_label)
+
+        #############################################################################################
+        #############################################################################################
+        self.power11_value_label.setText(str(power))
+
+
+        self.verticalLayout_11.addWidget(self.power11_frame)
+
 
         self.horizontalLayout_7.addWidget(self.ch11_left_frame)
 
@@ -828,6 +866,10 @@ class Ui_MainWindow(object):
 "font: 12pt \"Calibri\";")
 
         self.horizontalLayout_22.addWidget(self.cst11_value_label)
+        
+        #############################################################################################
+        #############################################################################################
+        self.cst11_value_label.setText(str(charging_start_time))
 
 
         self.verticalLayout_12.addWidget(self.cst11_frame)
@@ -852,6 +894,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_23.addWidget(self.soc11_value_label)
 
+        #############################################################################################
+        #############################################################################################
+        self.soc11_value_label.setText(str(current_soc))
+
 
         self.verticalLayout_12.addWidget(self.soc11_frame)
 
@@ -875,6 +921,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_24.addWidget(self.capacity11_value_label)
 
+        #############################################################################################
+        #############################################################################################
+        self.capacity11_value_label.setText(str(total_capacity))
 
         self.verticalLayout_12.addWidget(self.capacity11_frame)
 
@@ -924,11 +973,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.price11_frame)
 
+        self.ec11_frame = QFrame(self.ch11_right_frame)
+        self.ec11_frame.setObjectName(u"ec11_frame")
+        self.ec11_frame.setFrameShape(QFrame.StyledPanel)
+        self.ec11_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_75 = QHBoxLayout(self.ec11_frame)
+        self.horizontalLayout_75.setObjectName(u"horizontalLayout_75")
+        self.ec11_label = QLabel(self.ec11_frame)
+        self.ec11_label.setObjectName(u"ec11_label")
+        self.ec11_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_75.addWidget(self.ec11_label)
+
+        self.ec11_value_label = QLabel(self.ec11_frame)
+        self.ec11_value_label.setObjectName(u"ec11_value_label")
+        self.ec11_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_75.addWidget(self.ec11_value_label)
+
+
+        self.verticalLayout_12.addWidget(self.ec11_frame)
+
 
         self.horizontalLayout_7.addWidget(self.ch11_right_frame)
 
 
         self.gridLayout_17.addWidget(self.charger_11_frame, 0, 0, 1, 1)
+
 
         self.stackedWidget_3.addWidget(self.charge_11)
         self.charge_12 = QWidget()
@@ -1088,6 +1161,30 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addWidget(self.voltage12_frame)
 
+        self.power12_frame = QFrame(self.charger12_main_left_frame)
+        self.power12_frame.setObjectName(u"power12_frame")
+        self.power12_frame.setFrameShape(QFrame.StyledPanel)
+        self.power12_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_77 = QHBoxLayout(self.power12_frame)
+        self.horizontalLayout_77.setObjectName(u"horizontalLayout_77")
+        self.power12_label = QLabel(self.power12_frame)
+        self.power12_label.setObjectName(u"power12_label")
+        self.power12_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_77.addWidget(self.power12_label)
+
+        self.power12_value_label = QLabel(self.power12_frame)
+        self.power12_value_label.setObjectName(u"power12_value_label")
+        self.power12_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+        self.power12_value_label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_77.addWidget(self.power12_value_label)
+
+
+        self.verticalLayout_19.addWidget(self.power12_frame)
+
 
         self.horizontalLayout_8.addWidget(self.charger12_main_left_frame)
 
@@ -1235,6 +1332,29 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_18.addWidget(self.frame_81)
+
+        self.ec12_frame = QFrame(self.frame_37)
+        self.ec12_frame.setObjectName(u"ec12_frame")
+        self.ec12_frame.setFrameShape(QFrame.StyledPanel)
+        self.ec12_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_76 = QHBoxLayout(self.ec12_frame)
+        self.horizontalLayout_76.setObjectName(u"horizontalLayout_76")
+        self.ec12_label = QLabel(self.ec12_frame)
+        self.ec12_label.setObjectName(u"ec12_label")
+        self.ec12_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_76.addWidget(self.ec12_label)
+
+        self.ec12_value_label = QLabel(self.ec12_frame)
+        self.ec12_value_label.setObjectName(u"ec12_value_label")
+        self.ec12_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_76.addWidget(self.ec12_value_label)
+
+
+        self.verticalLayout_18.addWidget(self.ec12_frame)
 
 
         self.horizontalLayout_8.addWidget(self.frame_37)
@@ -1496,6 +1616,29 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_20.addWidget(self.voltage21_frame)
 
+        self.power21_frame = QFrame(self.charger21_left_frame)
+        self.power21_frame.setObjectName(u"power21_frame")
+        self.power21_frame.setFrameShape(QFrame.StyledPanel)
+        self.power21_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_81 = QHBoxLayout(self.power21_frame)
+        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
+        self.power21_label = QLabel(self.power21_frame)
+        self.power21_label.setObjectName(u"power21_label")
+        self.power21_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_81.addWidget(self.power21_label)
+
+        self.power21_value_label = QLabel(self.power21_frame)
+        self.power21_value_label.setObjectName(u"power21_value_label")
+        self.power21_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_81.addWidget(self.power21_value_label)
+
+
+        self.verticalLayout_20.addWidget(self.power21_frame)
+
 
         self.horizontalLayout_18.addWidget(self.charger21_left_frame)
 
@@ -1644,6 +1787,29 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_21.addWidget(self.price21_frame)
 
+        self.ec21_frame = QFrame(self.charger21_right_frame)
+        self.ec21_frame.setObjectName(u"ec21_frame")
+        self.ec21_frame.setFrameShape(QFrame.StyledPanel)
+        self.ec21_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_80 = QHBoxLayout(self.ec21_frame)
+        self.horizontalLayout_80.setObjectName(u"horizontalLayout_80")
+        self.ec21_label = QLabel(self.ec21_frame)
+        self.ec21_label.setObjectName(u"ec21_label")
+        self.ec21_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_80.addWidget(self.ec21_label)
+
+        self.ec21_value_label = QLabel(self.ec21_frame)
+        self.ec21_value_label.setObjectName(u"ec21_value_label")
+        self.ec21_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_80.addWidget(self.ec21_value_label)
+
+
+        self.verticalLayout_21.addWidget(self.ec21_frame)
+
 
         self.horizontalLayout_18.addWidget(self.charger21_right_frame)
 
@@ -1699,114 +1865,137 @@ class Ui_MainWindow(object):
         self.ctype22_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_53 = QHBoxLayout(self.ctype22_frame)
         self.horizontalLayout_53.setObjectName(u"horizontalLayout_53")
-        self.label_95 = QLabel(self.ctype22_frame)
-        self.label_95.setObjectName(u"label_95")
-        self.label_95.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.ctype22_label = QLabel(self.ctype22_frame)
+        self.ctype22_label.setObjectName(u"ctype22_label")
+        self.ctype22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_53.addWidget(self.label_95)
+        self.horizontalLayout_53.addWidget(self.ctype22_label)
 
-        self.label_96 = QLabel(self.ctype22_frame)
-        self.label_96.setObjectName(u"label_96")
-        self.label_96.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.ctype22_value_label = QLabel(self.ctype22_frame)
+        self.ctype22_value_label.setObjectName(u"ctype22_value_label")
+        self.ctype22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_53.addWidget(self.label_96)
+        self.horizontalLayout_53.addWidget(self.ctype22_value_label)
 
 
         self.verticalLayout_23.addWidget(self.ctype22_frame)
 
-        self.frame_99 = QFrame(self.charger22_left_frame)
-        self.frame_99.setObjectName(u"frame_99")
-        self.frame_99.setFrameShape(QFrame.StyledPanel)
-        self.frame_99.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_54 = QHBoxLayout(self.frame_99)
+        self.cid22_frame = QFrame(self.charger22_left_frame)
+        self.cid22_frame.setObjectName(u"cid22_frame")
+        self.cid22_frame.setFrameShape(QFrame.StyledPanel)
+        self.cid22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_54 = QHBoxLayout(self.cid22_frame)
         self.horizontalLayout_54.setObjectName(u"horizontalLayout_54")
-        self.label_97 = QLabel(self.frame_99)
-        self.label_97.setObjectName(u"label_97")
-        self.label_97.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.cid22_label = QLabel(self.cid22_frame)
+        self.cid22_label.setObjectName(u"cid22_label")
+        self.cid22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_54.addWidget(self.label_97)
+        self.horizontalLayout_54.addWidget(self.cid22_label)
 
-        self.label_98 = QLabel(self.frame_99)
-        self.label_98.setObjectName(u"label_98")
-        self.label_98.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.cid22_value_label = QLabel(self.cid22_frame)
+        self.cid22_value_label.setObjectName(u"cid22_value_label")
+        self.cid22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_54.addWidget(self.label_98)
+        self.horizontalLayout_54.addWidget(self.cid22_value_label)
 
 
-        self.verticalLayout_23.addWidget(self.frame_99)
+        self.verticalLayout_23.addWidget(self.cid22_frame)
 
-        self.frame_100 = QFrame(self.charger22_left_frame)
-        self.frame_100.setObjectName(u"frame_100")
-        self.frame_100.setFrameShape(QFrame.StyledPanel)
-        self.frame_100.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_55 = QHBoxLayout(self.frame_100)
+        self.minc22_frame = QFrame(self.charger22_left_frame)
+        self.minc22_frame.setObjectName(u"minc22_frame")
+        self.minc22_frame.setFrameShape(QFrame.StyledPanel)
+        self.minc22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_55 = QHBoxLayout(self.minc22_frame)
         self.horizontalLayout_55.setObjectName(u"horizontalLayout_55")
-        self.label_99 = QLabel(self.frame_100)
-        self.label_99.setObjectName(u"label_99")
-        self.label_99.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.minc22_label = QLabel(self.minc22_frame)
+        self.minc22_label.setObjectName(u"minc22_label")
+        self.minc22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_55.addWidget(self.label_99)
+        self.horizontalLayout_55.addWidget(self.minc22_label)
 
-        self.label_100 = QLabel(self.frame_100)
-        self.label_100.setObjectName(u"label_100")
-        self.label_100.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.minc22_valuelabel = QLabel(self.minc22_frame)
+        self.minc22_valuelabel.setObjectName(u"minc22_valuelabel")
+        self.minc22_valuelabel.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_55.addWidget(self.label_100)
+        self.horizontalLayout_55.addWidget(self.minc22_valuelabel)
 
 
-        self.verticalLayout_23.addWidget(self.frame_100)
+        self.verticalLayout_23.addWidget(self.minc22_frame)
 
-        self.frame_101 = QFrame(self.charger22_left_frame)
-        self.frame_101.setObjectName(u"frame_101")
-        self.frame_101.setFrameShape(QFrame.StyledPanel)
-        self.frame_101.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_56 = QHBoxLayout(self.frame_101)
+        self.maxc22_frame = QFrame(self.charger22_left_frame)
+        self.maxc22_frame.setObjectName(u"maxc22_frame")
+        self.maxc22_frame.setFrameShape(QFrame.StyledPanel)
+        self.maxc22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_56 = QHBoxLayout(self.maxc22_frame)
         self.horizontalLayout_56.setObjectName(u"horizontalLayout_56")
-        self.label_101 = QLabel(self.frame_101)
-        self.label_101.setObjectName(u"label_101")
-        self.label_101.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.maxc22_label = QLabel(self.maxc22_frame)
+        self.maxc22_label.setObjectName(u"maxc22_label")
+        self.maxc22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_56.addWidget(self.label_101)
+        self.horizontalLayout_56.addWidget(self.maxc22_label)
 
-        self.label_102 = QLabel(self.frame_101)
-        self.label_102.setObjectName(u"label_102")
-        self.label_102.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.maxc22_value_label = QLabel(self.maxc22_frame)
+        self.maxc22_value_label.setObjectName(u"maxc22_value_label")
+        self.maxc22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_56.addWidget(self.label_102)
+        self.horizontalLayout_56.addWidget(self.maxc22_value_label)
 
 
-        self.verticalLayout_23.addWidget(self.frame_101)
+        self.verticalLayout_23.addWidget(self.maxc22_frame)
 
-        self.frame_102 = QFrame(self.charger22_left_frame)
-        self.frame_102.setObjectName(u"frame_102")
-        self.frame_102.setFrameShape(QFrame.StyledPanel)
-        self.frame_102.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_57 = QHBoxLayout(self.frame_102)
+        self.voltage22_frame = QFrame(self.charger22_left_frame)
+        self.voltage22_frame.setObjectName(u"voltage22_frame")
+        self.voltage22_frame.setFrameShape(QFrame.StyledPanel)
+        self.voltage22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_57 = QHBoxLayout(self.voltage22_frame)
         self.horizontalLayout_57.setObjectName(u"horizontalLayout_57")
-        self.label_103 = QLabel(self.frame_102)
-        self.label_103.setObjectName(u"label_103")
-        self.label_103.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.voltage22_label = QLabel(self.voltage22_frame)
+        self.voltage22_label.setObjectName(u"voltage22_label")
+        self.voltage22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_57.addWidget(self.label_103)
+        self.horizontalLayout_57.addWidget(self.voltage22_label)
 
-        self.label_104 = QLabel(self.frame_102)
-        self.label_104.setObjectName(u"label_104")
-        self.label_104.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.voltage22_value_label = QLabel(self.voltage22_frame)
+        self.voltage22_value_label.setObjectName(u"voltage22_value_label")
+        self.voltage22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_57.addWidget(self.label_104)
+        self.horizontalLayout_57.addWidget(self.voltage22_value_label)
 
 
-        self.verticalLayout_23.addWidget(self.frame_102)
+        self.verticalLayout_23.addWidget(self.voltage22_frame)
+
+        self.power22_frame = QFrame(self.charger22_left_frame)
+        self.power22_frame.setObjectName(u"power22_frame")
+        self.power22_frame.setFrameShape(QFrame.StyledPanel)
+        self.power22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_79 = QHBoxLayout(self.power22_frame)
+        self.horizontalLayout_79.setObjectName(u"horizontalLayout_79")
+        self.power22_label = QLabel(self.power22_frame)
+        self.power22_label.setObjectName(u"power22_label")
+        self.power22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_79.addWidget(self.power22_label)
+
+        self.power22_value_label = QLabel(self.power22_frame)
+        self.power22_value_label.setObjectName(u"power22_value_label")
+        self.power22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_79.addWidget(self.power22_value_label)
+
+
+        self.verticalLayout_23.addWidget(self.power22_frame)
 
 
         self.horizontalLayout_27.addWidget(self.charger22_left_frame)
@@ -1818,89 +2007,89 @@ class Ui_MainWindow(object):
         self.frame_96.setFrameShadow(QFrame.Raised)
         self.verticalLayout_22 = QVBoxLayout(self.frame_96)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
-        self.frame_103 = QFrame(self.frame_96)
-        self.frame_103.setObjectName(u"frame_103")
-        self.frame_103.setFrameShape(QFrame.StyledPanel)
-        self.frame_103.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_58 = QHBoxLayout(self.frame_103)
+        self.evid22_frame = QFrame(self.frame_96)
+        self.evid22_frame.setObjectName(u"evid22_frame")
+        self.evid22_frame.setFrameShape(QFrame.StyledPanel)
+        self.evid22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_58 = QHBoxLayout(self.evid22_frame)
         self.horizontalLayout_58.setObjectName(u"horizontalLayout_58")
-        self.label_105 = QLabel(self.frame_103)
-        self.label_105.setObjectName(u"label_105")
-        self.label_105.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.evid22_label = QLabel(self.evid22_frame)
+        self.evid22_label.setObjectName(u"evid22_label")
+        self.evid22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_58.addWidget(self.label_105)
+        self.horizontalLayout_58.addWidget(self.evid22_label)
 
-        self.label_106 = QLabel(self.frame_103)
-        self.label_106.setObjectName(u"label_106")
-        self.label_106.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.evid22_value_label = QLabel(self.evid22_frame)
+        self.evid22_value_label.setObjectName(u"evid22_value_label")
+        self.evid22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_58.addWidget(self.label_106)
+        self.horizontalLayout_58.addWidget(self.evid22_value_label)
 
 
-        self.verticalLayout_22.addWidget(self.frame_103)
+        self.verticalLayout_22.addWidget(self.evid22_frame)
 
-        self.frame_104 = QFrame(self.frame_96)
-        self.frame_104.setObjectName(u"frame_104")
-        self.frame_104.setFrameShape(QFrame.StyledPanel)
-        self.frame_104.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_59 = QHBoxLayout(self.frame_104)
+        self.cst22_frame = QFrame(self.frame_96)
+        self.cst22_frame.setObjectName(u"cst22_frame")
+        self.cst22_frame.setFrameShape(QFrame.StyledPanel)
+        self.cst22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_59 = QHBoxLayout(self.cst22_frame)
         self.horizontalLayout_59.setObjectName(u"horizontalLayout_59")
-        self.label_107 = QLabel(self.frame_104)
-        self.label_107.setObjectName(u"label_107")
-        self.label_107.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.cst22_label = QLabel(self.cst22_frame)
+        self.cst22_label.setObjectName(u"cst22_label")
+        self.cst22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_59.addWidget(self.label_107)
+        self.horizontalLayout_59.addWidget(self.cst22_label)
 
-        self.label_108 = QLabel(self.frame_104)
-        self.label_108.setObjectName(u"label_108")
-        self.label_108.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.cst22_value_label = QLabel(self.cst22_frame)
+        self.cst22_value_label.setObjectName(u"cst22_value_label")
+        self.cst22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_59.addWidget(self.label_108)
+        self.horizontalLayout_59.addWidget(self.cst22_value_label)
 
 
-        self.verticalLayout_22.addWidget(self.frame_104)
+        self.verticalLayout_22.addWidget(self.cst22_frame)
 
-        self.frame_105 = QFrame(self.frame_96)
-        self.frame_105.setObjectName(u"frame_105")
-        self.frame_105.setFrameShape(QFrame.StyledPanel)
-        self.frame_105.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_60 = QHBoxLayout(self.frame_105)
+        self.soc22_frame = QFrame(self.frame_96)
+        self.soc22_frame.setObjectName(u"soc22_frame")
+        self.soc22_frame.setFrameShape(QFrame.StyledPanel)
+        self.soc22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_60 = QHBoxLayout(self.soc22_frame)
         self.horizontalLayout_60.setObjectName(u"horizontalLayout_60")
-        self.label_109 = QLabel(self.frame_105)
-        self.label_109.setObjectName(u"label_109")
-        self.label_109.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.soc22_label = QLabel(self.soc22_frame)
+        self.soc22_label.setObjectName(u"soc22_label")
+        self.soc22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_60.addWidget(self.label_109)
+        self.horizontalLayout_60.addWidget(self.soc22_label)
 
-        self.label_110 = QLabel(self.frame_105)
-        self.label_110.setObjectName(u"label_110")
-        self.label_110.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.soc22_value_label = QLabel(self.soc22_frame)
+        self.soc22_value_label.setObjectName(u"soc22_value_label")
+        self.soc22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_60.addWidget(self.label_110)
+        self.horizontalLayout_60.addWidget(self.soc22_value_label)
 
 
-        self.verticalLayout_22.addWidget(self.frame_105)
+        self.verticalLayout_22.addWidget(self.soc22_frame)
 
-        self.frame_106 = QFrame(self.frame_96)
-        self.frame_106.setObjectName(u"frame_106")
-        self.frame_106.setFrameShape(QFrame.StyledPanel)
-        self.frame_106.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_61 = QHBoxLayout(self.frame_106)
+        self.tc22_frame = QFrame(self.frame_96)
+        self.tc22_frame.setObjectName(u"tc22_frame")
+        self.tc22_frame.setFrameShape(QFrame.StyledPanel)
+        self.tc22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_61 = QHBoxLayout(self.tc22_frame)
         self.horizontalLayout_61.setObjectName(u"horizontalLayout_61")
-        self.label_111 = QLabel(self.frame_106)
-        self.label_111.setObjectName(u"label_111")
-        self.label_111.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.tc22_label = QLabel(self.tc22_frame)
+        self.tc22_label.setObjectName(u"tc22_label")
+        self.tc22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_61.addWidget(self.label_111)
+        self.horizontalLayout_61.addWidget(self.tc22_label)
 
-        self.label_112 = QLabel(self.frame_106)
+        self.label_112 = QLabel(self.tc22_frame)
         self.label_112.setObjectName(u"label_112")
         self.label_112.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
@@ -1908,53 +2097,76 @@ class Ui_MainWindow(object):
         self.horizontalLayout_61.addWidget(self.label_112)
 
 
-        self.verticalLayout_22.addWidget(self.frame_106)
+        self.verticalLayout_22.addWidget(self.tc22_frame)
 
-        self.frame_107 = QFrame(self.frame_96)
-        self.frame_107.setObjectName(u"frame_107")
-        self.frame_107.setFrameShape(QFrame.StyledPanel)
-        self.frame_107.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_62 = QHBoxLayout(self.frame_107)
+        self.ecet22_frame = QFrame(self.frame_96)
+        self.ecet22_frame.setObjectName(u"ecet22_frame")
+        self.ecet22_frame.setFrameShape(QFrame.StyledPanel)
+        self.ecet22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_62 = QHBoxLayout(self.ecet22_frame)
         self.horizontalLayout_62.setObjectName(u"horizontalLayout_62")
-        self.label_113 = QLabel(self.frame_107)
-        self.label_113.setObjectName(u"label_113")
-        self.label_113.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.ecet22_label = QLabel(self.ecet22_frame)
+        self.ecet22_label.setObjectName(u"ecet22_label")
+        self.ecet22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_62.addWidget(self.label_113)
+        self.horizontalLayout_62.addWidget(self.ecet22_label)
 
-        self.label_114 = QLabel(self.frame_107)
-        self.label_114.setObjectName(u"label_114")
-        self.label_114.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.ecet22_value_label = QLabel(self.ecet22_frame)
+        self.ecet22_value_label.setObjectName(u"ecet22_value_label")
+        self.ecet22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_62.addWidget(self.label_114)
+        self.horizontalLayout_62.addWidget(self.ecet22_value_label)
 
 
-        self.verticalLayout_22.addWidget(self.frame_107)
+        self.verticalLayout_22.addWidget(self.ecet22_frame)
 
-        self.frame_108 = QFrame(self.frame_96)
-        self.frame_108.setObjectName(u"frame_108")
-        self.frame_108.setFrameShape(QFrame.StyledPanel)
-        self.frame_108.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_63 = QHBoxLayout(self.frame_108)
+        self.price22_frame = QFrame(self.frame_96)
+        self.price22_frame.setObjectName(u"price22_frame")
+        self.price22_frame.setFrameShape(QFrame.StyledPanel)
+        self.price22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_63 = QHBoxLayout(self.price22_frame)
         self.horizontalLayout_63.setObjectName(u"horizontalLayout_63")
-        self.label_115 = QLabel(self.frame_108)
-        self.label_115.setObjectName(u"label_115")
-        self.label_115.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.price22_label = QLabel(self.price22_frame)
+        self.price22_label.setObjectName(u"price22_label")
+        self.price22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_63.addWidget(self.label_115)
+        self.horizontalLayout_63.addWidget(self.price22_label)
 
-        self.label_116 = QLabel(self.frame_108)
-        self.label_116.setObjectName(u"label_116")
-        self.label_116.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+        self.price22_value_label = QLabel(self.price22_frame)
+        self.price22_value_label.setObjectName(u"price22_value_label")
+        self.price22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 12pt \"Calibri\";")
 
-        self.horizontalLayout_63.addWidget(self.label_116)
+        self.horizontalLayout_63.addWidget(self.price22_value_label)
 
 
-        self.verticalLayout_22.addWidget(self.frame_108)
+        self.verticalLayout_22.addWidget(self.price22_frame)
+
+        self.ec22_frame = QFrame(self.frame_96)
+        self.ec22_frame.setObjectName(u"ec22_frame")
+        self.ec22_frame.setFrameShape(QFrame.StyledPanel)
+        self.ec22_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_78 = QHBoxLayout(self.ec22_frame)
+        self.horizontalLayout_78.setObjectName(u"horizontalLayout_78")
+        self.ec22_label = QLabel(self.ec22_frame)
+        self.ec22_label.setObjectName(u"ec22_label")
+        self.ec22_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_78.addWidget(self.ec22_label)
+
+        self.ec22_value_label = QLabel(self.ec22_frame)
+        self.ec22_value_label.setObjectName(u"ec22_value_label")
+        self.ec22_value_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 12pt \"Calibri\";")
+
+        self.horizontalLayout_78.addWidget(self.ec22_value_label)
+
+
+        self.verticalLayout_22.addWidget(self.ec22_frame)
 
 
         self.horizontalLayout_27.addWidget(self.frame_96)
@@ -2470,7 +2682,7 @@ class Ui_MainWindow(object):
         self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_4.setCurrentIndex(1)
+        self.stackedWidget_4.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(2)
 
 
@@ -2519,18 +2731,36 @@ class Ui_MainWindow(object):
         self.maxc11_value_label.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.voltage11_label.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.voltage11_value_label.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.power11_label.setText(QCoreApplication.translate("MainWindow", u"Power in KWH", None))
+
+
+        self.power11_value_label.setText(QCoreApplication.translate("MainWindow", str(power), None))
+
+
         self.evid11_label.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
         self.evid11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.cst11_label.setText(QCoreApplication.translate("MainWindow", u"Charging start Time", None))
-        self.cst11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.soc11_label.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
-        self.soc11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.capacity11_label.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
-        self.capacity11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+
+
+        self.cst11_value_label.setText(QCoreApplication.translate("MainWindow", str(charging_start_time), None))
+
+
+        self.soc11_label.setText(QCoreApplication.translate("MainWindow", u"Current SOC in %", None))
+
+
+        self.soc11_value_label.setText(QCoreApplication.translate("MainWindow", str(current_soc), None))
+
+
+        self.capacity11_label.setText(QCoreApplication.translate("MainWindow", u"Total Capacity in kWH", None))
+
+        self.capacity11_value_label.setText(QCoreApplication.translate("MainWindow", str(total_capacity), None))
+
         self.ecet11_label.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
         self.ecet11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.price11_label.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
         self.price11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ec11_label.setText(QCoreApplication.translate("MainWindow", u"Energy Consumed", None))
+        self.ec11_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.cname12_label.setText(QCoreApplication.translate("MainWindow", u"Charger name", None))
         self.cname12_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.ctype12_label.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
@@ -2543,18 +2773,22 @@ class Ui_MainWindow(object):
         self.maxc12_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.voltage12_label.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.voltage12_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.power12_label.setText(QCoreApplication.translate("MainWindow", u"Power in KWH", None))
+        self.power12_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_59.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
         self.label_60.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_61.setText(QCoreApplication.translate("MainWindow", u"Charging start Time", None))
         self.label_62.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.label_63.setText(QCoreApplication.translate("MainWindow", u"Current SOC in %", None))
         self.label_64.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"Total Capacity in kWH", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_57.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
         self.label_58.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_67.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
         self.label_68.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ec12_label.setText(QCoreApplication.translate("MainWindow", u"Energy Consumed", None))
+        self.ec12_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.location2_btn.setText(QCoreApplication.translate("MainWindow", u"Location", None))
         self.camera2_btn.setText(QCoreApplication.translate("MainWindow", u"Camera View", None))
         self.st2_charger_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Charger 1", None))
@@ -2572,42 +2806,50 @@ class Ui_MainWindow(object):
         self.maxc21_value_label.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.voltage21_label.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.voltage21_value_label.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.power21_label.setText(QCoreApplication.translate("MainWindow", u"Power in KWH", None))
+        self.power21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.evid21_label.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
         self.evid21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.cst21_label.setText(QCoreApplication.translate("MainWindow", u"Chrging Start Time", None))
         self.cst21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.soc21_label.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
+        self.soc21_label.setText(QCoreApplication.translate("MainWindow", u"Current SOC in %", None))
         self.soc21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.capacity21_label.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.capacity21_label.setText(QCoreApplication.translate("MainWindow", u"Total Capacity in kWH", None))
         self.capacity21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.ecet21_label.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
         self.ecet21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.price21_label.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
         self.price21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ec21_label.setText(QCoreApplication.translate("MainWindow", u"Energy Consumed", None))
+        self.ec21_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.cname22_label.setText(QCoreApplication.translate("MainWindow", u"Charger Name", None))
         self.cname22_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_95.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
-        self.label_96.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_97.setText(QCoreApplication.translate("MainWindow", u"Charger ID", None))
-        self.label_98.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_99.setText(QCoreApplication.translate("MainWindow", u"Minimum Current", None))
-        self.label_100.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_101.setText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
-        self.label_102.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_103.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
-        self.label_104.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.label_105.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
-        self.label_106.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_107.setText(QCoreApplication.translate("MainWindow", u"Charging Start Time", None))
-        self.label_108.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_109.setText(QCoreApplication.translate("MainWindow", u"Current SOC", None))
-        self.label_110.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_111.setText(QCoreApplication.translate("MainWindow", u"Total Capacity", None))
+        self.ctype22_label.setText(QCoreApplication.translate("MainWindow", u"Charger Type", None))
+        self.ctype22_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.cid22_label.setText(QCoreApplication.translate("MainWindow", u"Charger ID", None))
+        self.cid22_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.minc22_label.setText(QCoreApplication.translate("MainWindow", u"Minimum Current", None))
+        self.minc22_valuelabel.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.maxc22_label.setText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
+        self.maxc22_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.voltage22_label.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
+        self.voltage22_value_label.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.power22_label.setText(QCoreApplication.translate("MainWindow", u"Power in KWH", None))
+        self.power22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.evid22_label.setText(QCoreApplication.translate("MainWindow", u"EV ID", None))
+        self.evid22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.cst22_label.setText(QCoreApplication.translate("MainWindow", u"Charging Start Time", None))
+        self.cst22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.soc22_label.setText(QCoreApplication.translate("MainWindow", u"Current SOC in %", None))
+        self.soc22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.tc22_label.setText(QCoreApplication.translate("MainWindow", u"Total Capacity in kWH", None))
         self.label_112.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_113.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
-        self.label_114.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_115.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
-        self.label_116.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ecet22_label.setText(QCoreApplication.translate("MainWindow", u"Expected Charging End Time", None))
+        self.ecet22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.price22_label.setText(QCoreApplication.translate("MainWindow", u"Expected Price", None))
+        self.price22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.ec22_label.setText(QCoreApplication.translate("MainWindow", u"Energy Consumed", None))
+        self.ec22_value_label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sales_tab), QCoreApplication.translate("MainWindow", u"Sales", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.managemet_cost_tab), QCoreApplication.translate("MainWindow", u"Management Cost", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.electricity_cost_tab), QCoreApplication.translate("MainWindow", u"Electricity Cost", None))
@@ -2637,4 +2879,14 @@ class Ui_MainWindow(object):
 "EV Charge sits at the nexus point between vehicles, building owners, and the grid. With software, we can help buildings, communities, and entire cities charge more EVs than their infrastructure would otherwise allow. We can optimize charging for grid capacity, cost, or carbon impact. And we can enable bi-di"
                         "rectional communication between individual EVs and the grid.", None))
     # retranslateUi
+
+
+
+
+
+
+
+
+
+
 

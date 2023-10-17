@@ -1,7 +1,21 @@
-total_stations = 10
 total_chargers = 58
 in_use_chargers = 43
+charging_start_time = 0
+total_capacity = 0
+current_soc = 0
 
-        global total_stations
         global total_chargers
         global in_use_chargers
+        global charging_start_time
+        global total_capacity
+        global current_soc
+
+
+import qrc_pyfiles.account_rc as account_rc
+import qrc_pyfiles.search_rc as search_rc
+import qrc_pyfiles.edit_rc as edit_rc
+import qrc_pyfiles.line_rc as line_rc
+import qrc_pyfiles.plug_rc as plug_rc
+import qrc_pyfiles.down_rc as down_rc
+import qrc_pyfiles.menu_rc as menu_rc
+import qrc_pyfiles.noti_rc as noti_rc

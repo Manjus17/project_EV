@@ -12,13 +12,13 @@ from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
-import logo_rc
-import google_rc
-import apple_rc
-import add_rc
-import next_rc
-import log_in_rc
-import sign_in_rc
+import qrc_pyfiles.logo_rc as logo_rc
+import qrc_pyfiles.google_rc as google_rc
+import qrc_pyfiles.apple_rc as apple_rc
+import qrc_pyfiles.add_rc as add_rc
+import qrc_pyfiles.next_rc as next_rc
+import qrc_pyfiles.log_in_rc as log_in_rc
+import qrc_pyfiles.sign_in_rc as sign_in_rc
 
 class Ui_StartWindow(object):
     def setupUi(self, MainWindow):
