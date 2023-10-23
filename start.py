@@ -40,6 +40,8 @@ from app_function import *
 # import total_chargers and in_use_cahrgers
 from app import total_chargers, in_use_chargers
 
+import pyrebase
+
 class MainWindow(QMainWindow):
     #########################################################################################################
     # MAP LINKING FUNCTION
@@ -134,12 +136,30 @@ class MainWindow(QMainWindow):
         # show window
         self.window.show()
 
+
+    #######################################################################################################
+    # FIREBASE AUTHENTICATION
+    #######################################################################################################
+    def loginfunction(self, auth):
+        email=self.ui.username.text()
+        password=self.ui.password_login.text()
+        try:
+            auth.sign_in_with_email_and_password(email,password)
+            self.appstart()
+        except:
+            print("Couldn't Sign in Please reacheck email or password")
+            
+
+    def createaccfunction(self, auth):
+        email = self.ui.email.text()
+        if self.ui.password.text()==self.ui.cnf_password.text():
+            password=self.ui.password.text()
+            try:
+                auth.create_user_with_email_and_password(email,password)
+                self.appstart()
+            except:
+                print("This account already exist")  
     
-    
-
-
-
-
 
     ################################################################################################
     # LOGIN AND SIGNUP PAGE
@@ -154,10 +174,11 @@ class MainWindow(QMainWindow):
         self.setFixedWidth(1300)
 
         # open appliction after creating account
-        self.ui.ca_next.clicked.connect(self.appstart)
+        self.ui.ca_next.clicked.connect(lambda: self.createaccfunction(auth))
+        # self.ui.ca_next.clicked.connect(lambda: login(self))
 
         # open application after logging in
-        self.ui.loginpg_next_btn.clicked.connect(self.appstart)
+        self.ui.loginpg_next_btn.clicked.connect(lambda: self.loginfunction(auth))
 
         # link main i.e, first page to create account page
         self.ui.create_account_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.creat_account_page))
@@ -165,6 +186,19 @@ class MainWindow(QMainWindow):
         # link main i.e, first page to login page
         self.ui.log_in_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.login_page))
 
+        firebaseConfig = {
+            "apiKey": "AIzaSyCxe5iXVQujXMltkX7Lcc06Xp16qRCzi1Y",
+            "authDomain": "ev-station-management-e64ee.firebaseapp.com",
+            "projectId": "ev-station-management-e64ee",
+            "storageBucket": "ev-station-management-e64ee.appspot.com",
+            "messagingSenderId": "361415870891",
+            "appId": "1:361415870891:web:173208fcd67f36eea46aee",
+            "measurementId": "G-9HD0M30NVD",
+            "databaseURL": ""
+        }
+
+        firebase = pyrebase.initialize_app(firebaseConfig)
+        auth=firebase.auth()
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################

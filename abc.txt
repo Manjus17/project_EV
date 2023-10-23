@@ -19,3 +19,37 @@ import qrc_pyfiles.plug_rc as plug_rc
 import qrc_pyfiles.down_rc as down_rc
 import qrc_pyfiles.menu_rc as menu_rc
 import qrc_pyfiles.noti_rc as noti_rc
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCxe5iXVQujXMltkX7Lcc06Xp16qRCzi1Y",
+  authDomain: "ev-station-management-e64ee.firebaseapp.com",
+  projectId: "ev-station-management-e64ee",
+  storageBucket: "ev-station-management-e64ee.appspot.com",
+  messagingSenderId: "361415870891",
+  appId: "1:361415870891:web:173208fcd67f36eea46aee",
+  measurementId: "G-9HD0M30NVD"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
