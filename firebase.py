@@ -4,6 +4,7 @@ from ui_start import Ui_StartWindow
 firebaseConfig = {
     "apiKey": "AIzaSyCxe5iXVQujXMltkX7Lcc06Xp16qRCzi1Y",
     "authDomain": "ev-station-management-e64ee.firebaseapp.com",
+    "databaseURL": "https://ev-station-management-e64ee-default-rtdb.firebaseio.com/",
     "projectId": "ev-station-management-e64ee",
     "storageBucket": "ev-station-management-e64ee.appspot.com",
     "messagingSenderId": "361415870891",

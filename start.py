@@ -46,11 +46,11 @@ class MainWindow(QMainWindow):
     #########################################################################################################
     # MAP LINKING FUNCTION
     #########################################################################################################
-    def maplink(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Map_in_App()
-        # self.ui.setupUi(self.window)
-        self.window.show()
+    # def maplink(self):
+    #     self.window = QtWidgets.QMainWindow()
+    #     self.ui = Map_in_App()
+    #     # self.ui.setupUi(self.window)
+    #     self.window.show()
 
 
     ################################################################################################
@@ -144,6 +144,7 @@ class MainWindow(QMainWindow):
         email=self.ui.username.text()
         password=self.ui.password_login.text()
         try:
+            # auth = firebase.auth()
             auth.sign_in_with_email_and_password(email,password)
             self.appstart()
         except:
@@ -152,10 +153,22 @@ class MainWindow(QMainWindow):
 
     def createaccfunction(self, auth):
         email = self.ui.email.text()
+        name = self.ui.name.text()
+        seller_id = self.ui.seller_id.text()
+
         if self.ui.password.text()==self.ui.cnf_password.text():
             password=self.ui.password.text()
             try:
-                auth.create_user_with_email_and_password(email,password)
+                # auth = firebase.auth()
+                print('inside the try block of creating account')
+                user = auth.create_user_with_email_and_password(email,password)
+                user_id = user['idToken']
+                # print(user_id)
+
+                # # db = firebase.database()
+                # db.child("Sellers").child(user_id).set({"name": name, "seller_id": seller_id , "email": email})
+                # # db.child("users").child(email).set({"name": name, "seller_id": seller_id, "email": email })
+                # print('the account created for seller_id ' + seller_id)
                 self.appstart()
             except:
                 print("This account already exist")  
@@ -189,6 +202,7 @@ class MainWindow(QMainWindow):
         firebaseConfig = {
             "apiKey": "AIzaSyCxe5iXVQujXMltkX7Lcc06Xp16qRCzi1Y",
             "authDomain": "ev-station-management-e64ee.firebaseapp.com",
+            "databaseURL": "https://ev-station-management-e64ee.firebaseio.com/",
             "projectId": "ev-station-management-e64ee",
             "storageBucket": "ev-station-management-e64ee.appspot.com",
             "messagingSenderId": "361415870891",
@@ -199,6 +213,8 @@ class MainWindow(QMainWindow):
 
         firebase = pyrebase.initialize_app(firebaseConfig)
         auth=firebase.auth()
+
+        # db = firebase.database()
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################
