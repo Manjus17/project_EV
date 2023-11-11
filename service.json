@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "ev-station-management-e64ee",
+    "private_key_id": "238c0fabfa96bb3dbe10513d54bdf2153b6e4e76",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC9thcQAEhdsv39\no8q4rDwgLFIf/O7K7ha49Zo5MmuWsPhoaKmJpNbAvPUE4NVD7VPiaCYe/wWrFAeu\nD52KsPeeVW1nGCQCee8c7QFT/+D69uxySlmYtfZkwAwN0JxtON9TCD/3kBJnlS29\nNiXVBEzdmMjbS/lYg5IadFO3rPeYVanHdlRUThbguSftczwLCR1jajB+9ivbYhOx\n2wmnziBhG9evCTDkU396et/bcufADXArz8Zf0WBQFUAmWt6Ma0TAfOvyC8EEMeih\nmQ2N1Xfk9ui036HxF992BcgkNi+XWu67VWyfdzXroykC16JY+stjky5+ud4L+B7T\nElKQn5vpAgMBAAECggEAUNYlxpowO8jY5HqmF4HAjv8DsYCv6cWA5ig1Ipki8g+P\nkcHDOBUGsxLxHraE+VBH1aoGUF/fdPHwgdFCkoXsxUlmeC73rRxy8HLnBXl7TsTn\npJ2cxu8GQhD5MevJs9qvgmx6AU2hIgUVe9H2VenirOv87kDVy0so9t/JinMH/58I\nQNKTMifc5ey6iW8N7T0x6xfabDA8+NqGaFoFoYsloj/2YvjAju1huZHDhKcwjddr\nP898a1lsQEKufibuxo1x6eSU7AHVLhCWh9eGFRTb+sWSoA3EH4IyHP34PJjoTUZS\nxSeiQpIGb5RBviK9FQfCeHgKRgO55/D0qoInPKrMTwKBgQDxqsvUZBuv5Or8QHCq\n/1bAT4epqcL4igSNsWGzbSoj6PnJUoPoI+IALXiP5xp0xjHEOamDV8RGW5kBUmrs\n/7aZwFM0XPq39hxso84yJrtT+GIRWo1u1DPojlJsWd803uOBYuMuwDc2uioWDVeJ\nzmCzY8MalEqQCMmwVBCEubwp/wKBgQDI9nQztLXHEnOuWU/s+gx1Nl/IgtzmBMzt\nENaRYnzw9x8YBQukyOC1Vm2xLIU/YLuzNqLE8Sl5HSy+pfpbs7EoP+l74Tib0atX\nKaAHQgVodRFIcYPl9XIKvcTUSLowMjAmv6uccbG1FGWyNXXfVKr5qH112CoaFmy4\n20lGNiwqFwKBgQCQpycyjml0M5XkP74w3H3UxsXxbEfj9Nkc5xwQBju/GujI9Lc3\n8KKKcK1FlZNkam3HgqxQjexSIOnIvMh76+Qky9YB9dWs34fMD5CQvFZMwNQShx05\nRZN8lBQJ/xF32CJdhA9wIGXsQCqI4JuRRRLkzcYu1qx64oe3H9pzV6mliQKBgQDE\nHJYLe1dFHMGdK/UualnL7LMORn5xTc/5rMvndrg8orxKQWo6dfmrnNtQ4gRqc+jY\nHAI9tKZnVcw7hFfMM5A3mh8sz/3hOXw+hBVx38DNTij+jCBOQfb3endhPlPMAr4w\noi1Db0QfVPdlMHyF4+cx2XYNkVSMvsN8pipchTMWIwKBgQDuMnZQLcIdjKZCpSN3\nCL3xiyquPBIUnwMIB72s/aH8XOzQ0R6TtsImaLl6MdCINJwFewokNteQJSY+a7YU\nkOSdym5lVOQ1pMRLH0ljwhr8MNGB5HeKFRXOpjyNlRt/2L3EPcjBkAbDP6MRhWHn\nbnUxBj+PY8gUcsYOVf+PzmdkrA==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-tugor@ev-station-management-e64ee.iam.gserviceaccount.com",
+    "client_id": "102448483191080791607",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tugor%40ev-station-management-e64ee.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+}

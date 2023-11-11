@@ -11,12 +11,12 @@ from PySide2.QtWidgets import *
 ################################################################################################
 # MAP FILE IMPORT
 ################################################################################################
-from map import MapWindow, MapDialog
+from camera_and_map.map import MapWindow, MapDialog
 
 ################################################################################################
 # CAMERA FILE IMPORT
 ################################################################################################
-from camera import MaincamWindow
+from camera_and_map.camera import MaincamWindow
 
 ################################################################################################
 # GUI FILE IMPORT
@@ -26,7 +26,7 @@ from app import Ui_MainWindow
 ################################################################################################
 # VIEW MAP FILE IMPORT
 ################################################################################################
-from view_map import ViewMapWindow, ViewMapDialog
+from camera_and_map.view_map import ViewMapWindow, ViewMapDialog
 
 ################################################################################################
 # IMPORT FUNCTIONS

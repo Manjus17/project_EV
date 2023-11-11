@@ -22,6 +22,7 @@ import qrc_pyfiles.plug_rc as plug_rc
 import qrc_pyfiles.down_rc as down_rc
 import qrc_pyfiles.menu_rc as menu_rc
 import qrc_pyfiles.noti_rc as noti_rc
+import firebase_admin
 
 total_chargers = 58
 in_use_chargers = 43

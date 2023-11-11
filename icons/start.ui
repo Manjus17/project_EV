@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>844</width>
-    <height>696</height>
+    <height>701</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -33,6 +33,21 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="logo_frame">
          <property name="sizePolicy">
@@ -142,7 +157,7 @@
              <item row="0" column="0">
               <widget class="QStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="page">
                 <layout class="QGridLayout" name="gridLayout_6">
@@ -799,6 +814,657 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="add_station">
+                <layout class="QGridLayout" name="gridLayout_10">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="frame_2">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignTop">
+                     <widget class="QFrame" name="frame_6">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_11">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label">
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Add Station</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_21">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_10">
+                       <item>
+                        <widget class="QLineEdit" name="station_name">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>60</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Station Name</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="station_location">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>60</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Station Location</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="Latitude">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>60</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Latitude</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="longitude">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>60</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Longitude</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="no_chargers">
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Number of Chargers in the station</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_22">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_12">
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="add_station_page_btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>100</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">padding: 3px 5px;
+background-color: rgb(50, 162, 244);
+border: none;
+border-radius: 10;
+font: 14pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="add_charger">
+                <layout class="QGridLayout" name="gridLayout_13">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="frame_23">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <item alignment="Qt::AlignTop">
+                     <widget class="QFrame" name="frame_24">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_14">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_3">
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Add charger</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_25">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777214</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_12">
+                       <item>
+                        <widget class="QLineEdit" name="charger_name">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Chrager Name</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="charger_type">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Charger Type</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="charger_id">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Charger Id</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="minimum_current">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Minimum Current</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="maximum_current">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Maximum Current</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="voltage">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Voltage</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="power">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: none;
+background-color: rgb(61, 61, 61);
+border-radius: 10px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Power in kWh</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignBottom">
+                     <widget class="QFrame" name="frame_26">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_15">
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="add_charger_page_btn">
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">padding: 3px 5px;
+background-color: rgb(50, 162, 244);
+border: none;
+border-radius: 10;
+font: 14pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="text">
+                          <string>Add charger</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="added_chargers">
+                <layout class="QGridLayout" name="gridLayout_16">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="frame_27">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <item alignment="Qt::AlignTop">
+                     <widget class="QFrame" name="frame_30">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>120</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_17">
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_5">
+                         <property name="styleSheet">
+                          <string notr="true">color: rgb(255, 255, 255);
+font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Added Stations</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_28">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_20">
+                       <item row="0" column="0">
+                        <widget class="QFrame" name="station_frame">
+                         <property name="maximumSize">
+                          <size>
+                           <width>250</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">padding: 3px 5px;
+background-color: rgb(50, 162, 244);
+border: none;
+border-radius: 10;
+font: 8pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_19">
+                          <property name="sizeConstraint">
+                           <enum>QLayout::SetFixedSize</enum>
+                          </property>
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="station_n">
+                            <property name="text">
+                             <string>Station 1</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLabel" name="station_value">
+                            <property name="text">
+                             <string>1</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="charger_n">
+                            <property name="text">
+                             <string>Chargers</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLabel" name="charger_value">
+                            <property name="text">
+                             <string>2</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignBottom">
+                     <widget class="QFrame" name="frame_29">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_18">
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="added_st_btn">
+                         <property name="maximumSize">
+                          <size>
+                           <width>120</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">padding: 3px 5px;
+background-color: rgb(50, 162, 244);
+border: none;
+border-radius: 10;
+font: 14pt &quot;Consolas&quot;;
+color: rgb(255, 255, 255);</string>
+                         </property>
+                         <property name="text">
+                          <string>Next</string>
                          </property>
                         </widget>
                        </item>
