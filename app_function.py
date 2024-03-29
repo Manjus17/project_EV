@@ -3,9 +3,17 @@
 ##########################################################################################################
 from app_main import *
 from datetime import datetime, timedelta
-import pyrebase
+
+import firebase_admin
+from firebase_admin import firestore
+from firebase_admin import credentials
 
 
+cred = credentials.Certificate("./service.json")
+firebase_admin.initialize_app(cred)
+firestore_client = firestore.client()
+
+admin_map = {}
 
 class UIFunctions(MainWindow):
     ##########################################################################################################
@@ -248,6 +256,15 @@ class UIFunctions(MainWindow):
         # Format the end_time as a string in HH:MM format
         end_time_str = end_time.strftime('%H:%M')
         return end_time_str
+    
+
+    def store_email(email, user_id):
+        admin_map[email] = user_id
+
+
+    def extract_admin_crediantials():
+        pass
+        
     
 
 

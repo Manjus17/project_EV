@@ -40,26 +40,23 @@ from app_function import *
 # import total_chargers and in_use_cahrgers
 from app import total_chargers, in_use_chargers
 import firebase_admin
-import pyrebase
 from firebase_admin import firestore
 from firebase_admin import credentials
+# from firebase_admin import auth
+import pyrebase
 
-cred = credentials.Certificate("./service.json")
-firebase_admin.initialize_app(cred)
-# app = firebase_admin.initialize_app()
-firestore_client = firestore.client()
+
+try:
+    app = firebase_admin.get_app()
+except ValueError as e:
+    cred = credentials.Certificate("./service.json")
+    firebase_admin.initialize_app(cred)
+
+# cred = credentials.Certificate("./service.json")
+# firebase_admin.initialize_app(cred)
+# firestore_client = firestore.client()
 
 class MainWindow(QMainWindow):
-    #########################################################################################################
-    # MAP LINKING FUNCTION
-    #########################################################################################################
-    # def maplink(self):
-    #     self.window = QtWidgets.QMainWindow()
-    #     self.ui = Map_in_App()
-    #     # self.ui.setupUi(self.window)
-    #     self.window.show()
-
-
     ################################################################################################
     # APPLICATION PAGE 
     ################################################################################################
@@ -151,47 +148,160 @@ class MainWindow(QMainWindow):
         email=self.ui.username.text()
         password=self.ui.password_login.text()
         try:
-            # auth = firebase.auth()
-            auth.sign_in_with_email_and_password(email,password)
+            # auth.generate_sign_in_with_email_link(email = email)
+            auth.sign_in_with_email_and_password(email, password)
             self.appstart()
-        except:
-            print("Couldn't Sign in Please reacheck email or password")
+        except Exception as e:
+                print(e)
             
 
     def createaccfunction(self, auth):
-        email = self.ui.email.text()
+        ema = self.ui.email.text()
         name = self.ui.name.text()
         seller_id = self.ui.seller_id.text()
 
         if self.ui.password.text()==self.ui.cnf_password.text():
-            password=self.ui.password.text()
+            passw=self.ui.password.text()
             try:
-                # auth = firebase.auth()
                 print('inside the try block of creating account')
-                user = auth.create_user_with_email_and_password(email,password)
+                # user = auth.create_user_using_email_(email= ema, password = passw)
+                user = auth.create_user_with_email_and_password(ema, passw)
                 user_id = user['idToken']
-                doc_ref=firestore_client.collection("stations").document(user_id)
+                doc_ref=firestore_client.collection("Admins").document(user_id)
                 doc_ref.set({
-                    "email":email,
+                    "email":ema,
                     "name":name,
                     "sellerid":seller_id
                 })
-                # print(user_id)
 
-                # # db = firebase.database()
-                # db.child("Sellers").child(user_id).set({"name": name, "seller_id": seller_id , "email": email})
-                # # db.child("users").child(email).set({"name": name, "seller_id": seller_id, "email": email })
-                # print('the account created for seller_id ' + seller_id)
-                # self.appstart()
+                UIFunctions.store_email(ema, user_id)
+                
             except Exception as e:
                 print(e)
-                # print("This account already exist")
+
+
+    #############################################################################################################################
+    # all added station and charger page function
+    #############################################################################################################################
+    def added_stn_chargers(self, user_id, station_id):
+        charger_name = self.ui.charger_name.text()
+        charger_id = self.ui.charger_id.text()
+        charger_type = self.ui.charger_type.text()
+        maximum_current = int(self.ui.maximum_current.text())
+        minimum_current = int(self.ui.minimum_current.text())
+        voltage = int(self.ui.voltage.text())
+        power = int(self.ui.power.text())
+        self.ui.stackedWidget.setCurrentWidget(self.ui.added_chargers)
+
+        doc_ref=firestore_client.collection("Admins").document(user_id).collection("Stations").document(station_id).collection("Chargers").document(charger_id)
+        doc_ref.set({
+            "Charger name": charger_name,
+            "Charger type": charger_type,
+            "Minimum Current": minimum_current,
+            "Maximum Current": maximum_current,
+            "Voltage": voltage,
+            "Power": power
+        })
+
+        self.ui.added_st_btn.clicked.connect(lambda: self.appstart)
+        self.ui.add_more_stn_btn.clicked.connect(lambda: self.add_station)
+
+        
+    #############################################################################################################################
+    # add charger function
+    #############################################################################################################################
+    def add_another_charger(self, user_id, station_id):
+
+        # extract values
+        charger_name = self.ui.charger_name.text()
+        charger_id = self.ui.charger_id.text()
+        charger_type = self.ui.charger_type.text()
+        maximum_current = int(self.ui.maximum_current.text())
+        minimum_current = int(self.ui.minimum_current.text())
+        voltage = int(self.ui.voltage.text())
+        power = int(self.ui.power.text())
+
+        # clear the values
+        self.ui.charger_name.clear()
+        self.ui.charger_id.clear()
+        self.ui.charger_type.clear()
+        self.ui.maximum_current.clear()
+        self.ui.minimum_current.clear()
+        self.ui.voltage.clear()
+        self.ui.power.clear()
+
+        doc_ref=firestore_client.collection("Admins").document(user_id).collection("Stations").document(station_id).collection("Chargers").document(charger_id)
+        doc_ref.set({
+            "Charger name": charger_name,
+            "Charger type": charger_type,
+            "Minimum Current": minimum_current,
+            "Maximum Current": maximum_current,
+            "Voltage": voltage,
+            "Power": power
+        })
+
+        self.ui.add_charger_page_btn.clicked.connect(lambda: self.added_stn_chargers)
+        self.ui.add_more_charger_btn.clicked.connect(lambda: self.add_another_charger(user_id, station_id))
+
+
+
+
+    #############################################################################################################################
+    # add charger function
+    #############################################################################################################################
+    def add_chargers_fn(self, user_id):
+        station_name = self.ui.station_name.text()
+        station_loc = self.ui.station_location.text()
+        latitude = float(self.ui.Latitude.text())
+        longitude = float(self.ui.longitude.text())
+
+        station_id = self.generate_id()
+        print(station_id)
+
+        doc_ref_st=firestore_client.collection("Admins").document(user_id).collection("Stations").document(station_id)
+        doc_ref_st.set({
+            "Station name": station_name,
+            "Station Location": station_loc,
+            "Latitude": latitude,
+            "Longitude": longitude
+        })
+
+        self.ui.stackedWidget.setCurrentWidget(self.ui.add_charger)
+
+        print("inside the add chargers block")
+
+        self.ui.add_charger_page_btn.clicked.connect(lambda: self.added_stn_chargers())
+        self.ui.add_more_charger_btn.clicked.connect(lambda: self.add_another_charger(user_id, station_id))
+
+        
+        
+
+    #############################################################################################################################
+    # unique station id generator
+    #############################################################################################################################
+    def generate_id(self):
+        current_time = datetime.now()
+        id_str = str(current_time)
+        id_str = self.remove_non_numeric_characters(id_str)
+        n = int(id_str)
+        fi = format(n, 'x')
+        return fi
+
+    def remove_non_numeric_characters(self, input_str):
+        return ''.join(char for char in input_str if char.isdigit())
     
-    def add_chargers_fn(self, total_ch):
-        if total_ch == int(self.ui.no_chargers.text()):
-            self.ui.stackedWidget.setCurrentWidget(self.ui.add_charger)
-        else:
-            self.ui.stackedWidget.setCurrentWidget(self.ui.add_charger)
+
+
+    ###############################################################################################################################
+    # add station 
+    ###############################################################################################################################
+    def add_station(self, user_id):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.add_station)
+
+        print("inside the add station block")
+
+        self.ui.add_station_page_btn.clicked.connect(lambda: self.add_chargers_fn(user_id))
+
 
 
     ################################################################################################
@@ -207,21 +317,9 @@ class MainWindow(QMainWindow):
         self.setFixedWidth(1300)
 
         # open appliction after creating account
-        # self.ui.ca_next.clicked.connect(lambda: self.createaccfunction(auth))
-        # self.ui.ca_next.clicked.connect(lambda: login(self))
+        self.ui.ca_next.clicked.connect(lambda: self.createaccfunction(auth))
+        self.ui.add_station_page_btn.clicked.connect(self.add_chargers_fn)
 
-        self.ui.ca_next.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.add_station))
-        self.ui.add_station_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.add_charger))
-
-        t_ch = self.ui.no_chargers.text()
-        # print(type(int(t_ch)))
-        # total_ch = int(t_ch)
-
-        # while total_ch > 0:
-        #     self.ui.add_charger_page_btn.clicked.connect(lambda: self.add_chargers_fn(self, total_ch))
-        #     total_ch = total_ch - 1
-
-        self.ui.add_charger_page_btn.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_3))
         self.ui.added_st_btn.clicked.connect(self.appstart)
         
 
@@ -247,10 +345,22 @@ class MainWindow(QMainWindow):
             "databaseURL": ""
         }
 
+        # firebaseConfig = {
+        #     "type": "service_account",
+        #     "project_id": "ev-station-management-e64ee",
+        #     "private_key_id": "238c0fabfa96bb3dbe10513d54bdf2153b6e4e76",
+        #     "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC9thcQAEhdsv39\no8q4rDwgLFIf/O7K7ha49Zo5MmuWsPhoaKmJpNbAvPUE4NVD7VPiaCYe/wWrFAeu\nD52KsPeeVW1nGCQCee8c7QFT/+D69uxySlmYtfZkwAwN0JxtON9TCD/3kBJnlS29\nNiXVBEzdmMjbS/lYg5IadFO3rPeYVanHdlRUThbguSftczwLCR1jajB+9ivbYhOx\n2wmnziBhG9evCTDkU396et/bcufADXArz8Zf0WBQFUAmWt6Ma0TAfOvyC8EEMeih\nmQ2N1Xfk9ui036HxF992BcgkNi+XWu67VWyfdzXroykC16JY+stjky5+ud4L+B7T\nElKQn5vpAgMBAAECggEAUNYlxpowO8jY5HqmF4HAjv8DsYCv6cWA5ig1Ipki8g+P\nkcHDOBUGsxLxHraE+VBH1aoGUF/fdPHwgdFCkoXsxUlmeC73rRxy8HLnBXl7TsTn\npJ2cxu8GQhD5MevJs9qvgmx6AU2hIgUVe9H2VenirOv87kDVy0so9t/JinMH/58I\nQNKTMifc5ey6iW8N7T0x6xfabDA8+NqGaFoFoYsloj/2YvjAju1huZHDhKcwjddr\nP898a1lsQEKufibuxo1x6eSU7AHVLhCWh9eGFRTb+sWSoA3EH4IyHP34PJjoTUZS\nxSeiQpIGb5RBviK9FQfCeHgKRgO55/D0qoInPKrMTwKBgQDxqsvUZBuv5Or8QHCq\n/1bAT4epqcL4igSNsWGzbSoj6PnJUoPoI+IALXiP5xp0xjHEOamDV8RGW5kBUmrs\n/7aZwFM0XPq39hxso84yJrtT+GIRWo1u1DPojlJsWd803uOBYuMuwDc2uioWDVeJ\nzmCzY8MalEqQCMmwVBCEubwp/wKBgQDI9nQztLXHEnOuWU/s+gx1Nl/IgtzmBMzt\nENaRYnzw9x8YBQukyOC1Vm2xLIU/YLuzNqLE8Sl5HSy+pfpbs7EoP+l74Tib0atX\nKaAHQgVodRFIcYPl9XIKvcTUSLowMjAmv6uccbG1FGWyNXXfVKr5qH112CoaFmy4\n20lGNiwqFwKBgQCQpycyjml0M5XkP74w3H3UxsXxbEfj9Nkc5xwQBju/GujI9Lc3\n8KKKcK1FlZNkam3HgqxQjexSIOnIvMh76+Qky9YB9dWs34fMD5CQvFZMwNQShx05\nRZN8lBQJ/xF32CJdhA9wIGXsQCqI4JuRRRLkzcYu1qx64oe3H9pzV6mliQKBgQDE\nHJYLe1dFHMGdK/UualnL7LMORn5xTc/5rMvndrg8orxKQWo6dfmrnNtQ4gRqc+jY\nHAI9tKZnVcw7hFfMM5A3mh8sz/3hOXw+hBVx38DNTij+jCBOQfb3endhPlPMAr4w\noi1Db0QfVPdlMHyF4+cx2XYNkVSMvsN8pipchTMWIwKBgQDuMnZQLcIdjKZCpSN3\nCL3xiyquPBIUnwMIB72s/aH8XOzQ0R6TtsImaLl6MdCINJwFewokNteQJSY+a7YU\nkOSdym5lVOQ1pMRLH0ljwhr8MNGB5HeKFRXOpjyNlRt/2L3EPcjBkAbDP6MRhWHn\nbnUxBj+PY8gUcsYOVf+PzmdkrA==\n-----END PRIVATE KEY-----\n",
+        #     "client_email": "firebase-adminsdk-tugor@ev-station-management-e64ee.iam.gserviceaccount.com",
+        #     "client_id": "102448483191080791607",
+        #     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        #     "token_uri": "https://oauth2.googleapis.com/token",
+        #     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        #     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tugor%40ev-station-management-e64ee.iam.gserviceaccount.com",
+        #     "universe_domain": "googleapis.com"
+        # }
+
         firebase = pyrebase.initialize_app(firebaseConfig)
         auth=firebase.auth()
-
-        # db = firebase.database()
 
         ## SHOW ==> MAIN WINDOW
         ########################################################################

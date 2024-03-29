@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'startBmWhhR.ui'
+## Form generated from reading UI file 'startaFIJhT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -24,7 +24,7 @@ class Ui_StartWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(844, 696)
+        MainWindow.resize(844, 701)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -33,8 +33,8 @@ class Ui_StartWindow(object):
         MainWindow.setStyleSheet(u"background-color: rgb(34, 34, 34);")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.gridLayout = QGridLayout(self.centralwidget)
-        self.gridLayout.setObjectName(u"gridLayout")
+        self.horizontalLayout_5 = QHBoxLayout(self.centralwidget)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
@@ -488,7 +488,7 @@ class Ui_StartWindow(object):
 
         self.station_location = QLineEdit(self.frame_21)
         self.station_location.setObjectName(u"station_location")
-        self.station_location.setMinimumSize(QSize(120, 65))
+        self.station_location.setMinimumSize(QSize(120, 60))
         self.station_location.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -500,7 +500,7 @@ class Ui_StartWindow(object):
 
         self.Latitude = QLineEdit(self.frame_21)
         self.Latitude.setObjectName(u"Latitude")
-        self.Latitude.setMinimumSize(QSize(120, 65))
+        self.Latitude.setMinimumSize(QSize(120, 60))
         self.Latitude.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -512,7 +512,7 @@ class Ui_StartWindow(object):
 
         self.longitude = QLineEdit(self.frame_21)
         self.longitude.setObjectName(u"longitude")
-        self.longitude.setMinimumSize(QSize(120, 65))
+        self.longitude.setMinimumSize(QSize(120, 60))
         self.longitude.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -521,18 +521,6 @@ class Ui_StartWindow(object):
 "font: 10pt \"MS Shell Dlg 2\";")
 
         self.verticalLayout_10.addWidget(self.longitude)
-
-        self.no_chargers = QLineEdit(self.frame_21)
-        self.no_chargers.setObjectName(u"no_chargers")
-        self.no_chargers.setMinimumSize(QSize(120, 65))
-        self.no_chargers.setStyleSheet(u"border: none;\n"
-"background-color: rgb(61, 61, 61);\n"
-"border-radius: 10px;\n"
-"padding-left: 10px;\n"
-"color: rgb(255, 255, 255);\n"
-"font: 10pt \"MS Shell Dlg 2\";")
-
-        self.verticalLayout_10.addWidget(self.no_chargers)
 
 
         self.verticalLayout_9.addWidget(self.frame_21)
@@ -547,7 +535,7 @@ class Ui_StartWindow(object):
         self.add_station_page_btn = QPushButton(self.frame_22)
         self.add_station_page_btn.setObjectName(u"add_station_page_btn")
         self.add_station_page_btn.setMinimumSize(QSize(0, 0))
-        self.add_station_page_btn.setMaximumSize(QSize(120, 55))
+        self.add_station_page_btn.setMaximumSize(QSize(100, 50))
         self.add_station_page_btn.setStyleSheet(u"padding: 3px 5px;\n"
 "background-color: rgb(50, 162, 244);\n"
 "border: none;\n"
@@ -603,7 +591,7 @@ class Ui_StartWindow(object):
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.charger_name = QLineEdit(self.frame_25)
         self.charger_name.setObjectName(u"charger_name")
-        self.charger_name.setMinimumSize(QSize(0, 55))
+        self.charger_name.setMinimumSize(QSize(0, 45))
         self.charger_name.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -615,7 +603,7 @@ class Ui_StartWindow(object):
 
         self.charger_type = QLineEdit(self.frame_25)
         self.charger_type.setObjectName(u"charger_type")
-        self.charger_type.setMinimumSize(QSize(0, 55))
+        self.charger_type.setMinimumSize(QSize(0, 45))
         self.charger_type.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -627,7 +615,7 @@ class Ui_StartWindow(object):
 
         self.charger_id = QLineEdit(self.frame_25)
         self.charger_id.setObjectName(u"charger_id")
-        self.charger_id.setMinimumSize(QSize(0, 55))
+        self.charger_id.setMinimumSize(QSize(0, 45))
         self.charger_id.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -639,7 +627,7 @@ class Ui_StartWindow(object):
 
         self.minimum_current = QLineEdit(self.frame_25)
         self.minimum_current.setObjectName(u"minimum_current")
-        self.minimum_current.setMinimumSize(QSize(0, 55))
+        self.minimum_current.setMinimumSize(QSize(0, 45))
         self.minimum_current.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -651,7 +639,7 @@ class Ui_StartWindow(object):
 
         self.maximum_current = QLineEdit(self.frame_25)
         self.maximum_current.setObjectName(u"maximum_current")
-        self.maximum_current.setMinimumSize(QSize(0, 55))
+        self.maximum_current.setMinimumSize(QSize(0, 45))
         self.maximum_current.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -663,7 +651,7 @@ class Ui_StartWindow(object):
 
         self.voltage = QLineEdit(self.frame_25)
         self.voltage.setObjectName(u"voltage")
-        self.voltage.setMinimumSize(QSize(0, 55))
+        self.voltage.setMinimumSize(QSize(0, 45))
         self.voltage.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -675,7 +663,7 @@ class Ui_StartWindow(object):
 
         self.power = QLineEdit(self.frame_25)
         self.power.setObjectName(u"power")
-        self.power.setMinimumSize(QSize(0, 55))
+        self.power.setMinimumSize(QSize(0, 45))
         self.power.setStyleSheet(u"border: none;\n"
 "background-color: rgb(61, 61, 61);\n"
 "border-radius: 10px;\n"
@@ -697,7 +685,8 @@ class Ui_StartWindow(object):
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.add_charger_page_btn = QPushButton(self.frame_26)
         self.add_charger_page_btn.setObjectName(u"add_charger_page_btn")
-        self.add_charger_page_btn.setMaximumSize(QSize(250, 60))
+        self.add_charger_page_btn.setMinimumSize(QSize(0, 50))
+        self.add_charger_page_btn.setMaximumSize(QSize(120, 50))
         self.add_charger_page_btn.setStyleSheet(u"padding: 3px 5px;\n"
 "background-color: rgb(50, 162, 244);\n"
 "border: none;\n"
@@ -707,6 +696,18 @@ class Ui_StartWindow(object):
 
         self.gridLayout_15.addWidget(self.add_charger_page_btn, 0, 0, 1, 1)
 
+        self.add_more_charger_btn = QPushButton(self.frame_26)
+        self.add_more_charger_btn.setObjectName(u"add_more_charger_btn")
+        self.add_more_charger_btn.setMinimumSize(QSize(0, 50))
+        self.add_more_charger_btn.setStyleSheet(u"padding: 3px 5px;\n"
+"background-color: rgb(50, 162, 244);\n"
+"border: none;\n"
+"border-radius: 10;\n"
+"font: 14pt \"Consolas\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.gridLayout_15.addWidget(self.add_more_charger_btn, 0, 1, 1, 1)
+
 
         self.verticalLayout_11.addWidget(self.frame_26, 0, Qt.AlignBottom)
 
@@ -714,11 +715,11 @@ class Ui_StartWindow(object):
         self.gridLayout_13.addWidget(self.frame_23, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.add_charger)
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.gridLayout_16 = QGridLayout(self.page_3)
+        self.added_chargers = QWidget()
+        self.added_chargers.setObjectName(u"added_chargers")
+        self.gridLayout_16 = QGridLayout(self.added_chargers)
         self.gridLayout_16.setObjectName(u"gridLayout_16")
-        self.frame_27 = QFrame(self.page_3)
+        self.frame_27 = QFrame(self.added_chargers)
         self.frame_27.setObjectName(u"frame_27")
         self.frame_27.setFrameShape(QFrame.StyledPanel)
         self.frame_27.setFrameShadow(QFrame.Raised)
@@ -795,10 +796,11 @@ class Ui_StartWindow(object):
         self.frame_29.setMinimumSize(QSize(0, 100))
         self.frame_29.setFrameShape(QFrame.StyledPanel)
         self.frame_29.setFrameShadow(QFrame.Raised)
-        self.gridLayout_18 = QGridLayout(self.frame_29)
-        self.gridLayout_18.setObjectName(u"gridLayout_18")
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_29)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.added_st_btn = QPushButton(self.frame_29)
         self.added_st_btn.setObjectName(u"added_st_btn")
+        self.added_st_btn.setMinimumSize(QSize(0, 50))
         self.added_st_btn.setMaximumSize(QSize(120, 50))
         self.added_st_btn.setStyleSheet(u"padding: 3px 5px;\n"
 "background-color: rgb(50, 162, 244);\n"
@@ -807,7 +809,20 @@ class Ui_StartWindow(object):
 "font: 14pt \"Consolas\";\n"
 "color: rgb(255, 255, 255);")
 
-        self.gridLayout_18.addWidget(self.added_st_btn, 0, 0, 1, 1)
+        self.horizontalLayout_6.addWidget(self.added_st_btn)
+
+        self.add_more_stn_btn = QPushButton(self.frame_29)
+        self.add_more_stn_btn.setObjectName(u"add_more_stn_btn")
+        self.add_more_stn_btn.setMinimumSize(QSize(0, 50))
+        self.add_more_stn_btn.setMaximumSize(QSize(250, 16777215))
+        self.add_more_stn_btn.setStyleSheet(u"padding: 3px 5px;\n"
+"background-color: rgb(50, 162, 244);\n"
+"border: none;\n"
+"border-radius: 10;\n"
+"font: 14pt \"Consolas\";\n"
+"color: rgb(255, 255, 255);")
+
+        self.horizontalLayout_6.addWidget(self.add_more_stn_btn)
 
 
         self.verticalLayout_13.addWidget(self.frame_29, 0, Qt.AlignBottom)
@@ -815,7 +830,7 @@ class Ui_StartWindow(object):
 
         self.gridLayout_16.addWidget(self.frame_27, 0, 0, 1, 1)
 
-        self.stackedWidget.addWidget(self.page_3)
+        self.stackedWidget.addWidget(self.added_chargers)
 
         self.gridLayout_5.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -826,7 +841,7 @@ class Ui_StartWindow(object):
         self.horizontalLayout.addWidget(self.frame_3)
 
 
-        self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
+        self.horizontalLayout_5.addWidget(self.frame)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -865,7 +880,6 @@ class Ui_StartWindow(object):
         self.station_location.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Station Location", None))
         self.Latitude.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Latitude", None))
         self.longitude.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Longitude", None))
-        self.no_chargers.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Number of Chargers in the station", None))
         self.add_station_page_btn.setText(QCoreApplication.translate("MainWindow", u"Add", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Add charger", None))
         self.charger_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Chrager Name", None))
@@ -875,12 +889,14 @@ class Ui_StartWindow(object):
         self.maximum_current.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Maximum Current", None))
         self.voltage.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.power.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Power in kWh", None))
-        self.add_charger_page_btn.setText(QCoreApplication.translate("MainWindow", u"Add charger", None))
+        self.add_charger_page_btn.setText(QCoreApplication.translate("MainWindow", u"next", None))
+        self.add_more_charger_btn.setText(QCoreApplication.translate("MainWindow", u"add more charger", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Added Stations", None))
         self.station_n.setText(QCoreApplication.translate("MainWindow", u"Station 1", None))
         self.station_value.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.charger_n.setText(QCoreApplication.translate("MainWindow", u"Chargers", None))
         self.charger_value.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.added_st_btn.setText(QCoreApplication.translate("MainWindow", u"Next", None))
+        self.add_more_stn_btn.setText(QCoreApplication.translate("MainWindow", u"add more Station", None))
     # retranslateUi
 
