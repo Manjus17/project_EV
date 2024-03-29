@@ -19,12 +19,6 @@
 - added camera using opencv
 - added camera using opencv
 
-## Done Today
-- integrated wating time calculation
-- charging end time
-- progress bar
 
-## to do
-- intergation of algorithm in the python app
-- renaming all widgets in ui file for better understanding
+## Add the service key for cloud firestore in the service.json
 
